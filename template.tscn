@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7bxki1lf0m1g"]
+
+[ext_resource type="Script" path="res://template.gd" id="1_2sgh4"]
+[ext_resource type="Texture2D" uid="uid://cmrotq7shxctv" path="res://shelf_1.png" id="1_wyeyj"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_d5582"]
+size = Vector2(64, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t5a4"]
+size = Vector2(62, 62)
+
+[node name="Template" type="Area2D"]
+script = ExtResource("1_2sgh4")
+
+[node name="Sizing" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = SubResource("PlaceholderTexture2D_d5582")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5t5a4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.462745, 1, 1, 0.223529)
+position = Vector2(0, -16)
+scale = Vector2(0.185496, 0.185496)
+texture = ExtResource("1_wyeyj")
