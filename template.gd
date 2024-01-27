@@ -4,6 +4,7 @@ extends Area2D
 @onready var sprite: Sprite2D = $Sprite2D
 var can_build = false
 var other_shape_overlap: bool = false
+var cost: int
 
 
 func _ready() -> void:
@@ -12,7 +13,8 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if in_buildable() && !other_shape_overlap:
+	var can_afford = GameState.money >= cost
+	if in_buildable() && !other_shape_overlap && can_afford:
 		sprite.modulate = Color(1, 1, 1, 0.4)
 		can_build = true
 	else:

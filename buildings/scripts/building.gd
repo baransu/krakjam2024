@@ -11,12 +11,13 @@ signal on_selected(bool)
 @export var type: Type = Type.PRODUCT
 @export var product: Product = Product.NONE
 
-var cost = 0
+var cost := 0
+var build_cost := 0
 var product_texture: Texture2D
 var selected = false
 
 enum Type { PRODUCT, CHECKOUT }
-enum Product { NONE, BEER, HOTDOG }
+enum Product { NONE, BEER, HOTDOG, ICECREAM, WINE, BREAD, COFFEE }
 
 
 func _ready() -> void:

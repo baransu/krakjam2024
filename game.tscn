@@ -9,12 +9,12 @@
 [node name="Level" parent="." instance=ExtResource("2_oy64i")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.8, 0.8)
 limit_left = -2000
 limit_top = -2000
 limit_right = 2000
 limit_bottom = 2000
 limit_smoothed = true
 script = ExtResource("4_4aa6m")
-speed = null
 
 [node name="HUD" parent="." instance=ExtResource("5_48ess")]

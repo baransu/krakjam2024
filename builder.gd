@@ -27,6 +27,7 @@ func update_buildable() -> void:
 
 	template = GameState.buildable.template.instantiate()
 	template.global_position = positon
+	template.cost = GameState.buildable.build_cost
 	dynamic.add_child(template)
 
 
@@ -52,9 +53,11 @@ func place_buildable(pos: Vector2) -> void:
 	var item: Building = GameState.buildable.scene.instantiate()
 	dynamic.add_child(item)
 	item.global_position = pos
-	item.cost = GameState.buildable.cost
+	item.cost = GameState.buildable.product_cost
+	item.build_cost = GameState.buildable.build_cost
 	item.product_texture = GameState.buildable.product_texture
 	GameState.buildings.append(item)
+	GameState.remove_money(GameState.buildable.build_cost)
 
 
 func on_tool_changed() -> void:

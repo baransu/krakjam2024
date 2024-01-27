@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Buildable" load_steps=5 format=3 uid="uid://bx3khnmti1p5t"]
+
+[ext_resource type="Texture2D" uid="uid://b4h8v2jm1yckj" path="res://art/Sprite-0006-kawa.png" id="1_ow1nx"]
+[ext_resource type="PackedScene" uid="uid://dpl6ioph526uy" path="res://buildings/coffee/coffee.tscn" id="2_20nlj"]
+[ext_resource type="Script" path="res://buildable.gd" id="3_xbewx"]
+[ext_resource type="PackedScene" uid="uid://bueg22irtfdi7" path="res://buildings/coffee/coffee_template.tscn" id="4_6ie5m"]
+
+[resource]
+script = ExtResource("3_xbewx")
+scene = ExtResource("2_20nlj")
+template = ExtResource("4_6ie5m")
+product_cost = 1
+build_cost = 1
+product_texture = ExtResource("1_ow1nx")
