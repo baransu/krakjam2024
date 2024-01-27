@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://smbgof2hawru"]
+[gd_scene load_steps=60 format=3 uid="uid://smbgof2hawru"]
 
 [ext_resource type="Script" path="res://builder.gd" id="1_hqa1e"]
 [ext_resource type="Texture2D" uid="uid://bvxtthfn17gpf" path="res://art/Sprite-0004.png" id="1_nqllq"]
-[ext_resource type="Texture2D" uid="uid://klvwei88mak0" path="res://art/Sprite-0005-2.png" id="2_7ut7r"]
 [ext_resource type="Texture2D" uid="uid://d0fybtfkbjbbn" path="res://art/Grupa 12.png" id="2_y4v5x"]
 [ext_resource type="Texture2D" uid="uid://bw1vcpvu5fomm" path="res://art/Sprite-0005-3.png" id="3_ql6n0"]
 [ext_resource type="Script" path="res://customer_spawn.gd" id="6_xh5gs"]
@@ -11,8 +10,139 @@
 [ext_resource type="PackedScene" uid="uid://c1vhiidpbpuyc" path="res://staff.tscn" id="9_r2drp"]
 [ext_resource type="Texture2D" uid="uid://senu8r2geirw" path="res://art/2.png" id="10_w8en8"]
 [ext_resource type="Texture2D" uid="uid://buetvheikikwj" path="res://art/1.png" id="11_wcxx2"]
+[ext_resource type="Texture2D" uid="uid://bvdmm4upy0qko" path="res://art/kenney_particle-pack/PNG (Transparent)/circle_05.png" id="12_2dc0e"]
 [ext_resource type="Texture2D" uid="uid://dggtwndc8dcal" path="res://art/Sprite-0004-2.png" id="12_a3gdg"]
 [ext_resource type="Texture2D" uid="uid://37xetqlbyp0u" path="res://art/grid.png" id="13_dyp46"]
+[ext_resource type="PackedScene" uid="uid://dvio7aaw5oatx" path="res://front_wall.tscn" id="14_mta1c"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_r4jd7"]
+polygon = PackedVector2Array(32, 32, 16, 32, 16, -32, 32, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_efon7"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wrgfd"]
+polygon = PackedVector2Array(32, 32, 16, 32, 16, -32, 32, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_obxkb"]
+polygon = PackedVector2Array(32, 32, 16, 32, 16, -32, 32, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ffu2c"]
+polygon = PackedVector2Array(32, 32, 16, 32, 16, -32, 32, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mbj15"]
+polygon = PackedVector2Array(32, 32, 16, 32, 16, -32, 32, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q2580"]
+polygon = PackedVector2Array(32, 32, 16, 32, 16, -32, 32, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tsdhy"]
+polygon = PackedVector2Array(32, 32, 16, 32, 16, -32, 32, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tnaik"]
+polygon = PackedVector2Array(32, 32, 16, 32, 16, -32, 32, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_c8ffl"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_g8h4t"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_skeuo"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uee2o"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hbi8i"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pmw6n"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_86y6j"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_d8s66"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_sjy2b"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ns6tg"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_r35en"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_m3jyl"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_onxfe"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_aqywk"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0c7at"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_p3qxg"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_0c2gy"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_x6d2n"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wcwn3"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w7wbj"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_a7ku6"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yuguw"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vqkr5"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_hla8d"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4c66c"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_g1sjj"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rnufk"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xvmgx"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dm45v"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xmtvx"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4u3i8"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wrj5m"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1w6dp"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vnhup"]
+polygon = PackedVector2Array(-16, 32, -32, 32, -32, -32, -16, -32)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_rtm1c"]
 vertices = PackedVector2Array(-138, -118, 246, -118, 246, 310, -263, 310, -196, 394, 246, 425, 246, 502, -886, 502, -886, 425, -444, 394, -268, 322, -372, 322, -377, 310, -886, 310, -886, -438, -138, -438)
@@ -21,9 +151,15 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(256, 320, 256, -128, -1
 parsed_geometry_type = 1
 source_geometry_group_name = &"navigation_polygon_source_group"
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ttear"]
+polygon = PackedVector2Array(64, 128, 37, 128, 37, -31, -37, -31, -37, 128, -64, 128, -64, -128, 64, -128)
+
 [node name="Level" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_hqa1e")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.752941, 0.752941, 0.752941, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -20
@@ -31,7 +167,7 @@ offset_left = -3744.0
 offset_top = -2656.0
 offset_right = 6256.0
 offset_bottom = 7344.0
-color = Color(0.545098, 0.439216, 0.419608, 1)
+color = Color(0.537255, 0.815686, 0.572549, 1)
 
 [node name="Back" type="Node2D" parent="."]
 z_index = -10
@@ -172,6 +308,343 @@ texture = ExtResource("11_wcxx2")
 [node name="12" type="Sprite2D" parent="Walls"]
 position = Vector2(288, 32)
 texture = ExtResource("11_wcxx2")
+
+[node name="13" type="Sprite2D" parent="Walls"]
+position = Vector2(288, -160)
+texture = ExtResource("11_wcxx2")
+
+[node name="14" type="Sprite2D" parent="Walls"]
+position = Vector2(288, -224)
+texture = ExtResource("11_wcxx2")
+
+[node name="15" type="Sprite2D" parent="Walls"]
+position = Vector2(288, -288)
+texture = ExtResource("11_wcxx2")
+
+[node name="16" type="Sprite2D" parent="Walls"]
+position = Vector2(288, -352)
+texture = ExtResource("11_wcxx2")
+
+[node name="39" type="Sprite2D" parent="Walls"]
+position = Vector2(-96, -480)
+texture = ExtResource("11_wcxx2")
+
+[node name="40" type="Sprite2D" parent="Walls"]
+position = Vector2(-96, -544)
+texture = ExtResource("11_wcxx2")
+
+[node name="41" type="Sprite2D" parent="Walls"]
+position = Vector2(-96, -608)
+texture = ExtResource("11_wcxx2")
+
+[node name="42" type="Sprite2D" parent="Walls"]
+position = Vector2(-96, -672)
+texture = ExtResource("11_wcxx2")
+
+[node name="17" type="Sprite2D" parent="Walls"]
+position = Vector2(224, -352)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="18" type="Sprite2D" parent="Walls"]
+position = Vector2(160, -352)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="19" type="Sprite2D" parent="Walls"]
+position = Vector2(96, -352)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="20" type="Sprite2D" parent="Walls"]
+position = Vector2(32, -352)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="21" type="Sprite2D" parent="Walls"]
+position = Vector2(-32, -352)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="22" type="Sprite2D" parent="Walls"]
+position = Vector2(-96, -352)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="23" type="Sprite2D" parent="Walls"]
+position = Vector2(-160, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="24" type="Sprite2D" parent="Walls"]
+position = Vector2(-224, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="25" type="Sprite2D" parent="Walls"]
+position = Vector2(-288, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="26" type="Sprite2D" parent="Walls"]
+position = Vector2(-352, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="27" type="Sprite2D" parent="Walls"]
+position = Vector2(-416, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="28" type="Sprite2D" parent="Walls"]
+position = Vector2(-480, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="29" type="Sprite2D" parent="Walls"]
+position = Vector2(-544, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="30" type="Sprite2D" parent="Walls"]
+position = Vector2(-608, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="31" type="Sprite2D" parent="Walls"]
+position = Vector2(-672, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="32" type="Sprite2D" parent="Walls"]
+position = Vector2(-736, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="33" type="Sprite2D" parent="Walls"]
+position = Vector2(-800, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="34" type="Sprite2D" parent="Walls"]
+position = Vector2(-864, -672)
+rotation = 1.5708
+texture = ExtResource("11_wcxx2")
+
+[node name="35" type="Sprite2D" parent="Walls"]
+position = Vector2(-928, -672)
+rotation = 3.14159
+texture = ExtResource("11_wcxx2")
+
+[node name="36" type="Sprite2D" parent="Walls"]
+position = Vector2(-928, -608)
+rotation = 3.14159
+texture = ExtResource("11_wcxx2")
+
+[node name="37" type="Sprite2D" parent="Walls"]
+position = Vector2(-928, -544)
+rotation = 3.14159
+texture = ExtResource("11_wcxx2")
+
+[node name="38" type="Sprite2D" parent="Walls"]
+position = Vector2(-928, -480)
+rotation = 3.14159
+texture = ExtResource("11_wcxx2")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -160)
+occluder = SubResource("OccluderPolygon2D_r4jd7")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -480)
+rotation = -3.14159
+occluder = SubResource("OccluderPolygon2D_efon7")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -96)
+occluder = SubResource("OccluderPolygon2D_wrgfd")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -32)
+occluder = SubResource("OccluderPolygon2D_obxkb")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, 32)
+occluder = SubResource("OccluderPolygon2D_ffu2c")
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -416)
+occluder = SubResource("OccluderPolygon2D_mbj15")
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -352)
+occluder = SubResource("OccluderPolygon2D_q2580")
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -288)
+occluder = SubResource("OccluderPolygon2D_tsdhy")
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -224)
+occluder = SubResource("OccluderPolygon2D_tnaik")
+
+[node name="LightOccluder2D10" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-96, -416)
+occluder = SubResource("OccluderPolygon2D_c8ffl")
+
+[node name="LightOccluder2D11" type="LightOccluder2D" parent="Walls"]
+position = Vector2(288, -96)
+occluder = SubResource("OccluderPolygon2D_g8h4t")
+
+[node name="LightOccluder2D12" type="LightOccluder2D" parent="Walls"]
+position = Vector2(288, -32)
+occluder = SubResource("OccluderPolygon2D_skeuo")
+
+[node name="LightOccluder2D13" type="LightOccluder2D" parent="Walls"]
+position = Vector2(288, 32)
+occluder = SubResource("OccluderPolygon2D_uee2o")
+
+[node name="LightOccluder2D14" type="LightOccluder2D" parent="Walls"]
+position = Vector2(288, -160)
+occluder = SubResource("OccluderPolygon2D_hbi8i")
+
+[node name="LightOccluder2D15" type="LightOccluder2D" parent="Walls"]
+position = Vector2(288, -224)
+occluder = SubResource("OccluderPolygon2D_pmw6n")
+
+[node name="LightOccluder2D16" type="LightOccluder2D" parent="Walls"]
+position = Vector2(288, -288)
+occluder = SubResource("OccluderPolygon2D_86y6j")
+
+[node name="LightOccluder2D17" type="LightOccluder2D" parent="Walls"]
+position = Vector2(288, -352)
+occluder = SubResource("OccluderPolygon2D_d8s66")
+
+[node name="LightOccluder2D18" type="LightOccluder2D" parent="Walls"]
+position = Vector2(224, -352)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_sjy2b")
+
+[node name="LightOccluder2D19" type="LightOccluder2D" parent="Walls"]
+position = Vector2(160, -352)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_ns6tg")
+
+[node name="LightOccluder2D20" type="LightOccluder2D" parent="Walls"]
+position = Vector2(96, -352)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_r35en")
+
+[node name="LightOccluder2D21" type="LightOccluder2D" parent="Walls"]
+position = Vector2(32, -352)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_m3jyl")
+
+[node name="LightOccluder2D22" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-32, -352)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_onxfe")
+
+[node name="LightOccluder2D23" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-96, -352)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_aqywk")
+
+[node name="LightOccluder2D24" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-160, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_0c7at")
+
+[node name="LightOccluder2D25" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-224, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_p3qxg")
+
+[node name="LightOccluder2D26" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-288, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_0c2gy")
+
+[node name="LightOccluder2D27" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-352, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_x6d2n")
+
+[node name="LightOccluder2D28" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-416, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_wcwn3")
+
+[node name="LightOccluder2D29" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-480, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_w7wbj")
+
+[node name="LightOccluder2D30" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-544, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_a7ku6")
+
+[node name="LightOccluder2D31" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-608, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_yuguw")
+
+[node name="LightOccluder2D32" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-672, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_vqkr5")
+
+[node name="LightOccluder2D33" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-736, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_hla8d")
+
+[node name="LightOccluder2D34" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-800, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_4c66c")
+
+[node name="LightOccluder2D35" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-864, -672)
+rotation = 1.5708
+occluder = SubResource("OccluderPolygon2D_g1sjj")
+
+[node name="LightOccluder2D36" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -672)
+rotation = -3.14159
+occluder = SubResource("OccluderPolygon2D_rnufk")
+
+[node name="LightOccluder2D37" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -608)
+rotation = -3.14159
+occluder = SubResource("OccluderPolygon2D_xvmgx")
+
+[node name="LightOccluder2D38" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -544)
+rotation = -3.14159
+occluder = SubResource("OccluderPolygon2D_dm45v")
+
+[node name="LightOccluder2D39" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-928, -480)
+rotation = -3.14159
+occluder = SubResource("OccluderPolygon2D_xmtvx")
+
+[node name="LightOccluder2D40" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-96, -480)
+occluder = SubResource("OccluderPolygon2D_4u3i8")
+
+[node name="LightOccluder2D41" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-96, -544)
+occluder = SubResource("OccluderPolygon2D_wrj5m")
+
+[node name="LightOccluder2D42" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-96, -608)
+occluder = SubResource("OccluderPolygon2D_1w6dp")
+
+[node name="LightOccluder2D43" type="LightOccluder2D" parent="Walls"]
+position = Vector2(-96, -672)
+occluder = SubResource("OccluderPolygon2D_vnhup")
 
 [node name="Floor" type="Node2D" parent="."]
 z_index = -5
@@ -2143,38 +2616,100 @@ position = Vector2(128, 416)
 [node name="Front" type="Node2D" parent="."]
 position = Vector2(0, 320)
 
-[node name="Sprite-0005-2" type="Sprite2D" parent="Front"]
-position = Vector2(-512, -128)
-texture = ExtResource("2_7ut7r")
-
 [node name="Sprite-0005-3" type="Sprite2D" parent="Front"]
-position = Vector2(-384, -128)
-texture = ExtResource("2_7ut7r")
-
-[node name="Sprite-0005-4" type="Sprite2D" parent="Front"]
-position = Vector2(-256, -128)
-texture = ExtResource("2_7ut7r")
-
-[node name="Sprite-0005-5" type="Sprite2D" parent="Front"]
-position = Vector2(-128, -128)
-texture = ExtResource("2_7ut7r")
-
-[node name="Sprite-0005-6" type="Sprite2D" parent="Front"]
-position = Vector2(128, -128)
-texture = ExtResource("2_7ut7r")
-
-[node name="Sprite-0005-7" type="Sprite2D" parent="Front"]
-position = Vector2(256, -128)
-texture = ExtResource("2_7ut7r")
-
-[node name="Sprite-0005-8" type="Sprite2D" parent="Front"]
-position = Vector2(384, -128)
-texture = ExtResource("2_7ut7r")
-
-[node name="Sprite-0005-9" type="Sprite2D" parent="Front"]
-position = Vector2(512, -128)
-texture = ExtResource("2_7ut7r")
-
-[node name="Sprite-0005-10" type="Sprite2D" parent="Front"]
 position = Vector2(0, -128)
 texture = ExtResource("3_ql6n0")
+
+[node name="FrontWall" parent="Front" instance=ExtResource("14_mta1c")]
+
+[node name="FrontWall2" parent="Front" instance=ExtResource("14_mta1c")]
+position = Vector2(-384, -128)
+
+[node name="FrontWall3" parent="Front" instance=ExtResource("14_mta1c")]
+position = Vector2(-256, -128)
+
+[node name="FrontWall4" parent="Front" instance=ExtResource("14_mta1c")]
+position = Vector2(-128, -128)
+
+[node name="FrontWall5" parent="Front" instance=ExtResource("14_mta1c")]
+position = Vector2(128, -128)
+
+[node name="FrontWall6" parent="Front" instance=ExtResource("14_mta1c")]
+position = Vector2(256, -128)
+
+[node name="FrontWall7" parent="Front" instance=ExtResource("14_mta1c")]
+position = Vector2(384, -128)
+
+[node name="FrontWall8" parent="Front" instance=ExtResource("14_mta1c")]
+position = Vector2(512, -128)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Front"]
+position = Vector2(0, -128)
+occluder = SubResource("OccluderPolygon2D_ttear")
+
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="Lights"]
+position = Vector2(-448, 64)
+scale = Vector2(2.9312, 2.9312)
+color = Color(0.537255, 0.537255, 0.537255, 0.533333)
+energy = 0.4
+shadow_enabled = true
+texture = ExtResource("12_2dc0e")
+
+[node name="PointLight2D7" type="PointLight2D" parent="Lights"]
+position = Vector2(0.00012207, 128)
+scale = Vector2(2.9312, 2.9312)
+color = Color(0.537255, 0.537255, 0.537255, 0.533333)
+shadow_enabled = true
+texture = ExtResource("12_2dc0e")
+height = 100.0
+
+[node name="PointLight2D5" type="PointLight2D" parent="Lights"]
+position = Vector2(-192, -672)
+scale = Vector2(2.9312, 2.9312)
+color = Color(0.537255, 0.537255, 0.537255, 0.533333)
+energy = 0.6
+shadow_enabled = true
+texture = ExtResource("12_2dc0e")
+texture_scale = 2.5
+
+[node name="PointLight2D8" type="PointLight2D" parent="Lights"]
+position = Vector2(448, -320)
+scale = Vector2(2.9312, 2.9312)
+color = Color(0.537255, 0.537255, 0.537255, 0.533333)
+energy = 0.6
+shadow_enabled = true
+texture = ExtResource("12_2dc0e")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Lights"]
+position = Vector2(-192, 64)
+scale = Vector2(2.9312, 2.9312)
+color = Color(0.537255, 0.537255, 0.537255, 0.533333)
+energy = 0.4
+shadow_enabled = true
+texture = ExtResource("12_2dc0e")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Lights"]
+position = Vector2(192, 64)
+scale = Vector2(2.9312, 2.9312)
+color = Color(0.537255, 0.537255, 0.537255, 0.533333)
+energy = 0.4
+shadow_enabled = true
+texture = ExtResource("12_2dc0e")
+
+[node name="PointLight2D6" type="PointLight2D" parent="Lights"]
+position = Vector2(-2.1684e-19, 160)
+scale = Vector2(2.9312, 2.9312)
+color = Color(0.537255, 0.537255, 0.537255, 0.533333)
+energy = 0.4
+shadow_enabled = true
+texture = ExtResource("12_2dc0e")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Lights"]
+position = Vector2(448, 64)
+scale = Vector2(2.9312, 2.9312)
+color = Color(0.537255, 0.537255, 0.537255, 0.533333)
+energy = 0.4
+shadow_enabled = true
+texture = ExtResource("12_2dc0e")

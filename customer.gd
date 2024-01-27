@@ -29,6 +29,8 @@ func _ready() -> void:
 	change_state(State.PRODUCT)
 	find_target(target_type, false)
 	sprite.texture = textures[randi() % textures.size()]
+	var night = "#3c5f47"
+	var day = "#89d092"
 
 
 func random_product() -> void:
