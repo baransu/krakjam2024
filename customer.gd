@@ -78,6 +78,7 @@ func find_target(type: Building.Type, exit: bool) -> void:
 		nav_agent.set_target_position(target.get_front())
 	else:
 		if exit:
+			change_state(State.EXIT)
 			find_exit()
 		else:
 			print("waiting for building to be created")
@@ -126,8 +127,16 @@ func change_state(next_state: State) -> void:
 					product = "BEER"
 				Building.Product.HOTDOG:
 					product = "HOTDOG"
+				Building.Product.WINE:
+					product = "WINE"
+				Building.Product.COFFEE:
+					product = "COFFEE"
+				Building.Product.ICECREAM:
+					product = "ICECREAM"
+				Building.Product.BREAD:
+					product = "BREAD"
 				_:
-					product = "TODO"
+					product = "NONE"
 
 			state_label.text = "PRODUCT: " + product
 
@@ -145,3 +154,7 @@ func give_product(tex: Texture2D, cost: int) -> void:
 	product_cost = cost
 	product_sprite.show()
 	product_sprite.texture = tex
+
+
+func drop_product() -> void:
+	product_sprite.hide()

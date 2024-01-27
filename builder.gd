@@ -57,9 +57,7 @@ func place_buildable(pos: Vector2) -> void:
 	var item: Building = GameState.buildable.scene.instantiate()
 	nav_region.add_child(item)
 	item.global_position = pos
-	item.cost = GameState.buildable.product_cost
-	item.build_cost = GameState.buildable.build_cost
-	item.product_texture = GameState.buildable.product_texture
+	item.set_res(GameState.buildable)
 	GameState.buildings.append(item)
 	GameState.remove_money(GameState.buildable.build_cost)
 	update_nav_mesh()

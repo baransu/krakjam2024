@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cdgaksn1few4f"]
+[gd_scene load_steps=29 format=3 uid="uid://cdgaksn1few4f"]
 
 [ext_resource type="Script" path="res://HUD.gd" id="1_dqttv"]
 [ext_resource type="Script" path="res://ui/buildings_container.gd" id="2_7q1ln"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://ui/delete_button.gd" id="3_q3tk0"]
 [ext_resource type="Texture2D" uid="uid://cfbxp6iqj3qra" path="res://art/Sprite-0007-2.png" id="4_begqd"]
 [ext_resource type="Resource" uid="uid://cygl2nish317r" path="res://buildings/hotdog/hotdog_res.tres" id="4_jk0rg"]
+[ext_resource type="PackedScene" uid="uid://dbedkj40f785x" path="res://ui/building_panel.tscn" id="6_cybql"]
 [ext_resource type="Texture2D" uid="uid://bftbtvqmorrov" path="res://art/Sprite-0006-3.png" id="10_woaov"]
 [ext_resource type="Resource" uid="uid://br4togwko5rd3" path="res://buildings/shelf_beer/shelf_beer_res.tres" id="11_yn7g0"]
 [ext_resource type="Texture2D" uid="uid://b1cbch7lv6s74" path="res://art/Sprite-0001-5-lodowmfa.png" id="12_tgllb"]
@@ -122,7 +123,7 @@ mouse_filter = 2
 layout_mode = 2
 
 [node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
-custom_minimum_size = Vector2(300, 150)
+custom_minimum_size = Vector2(380, 150)
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Panel"]
@@ -180,11 +181,15 @@ layout_mode = 2
 text = "Postaw kasę i zatrudnij pierwszego pracownika aby zachęcić klientów. Zarabiaj pieniądze, wykup koncesje na alkohol aby zwiększyć ruch w sklepie. Uzupełniaj produkty kiedy zabraknie ich na pułkach."
 autowrap_mode = 2
 
+[node name="BuildingPanel" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2" instance=ExtResource("6_cybql")]
+layout_mode = 2
+
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="ToolLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Tool: Build"

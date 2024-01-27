@@ -8,8 +8,8 @@ var cost: int
 
 
 func _ready() -> void:
-	area_entered.connect(on_area_entered)
-	area_exited.connect(on_area_exited)
+	body_entered.connect(on_area_entered)
+	body_exited.connect(on_area_exited)
 
 
 func _process(_delta: float) -> void:
@@ -22,11 +22,11 @@ func _process(_delta: float) -> void:
 		can_build = false
 
 
-func on_area_entered(_area: Area2D) -> void:
+func on_area_entered(_b: Node) -> void:
 	other_shape_overlap = true
 
 
-func on_area_exited(_area: Area2D) -> void:
+func on_area_exited(_b: Node) -> void:
 	other_shape_overlap = false
 
 

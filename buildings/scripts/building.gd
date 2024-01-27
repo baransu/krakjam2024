@@ -11,10 +11,8 @@ signal on_selected(bool)
 @export var type: Type = Type.PRODUCT
 @export var product: Product = Product.NONE
 
-var cost := 0
-var build_cost := 0
-var product_texture: Texture2D
 var selected = false
+var res: Buildable
 
 enum Type { PRODUCT, CHECKOUT }
 enum Product { NONE, BEER, HOTDOG, ICECREAM, WINE, BREAD, COFFEE }
@@ -37,6 +35,10 @@ func on_hover_start() -> void:
 
 		_:
 			pass
+
+
+func get_delete_cost() -> int:
+	return roundi(res.build_cost * 0.5)
 
 
 func on_hover_end() -> void:
@@ -64,12 +66,14 @@ func get_front() -> Vector2:
 func select() -> void:
 	selected = true
 	sprite.material = select_material
+	GameState.building_selected.emit(self)
 
 
 func deselect() -> void:
 	selected = false
 	sprite.material = null
+	GameState.building_deselected.emit(self)
 
 
-func get_obstacle() -> PackedVector2Array:
-	return get_node("NavigationObstacle2D").vertices
+func set_res(r: Buildable) -> void:
+	res = r

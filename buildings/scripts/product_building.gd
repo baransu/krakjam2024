@@ -1,10 +1,7 @@
 class_name ProductBuilding
 extends Building
 
-@onready var menu: PanelContainer = %Menu
-@onready var refill_button: Button = %RefillButton
 @onready var products_container: Node = $Products
-@onready var menu_anchor: Marker2D = $MenuAnchor
 
 var max_products: int
 var products: int
@@ -13,12 +10,7 @@ var endless_products = false
 
 func _ready() -> void:
 	super()
-	menu.hide()
-	menu.position = menu_anchor.get_global_transform_with_canvas().get_origin()
-	refill_button.pressed.connect(start_refill)
-	update_refill_button()
 	max_products = products_container.get_child_count()
-	GameState.money_changed.connect(update_refill_button)
 
 	if max_products == 0:
 		max_products = 99999999
@@ -33,19 +25,9 @@ func start_refill() -> void:
 			staff.start_refill(self)
 
 
-func select() -> void:
-	super()
-	menu.show()
-
-
-func deselect() -> void:
-	super()
-	menu.hide()
-
-
 func get_refill_cost() -> int:
 	var new_products = max_products - products
-	return roundi(new_products * (cost * 0.5))
+	return roundi(new_products * (res.product_cost * 0.5))
 
 
 func interact_staff(_staff: Staff) -> void:
@@ -58,7 +40,7 @@ func interact_staff(_staff: Staff) -> void:
 	for child in children:
 		child.show()
 
-	update_refill_button()
+	GameState.building_changed.emit(self)
 
 
 func interact_customer(customer: Customer) -> void:
@@ -68,7 +50,7 @@ func interact_customer(customer: Customer) -> void:
 		GameState.building_empty.emit(self)
 		return
 
-	customer.give_product(product_texture, cost)
+	customer.give_product(res.product_texture, res.product_cost)
 
 	var children = products_container.get_children()
 	children.shuffle()
@@ -80,19 +62,8 @@ func interact_customer(customer: Customer) -> void:
 	if !endless_products:
 		products -= 1
 
-	update_refill_button()
+	GameState.building_changed.emit(self)
 
 
 func is_working() -> bool:
 	return products > 0
-
-
-func update_refill_button(_delta: int = 0) -> void:
-	if products < max_products:
-		refill_button.show()
-		if GameState.money < get_refill_cost():
-			refill_button.disabled = true
-		else:
-			refill_button.disabled = false
-	else:
-		refill_button.hide()

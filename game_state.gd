@@ -9,6 +9,9 @@ signal seconds_elapsed_changed
 signal money_changed(int)
 signal staff_changed
 signal alkohol_access_changed
+signal building_selected(Building)
+signal building_deselected(Building)
+signal building_changed(Building)
 
 var selected: Building
 var buildings: Array[Building] = []
@@ -70,6 +73,7 @@ func clear_selection() -> void:
 
 
 func delete(b: Building) -> void:
+	add_money(b.get_delete_cost())
 	b.queue_free()
 	buildings.erase(b)
 	building_destroyed.emit(b)
