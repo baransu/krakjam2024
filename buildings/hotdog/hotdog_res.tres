@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Buildable" load_steps=5 format=3 uid="uid://cygl2nish317r"]
+[gd_resource type="Resource" script_class="Buildable" load_steps=6 format=3 uid="uid://cygl2nish317r"]
 
-[ext_resource type="Texture2D" uid="uid://bjy78anknpake" path="res://art/hotdog.png" id="1_0vl00"]
+[ext_resource type="Texture2D" uid="uid://dg7yoia30qwqj" path="res://art/hotdog.png" id="1_0vl00"]
+[ext_resource type="Texture2D" uid="uid://cos6j80okj1ig" path="res://art/icons/4.png" id="1_8lalb"]
 [ext_resource type="PackedScene" uid="uid://doeubp62x8dt4" path="res://buildings/hotdog/hotdog.tscn" id="1_ot8tp"]
 [ext_resource type="Script" path="res://buildable.gd" id="2_77hfk"]
 [ext_resource type="PackedScene" uid="uid://dhfjdct7ywher" path="res://buildings/hotdog/hotdog_template.tscn" id="3_p0bns"]
@@ -12,3 +13,5 @@ template = ExtResource("3_p0bns")
 product_cost = 0
 build_cost = 0
 product_texture = ExtResource("1_0vl00")
+name = "Kasa z hotdogami"
+icon = ExtResource("1_8lalb")

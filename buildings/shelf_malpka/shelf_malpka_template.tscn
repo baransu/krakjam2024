@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfd454ei8f0j5"]
+
+[ext_resource type="Script" path="res://template.gd" id="1_ipayl"]
+[ext_resource type="Texture2D" uid="uid://dli5mvbw25gux" path="res://art/Sprite-0001.png" id="2_1liq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t5a4"]
+resource_local_to_scene = true
+size = Vector2(126, 62)
+
+[node name="ShelfWineTemplate" type="Area2D"]
+collision_mask = 9
+script = ExtResource("1_ipayl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, 0)
+shape = SubResource("RectangleShape2D_5t5a4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.223529)
+position = Vector2(32, -64)
+texture = ExtResource("2_1liq0")

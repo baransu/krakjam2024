@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://fcgsu42igsrv"]
+
+[ext_resource type="PackedScene" uid="uid://c7bxki1lf0m1g" path="res://buildings/shelf_wine/shelf_wine_template.tscn" id="1_5vnpo"]
+[ext_resource type="Texture2D" uid="uid://pqkxuhrd7kx0" path="res://art/Sprite-0001-5-lodowamfa.png" id="2_du0gl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_beiap"]
+resource_local_to_scene = true
+size = Vector2(62, 62)
+
+[node name="ShelfBeerTemplate" instance=ExtResource("1_5vnpo")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_beiap")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(0, -96)
+texture = ExtResource("2_du0gl")

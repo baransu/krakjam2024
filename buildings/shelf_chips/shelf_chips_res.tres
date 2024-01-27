@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Buildable" load_steps=5 format=3 uid="uid://cm1n82gbt4c1h"]
+
+[ext_resource type="Texture2D" uid="uid://ca5pyeyaixk6x" path="res://art/chipsy.png" id="1_j3gvt"]
+[ext_resource type="PackedScene" uid="uid://mp7lgar8jpxe" path="res://buildings/shelf_chips/shelf_chips.tscn" id="2_bhmt0"]
+[ext_resource type="Script" path="res://buildable.gd" id="3_eq5jk"]
+[ext_resource type="PackedScene" uid="uid://c3eh5n1c3asvd" path="res://buildings/shelf_chips/shelf_chips_template.tscn" id="4_n0hbh"]
+
+[resource]
+script = ExtResource("3_eq5jk")
+scene = ExtResource("2_bhmt0")
+template = ExtResource("4_n0hbh")
+product_cost = 1
+build_cost = 1
+product_texture = ExtResource("1_j3gvt")
+name = "Zielona cebulka"

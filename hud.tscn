@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cdgaksn1few4f"]
+[gd_scene load_steps=37 format=3 uid="uid://cdgaksn1few4f"]
 
 [ext_resource type="Script" path="res://HUD.gd" id="1_dqttv"]
 [ext_resource type="Script" path="res://ui/buildings_container.gd" id="2_7q1ln"]
@@ -7,22 +7,30 @@
 [ext_resource type="Script" path="res://ui/building_button.gd" id="2_kir6n"]
 [ext_resource type="Script" path="res://staff_res.gd" id="3_kckky"]
 [ext_resource type="Script" path="res://ui/delete_button.gd" id="3_q3tk0"]
-[ext_resource type="Texture2D" uid="uid://cfbxp6iqj3qra" path="res://art/Sprite-0007-2.png" id="4_begqd"]
+[ext_resource type="Texture2D" uid="uid://bsbnpal1phlu4" path="res://art/Sprite-0007-2.png" id="4_begqd"]
 [ext_resource type="Resource" uid="uid://cygl2nish317r" path="res://buildings/hotdog/hotdog_res.tres" id="4_jk0rg"]
 [ext_resource type="PackedScene" uid="uid://dbedkj40f785x" path="res://ui/building_panel.tscn" id="6_cybql"]
-[ext_resource type="Texture2D" uid="uid://bftbtvqmorrov" path="res://art/Sprite-0006-3.png" id="10_woaov"]
+[ext_resource type="Texture2D" uid="uid://cos6j80okj1ig" path="res://art/icons/4.png" id="11_e0y0g"]
 [ext_resource type="Resource" uid="uid://br4togwko5rd3" path="res://buildings/shelf_beer/shelf_beer_res.tres" id="11_yn7g0"]
-[ext_resource type="Texture2D" uid="uid://b1cbch7lv6s74" path="res://art/Sprite-0001-5-lodowmfa.png" id="12_tgllb"]
-[ext_resource type="Texture2D" uid="uid://bkk6k65vowxcc" path="res://art/Sprite-0002 2.png" id="13_3d11q"]
 [ext_resource type="Resource" uid="uid://cx1bj3sfwh4y7" path="res://buildings/shelf_wine/shelf_wine_res.tres" id="13_cmllh"]
-[ext_resource type="Texture2D" uid="uid://dp6gnakolhff2" path="res://art/Sprite-0006.png" id="15_6siow"]
+[ext_resource type="Texture2D" uid="uid://c2phbkarwf0kp" path="res://art/icons/3.png" id="13_e2r5d"]
+[ext_resource type="Texture2D" uid="uid://c3ws0pwcp2xa8" path="res://art/icons/7.png" id="15_h0i1l"]
 [ext_resource type="Resource" uid="uid://cd5kajlna4w82" path="res://buildings/checkout/checkout_res.tres" id="15_q5gos"]
 [ext_resource type="Resource" uid="uid://bx3khnmti1p5t" path="res://buildings/coffee/coffee_res.tres" id="17_eegkq"]
-[ext_resource type="Texture2D" uid="uid://b4h8v2jm1yckj" path="res://art/Sprite-0006-kawa.png" id="18_xt5k7"]
+[ext_resource type="Texture2D" uid="uid://dtr7thfglinuu" path="res://art/icons/8.png" id="17_hncxn"]
+[ext_resource type="Texture2D" uid="uid://fxwv1gw7wg7s" path="res://art/icons/9.png" id="19_2ltjj"]
 [ext_resource type="Resource" uid="uid://1oilgobn26j1" path="res://buildings/shelf_icecream/shelf_icecream_res.tres" id="19_lfqtp"]
-[ext_resource type="Texture2D" uid="uid://d0es68ruc7lhy" path="res://art/Sprite-0006lod2.png" id="20_mrjn1"]
+[ext_resource type="Resource" uid="uid://cm1n82gbt4c1h" path="res://buildings/shelf_chips/shelf_chips_res.tres" id="20_7jirg"]
+[ext_resource type="Texture2D" uid="uid://15h4pt3u4f07" path="res://art/icons/11.png" id="20_n7npy"]
 [ext_resource type="Resource" uid="uid://bbi8wtxunmusn" path="res://buildings/shelf_bread/shelf_bread_res.tres" id="21_eyjh0"]
-[ext_resource type="Texture2D" uid="uid://kc8mtj4hftdn" path="res://art/Grupa 20.png" id="22_nnhfv"]
+[ext_resource type="Texture2D" uid="uid://qv2pnbli320s" path="res://art/icons/10.png" id="21_uy6mm"]
+[ext_resource type="Resource" uid="uid://csarysoyqudaq" path="res://buildings/shelf_soda/shelf_soda_res.tres" id="22_omlem"]
+[ext_resource type="Texture2D" uid="uid://bbeismw4fr4y5" path="res://art/icons/icon_2.png" id="23_3fp5j"]
+[ext_resource type="Texture2D" uid="uid://dy7dx3q2j4smc" path="res://art/icons/6.png" id="23_4abvg"]
+[ext_resource type="Resource" uid="uid://fe0msgss1jps" path="res://buildings/shelf_tomcio/shelf_tomcio_res.tres" id="24_guudq"]
+[ext_resource type="Resource" uid="uid://dtygck8qfbldp" path="res://buildings/shelf_malpka/shelf_malpka_res.tres" id="24_mnjdu"]
+[ext_resource type="Texture2D" uid="uid://cnu7gqymm8yev" path="res://art/icons/icon_1.png" id="25_n5fd6"]
+[ext_resource type="Texture2D" uid="uid://dckr5nik17yri" path="res://art/icons/5.png" id="25_xo1xw"]
 
 [sub_resource type="Resource" id="Resource_4bkkg"]
 script = ExtResource("3_kckky")
@@ -207,11 +215,10 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 10
 
-[node name="DeleteButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="DeleteButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2"]
 layout_mode = 2
 focus_mode = 0
 toggle_mode = true
@@ -219,23 +226,30 @@ text = "DELETE
 "
 script = ExtResource("3_q3tk0")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Kasa z hotdogami"
 horizontal_alignment = 1
 
-[node name="Hotdog" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(196, 128)
+[node name="Hotdog" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+size_flags_vertical = 3
 focus_mode = 0
 script = ExtResource("2_kir6n")
 buildable = ExtResource("4_jk0rg")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Hotdog"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer/Hotdog"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -243,304 +257,475 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -32.0
-offset_top = -48.0
+offset_top = -32.0
 offset_right = 32.0
-offset_bottom = 48.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("10_woaov")
+texture = ExtResource("11_e0y0g")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "100 Żabsów
 "
 horizontal_alignment = 1
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer4"]
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Kasa"
 horizontal_alignment = 1
 
-[node name="Checkout" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer4"]
-custom_minimum_size = Vector2(196, 128)
+[node name="Checkout" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer4"]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+size_flags_vertical = 3
 focus_mode = 0
 script = ExtResource("2_kir6n")
 buildable = ExtResource("15_q5gos")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer4/Checkout"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer4/Checkout"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -33.9448
-offset_top = -48.0
-offset_right = 33.9448
-offset_bottom = 48.0
+offset_left = -34.5
+offset_top = -34.0
+offset_right = 29.5
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("15_6siow")
+texture = ExtResource("13_e2r5d")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer4"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
 
-[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer4/HBoxContainer"]
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer4/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "100 Żabsów
 "
 horizontal_alignment = 1
 
-[node name="VBoxContainer5" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer5" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer5"]
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer5"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Ekspres do kawy"
+text = "Kawunia"
 horizontal_alignment = 1
 
-[node name="Coffee" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer5"]
-custom_minimum_size = Vector2(196, 128)
+[node name="Coffee" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer5"]
 layout_mode = 2
+size_flags_vertical = 3
 focus_mode = 0
 script = ExtResource("2_kir6n")
 buildable = ExtResource("17_eegkq")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer5/Coffee"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer5/Coffee"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -51.0
-offset_right = 44.8895
-offset_bottom = 45.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("18_xt5k7")
+texture = ExtResource("15_h0i1l")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer5"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer5"]
 layout_mode = 2
 
-[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer5/HBoxContainer"]
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer5/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "100 Żabsów
 "
 horizontal_alignment = 1
 
-[node name="VBoxContainer6" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer6" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer6"]
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer6"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Lody ekipy"
+text = "Lody Ekipy"
 horizontal_alignment = 1
 
-[node name="Icecream" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer6"]
-custom_minimum_size = Vector2(196, 128)
+[node name="Icecream" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer6"]
 layout_mode = 2
+size_flags_vertical = 3
 focus_mode = 0
 script = ExtResource("2_kir6n")
 buildable = ExtResource("19_lfqtp")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer6/Icecream"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer6/Icecream"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -15.0
-offset_top = -42.0
-offset_right = 126.785
-offset_bottom = 54.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_mrjn1")
+texture = ExtResource("17_hncxn")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer6"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer6"]
 layout_mode = 2
 
-[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer6/HBoxContainer"]
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer6/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "100 Żabsów
 "
 horizontal_alignment = 1
 
-[node name="VBoxContainer7" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="VBoxContainer7" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer7"]
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer7"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Pieczywo"
+text = "Kajzerki"
 horizontal_alignment = 1
 
-[node name="Icecream" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer7"]
-custom_minimum_size = Vector2(196, 128)
+[node name="Bread" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer7"]
 layout_mode = 2
+size_flags_vertical = 3
 focus_mode = 0
 script = ExtResource("2_kir6n")
 buildable = ExtResource("21_eyjh0")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer7/Icecream"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer7/Bread"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -77.0
-offset_top = -34.0
-offset_right = 106.652
-offset_bottom = 44.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("22_nnhfv")
+texture = ExtResource("19_2ltjj")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer7"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer7"]
 layout_mode = 2
 
-[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer7/HBoxContainer"]
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer7/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "100 Żabsów
 "
 horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control"]
-layout_mode = 2
-offset_left = 10.0
-offset_right = 410.0
-offset_bottom = 168.0
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer"]
+[node name="VBoxContainer8" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer/VBoxContainer2"]
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Zielona cebulka"
+horizontal_alignment = 1
+
+[node name="Bread" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer8"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+script = ExtResource("2_kir6n")
+buildable = ExtResource("20_7jirg")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer8/Bread"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_n7npy")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer8"]
+layout_mode = 2
+
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer8/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100 Żabsów
+"
+horizontal_alignment = 1
+
+[node name="VBoxContainer9" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Colka"
+horizontal_alignment = 1
+
+[node name="Bread" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer9"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+script = ExtResource("2_kir6n")
+buildable = ExtResource("22_omlem")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer9/Bread"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_3fp5j")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer9"]
+layout_mode = 2
+
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer9/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100 Żabsów
+"
+horizontal_alignment = 1
+
+[node name="VBoxContainer10" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer10"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Tomcio Paluch"
+horizontal_alignment = 1
+
+[node name="Bread" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer10"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+script = ExtResource("2_kir6n")
+buildable = ExtResource("24_guudq")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer10/Bread"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("25_xo1xw")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer10"]
+layout_mode = 2
+
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer10/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100 Żabsów
+"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Mocny ful"
 horizontal_alignment = 1
 
-[node name="Beer" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer/VBoxContainer2"]
-custom_minimum_size = Vector2(196, 128)
+[node name="Beer" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
+size_flags_vertical = 3
 focus_mode = 0
 script = ExtResource("2_kir6n")
 buildable = ExtResource("11_yn7g0")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer/VBoxContainer2/Beer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer2/Beer"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -29.0
-offset_top = -51.0
-offset_right = 35.0
-offset_bottom = 45.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("12_tgllb")
+texture = ExtResource("21_uy6mm")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer/VBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 
-[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer/VBoxContainer2/HBoxContainer"]
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "100 Żabsów
 "
 horizontal_alignment = 1
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer/VBoxContainer3"]
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Mamrot"
+text = "Wino Mamrot"
 horizontal_alignment = 1
 
-[node name="Wine" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer/VBoxContainer3"]
-custom_minimum_size = Vector2(196, 128)
+[node name="Wine" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
+size_flags_vertical = 3
 focus_mode = 0
 script = ExtResource("2_kir6n")
 buildable = ExtResource("13_cmllh")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer/VBoxContainer3/Wine"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer3/Wine"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -19.0
-offset_top = -51.0
-offset_right = 45.0
-offset_bottom = 45.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("13_3d11q")
+texture = ExtResource("23_4abvg")
 expand_mode = 3
 stretch_mode = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer/VBoxContainer3"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 
-[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control/HBoxContainer/VBoxContainer3/HBoxContainer"]
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "100 Żabsów
 "
 horizontal_alignment = 1
 
-[node name="AlkoholAccessPanel" type="ColorRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control"]
+[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Małpki"
+horizontal_alignment = 1
+
+[node name="Wine" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+script = ExtResource("2_kir6n")
+buildable = ExtResource("24_mnjdu")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer4/Wine"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("25_n5fd6")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer4/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100 Żabsów
+"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="AlkoholAccessPanel" type="ColorRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/Control"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_left = 3.0
-offset_top = 2.0
-offset_right = 419.0
-offset_bottom = 170.0
+offset_left = -321.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = 103.0
 mouse_filter = 1
 color = Color(0, 0, 0, 0.764706)
 
-[node name="AlkoholAccessButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Control"]
+[node name="AlkoholAccessButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/Control/AlkoholAccessPanel"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -548,10 +733,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 82.5
-offset_top = -10.0
-offset_right = 339.5
-offset_bottom = 14.0
+offset_left = -128.5
+offset_top = -12.0
+offset_right = 128.5
+offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Koncesja na alkohol (1000 Żapsów)"

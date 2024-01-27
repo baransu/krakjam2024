@@ -15,7 +15,7 @@ var selected = false
 var res: Buildable
 
 enum Type { PRODUCT, CHECKOUT }
-enum Product { NONE, BEER, HOTDOG, ICECREAM, WINE, BREAD, COFFEE }
+enum Product { NONE, BEER, HOTDOG, ICECREAM, WINE, BREAD, COFFEE, TOMCIO, SODA, MALPKA, CHIPS }
 
 
 func _ready() -> void:

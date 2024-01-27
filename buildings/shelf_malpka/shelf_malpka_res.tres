@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Buildable" load_steps=6 format=3 uid="uid://dtygck8qfbldp"]
+
+[ext_resource type="Texture2D" uid="uid://cnu7gqymm8yev" path="res://art/icons/icon_1.png" id="1_drh1n"]
+[ext_resource type="Texture2D" uid="uid://b4fv20sxqwon2" path="res://art/malpka.png" id="1_fdoat"]
+[ext_resource type="PackedScene" uid="uid://dsy4e65vojsbk" path="res://buildings/shelf_malpka/shelf_malpka.tscn" id="1_yp4a7"]
+[ext_resource type="PackedScene" uid="uid://bfd454ei8f0j5" path="res://buildings/shelf_malpka/shelf_malpka_template.tscn" id="3_a5h3i"]
+[ext_resource type="Script" path="res://buildable.gd" id="3_rhnvb"]
+
+[resource]
+script = ExtResource("3_rhnvb")
+scene = ExtResource("1_yp4a7")
+template = ExtResource("3_a5h3i")
+product_cost = 1
+build_cost = 1
+product_texture = ExtResource("1_fdoat")
+name = "Małpka"
+icon = ExtResource("1_drh1n")

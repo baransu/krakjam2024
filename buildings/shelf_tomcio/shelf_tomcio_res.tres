@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Buildable" load_steps=6 format=3 uid="uid://fe0msgss1jps"]
+
+[ext_resource type="Texture2D" uid="uid://oyylnsg8ubnb" path="res://art/bagietka.png" id="1_oajqf"]
+[ext_resource type="Texture2D" uid="uid://dckr5nik17yri" path="res://art/icons/5.png" id="1_w40j6"]
+[ext_resource type="PackedScene" uid="uid://cjgavgnn86ve6" path="res://buildings/shelf_tomcio/shelf_tomcio.tscn" id="2_sabmt"]
+[ext_resource type="Script" path="res://buildable.gd" id="3_tka1n"]
+[ext_resource type="PackedScene" uid="uid://fcgsu42igsrv" path="res://buildings/shelf_tomcio/shelf_tomcio_template.tscn" id="4_vn127"]
+
+[resource]
+script = ExtResource("3_tka1n")
+scene = ExtResource("2_sabmt")
+template = ExtResource("4_vn127")
+product_cost = 1
+build_cost = 1
+product_texture = ExtResource("1_oajqf")
+name = "Tomcio Paluch"
+icon = ExtResource("1_w40j6")

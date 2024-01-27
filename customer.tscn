@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://2r5d1n83oer5"]
 
 [ext_resource type="Script" path="res://customer.gd" id="1_28mxv"]
-[ext_resource type="Texture2D" uid="uid://cwuqxnqnrt256" path="res://art/Sprite-0007.png" id="2_n21ku"]
+[ext_resource type="Texture2D" uid="uid://bfi36jbt8uuyk" path="res://art/Sprite-0007.png" id="2_n21ku"]
 [ext_resource type="Texture2D" uid="uid://bkk6k65vowxcc" path="res://art/Sprite-0002 2.png" id="3_nvoji"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5l8y"]

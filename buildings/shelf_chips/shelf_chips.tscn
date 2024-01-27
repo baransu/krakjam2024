@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=3 uid="uid://mp7lgar8jpxe"]
+
+[ext_resource type="Script" path="res://buildings/scripts/product_building.gd" id="1_tnu63"]
+[ext_resource type="Material" uid="uid://li5m067f0ccm" path="res://select_material.tres" id="2_qqlai"]
+[ext_resource type="Texture2D" uid="uid://dli5mvbw25gux" path="res://art/Sprite-0001.png" id="3_2dm4g"]
+[ext_resource type="Texture2D" uid="uid://ca5pyeyaixk6x" path="res://art/chipsy.png" id="4_vlg7p"]
+[ext_resource type="Script" path="res://selectable.gd" id="5_dnrp4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbd7m"]
+resource_local_to_scene = true
+size = Vector2(128, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yy7dt"]
+resource_local_to_scene = true
+size = Vector2(128, 64)
+
+[node name="ShelfWine" type="Node2D"]
+script = ExtResource("1_tnu63")
+select_material = ExtResource("2_qqlai")
+product = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(32, -64)
+texture = ExtResource("3_2dm4g")
+
+[node name="Products" type="Node2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Products"]
+position = Vector2(-3.25, -87.2237)
+scale = Vector2(1.34211, 1.34211)
+texture = ExtResource("4_vlg7p")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Products"]
+position = Vector2(28.75, -87.2237)
+scale = Vector2(1.34211, 1.34211)
+texture = ExtResource("4_vlg7p")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Products"]
+position = Vector2(60.75, -87.2237)
+scale = Vector2(1.34211, 1.34211)
+texture = ExtResource("4_vlg7p")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Products"]
+position = Vector2(-3.25, -15.2237)
+scale = Vector2(1.34211, 1.34211)
+texture = ExtResource("4_vlg7p")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Products"]
+position = Vector2(28.75, -15.2237)
+scale = Vector2(1.34211, 1.34211)
+texture = ExtResource("4_vlg7p")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Products"]
+position = Vector2(60.75, -15.2237)
+scale = Vector2(1.34211, 1.34211)
+texture = ExtResource("4_vlg7p")
+
+[node name="SelectArea" type="Area2D" parent="."]
+position = Vector2(32, -30)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_dnrp4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectArea"]
+position = Vector2(0, -34)
+shape = SubResource("RectangleShape2D_mbd7m")
+
+[node name="BaseArea" type="StaticBody2D" parent="."]
+position = Vector2(32, -30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
+position = Vector2(0, 30)
+shape = SubResource("RectangleShape2D_yy7dt")
+
+[node name="Front" type="Marker2D" parent="."]
+position = Vector2(32, 56)
+
+[node name="MenuAnchor" type="Marker2D" parent="."]
+position = Vector2(-24, -224)

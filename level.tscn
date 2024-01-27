@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://2r5d1n83oer5" path="res://customer.tscn" id="7_ukjo2"]
 [ext_resource type="Script" path="res://staff_spawner.gd" id="8_sipmc"]
 [ext_resource type="PackedScene" uid="uid://c1vhiidpbpuyc" path="res://staff.tscn" id="9_r2drp"]
-[ext_resource type="Texture2D" uid="uid://jxig284yie8x" path="res://art/2.png" id="10_w8en8"]
-[ext_resource type="Texture2D" uid="uid://b5238cb8fd5ci" path="res://art/1.png" id="11_wcxx2"]
+[ext_resource type="Texture2D" uid="uid://senu8r2geirw" path="res://art/2.png" id="10_w8en8"]
+[ext_resource type="Texture2D" uid="uid://buetvheikikwj" path="res://art/1.png" id="11_wcxx2"]
 [ext_resource type="Texture2D" uid="uid://dggtwndc8dcal" path="res://art/Sprite-0004-2.png" id="12_a3gdg"]
 [ext_resource type="Texture2D" uid="uid://37xetqlbyp0u" path="res://art/grid.png" id="13_dyp46"]
 

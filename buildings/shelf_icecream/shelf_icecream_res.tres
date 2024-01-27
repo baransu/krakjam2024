@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Buildable" load_steps=5 format=3 uid="uid://1oilgobn26j1"]
+[gd_resource type="Resource" script_class="Buildable" load_steps=6 format=3 uid="uid://1oilgobn26j1"]
 
+[ext_resource type="Texture2D" uid="uid://dtr7thfglinuu" path="res://art/icons/8.png" id="1_kliws"]
 [ext_resource type="Texture2D" uid="uid://d0es68ruc7lhy" path="res://art/Sprite-0006lod2.png" id="1_ow24x"]
 [ext_resource type="PackedScene" uid="uid://beit8v7himh21" path="res://buildings/shelf_icecream/shelf_icecream.tscn" id="2_dkjan"]
 [ext_resource type="Script" path="res://buildable.gd" id="3_m0or0"]
@@ -12,3 +13,5 @@ template = ExtResource("4_eayss")
 product_cost = 1
 build_cost = 1
 product_texture = ExtResource("1_ow24x")
+name = "Lody Ekipy"
+icon = ExtResource("1_kliws")

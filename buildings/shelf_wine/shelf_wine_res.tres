@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Buildable" load_steps=5 format=3 uid="uid://cx1bj3sfwh4y7"]
+[gd_resource type="Resource" script_class="Buildable" load_steps=6 format=3 uid="uid://cx1bj3sfwh4y7"]
 
 [ext_resource type="Script" path="res://buildable.gd" id="1_7ifw5"]
+[ext_resource type="Texture2D" uid="uid://dy7dx3q2j4smc" path="res://art/icons/6.png" id="1_25ton"]
 [ext_resource type="Texture2D" uid="uid://bkk6k65vowxcc" path="res://art/Sprite-0002 2.png" id="1_m2lj2"]
 [ext_resource type="PackedScene" uid="uid://dq301i1qh5tko" path="res://buildings/shelf_wine/shelf_wine.tscn" id="1_xx68t"]
 [ext_resource type="PackedScene" uid="uid://c7bxki1lf0m1g" path="res://buildings/shelf_wine/shelf_wine_template.tscn" id="3_gbcrw"]
@@ -9,5 +10,8 @@
 script = ExtResource("1_7ifw5")
 scene = ExtResource("1_xx68t")
 template = ExtResource("3_gbcrw")
-cost = 1
+product_cost = 0
+build_cost = 0
 product_texture = ExtResource("1_m2lj2")
+name = "Wino Mamrot"
+icon = ExtResource("1_25ton")

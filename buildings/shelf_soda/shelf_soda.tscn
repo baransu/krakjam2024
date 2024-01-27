@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://c858n3bx5r5o6"]
+
+[ext_resource type="Script" path="res://buildings/scripts/product_building.gd" id="1_hwofe"]
+[ext_resource type="Material" uid="uid://li5m067f0ccm" path="res://select_material.tres" id="2_pd42t"]
+[ext_resource type="Texture2D" uid="uid://pqkxuhrd7kx0" path="res://art/Sprite-0001-5-lodowamfa.png" id="3_nqguv"]
+[ext_resource type="Texture2D" uid="uid://dgpyxtvfm5jm" path="res://art/cola.png" id="4_11tuh"]
+[ext_resource type="Script" path="res://selectable.gd" id="5_lwrmp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbd7m"]
+resource_local_to_scene = true
+size = Vector2(64, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yy7dt"]
+resource_local_to_scene = true
+size = Vector2(64, 64)
+
+[node name="ShelfWine" type="Node2D"]
+script = ExtResource("1_hwofe")
+select_material = ExtResource("2_pd42t")
+product = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -96)
+texture = ExtResource("3_nqguv")
+
+[node name="Products" type="Node2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Products"]
+position = Vector2(-16, -168)
+texture = ExtResource("4_11tuh")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Products"]
+position = Vector2(0, -168)
+texture = ExtResource("4_11tuh")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Products"]
+position = Vector2(16, -168)
+texture = ExtResource("4_11tuh")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Products"]
+position = Vector2(-17.5, -117.5)
+texture = ExtResource("4_11tuh")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Products"]
+position = Vector2(-1.5, -117.5)
+texture = ExtResource("4_11tuh")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Products"]
+position = Vector2(14.5, -117.5)
+texture = ExtResource("4_11tuh")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Products"]
+position = Vector2(-17.5, -61.5)
+texture = ExtResource("4_11tuh")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Products"]
+position = Vector2(-1.5, -61.5)
+texture = ExtResource("4_11tuh")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Products"]
+position = Vector2(14.5, -61.5)
+texture = ExtResource("4_11tuh")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Products"]
+position = Vector2(-17.5, -5.5)
+texture = ExtResource("4_11tuh")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Products"]
+position = Vector2(-1.5, -5.5)
+texture = ExtResource("4_11tuh")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Products"]
+position = Vector2(14.5, -5.5)
+texture = ExtResource("4_11tuh")
+
+[node name="SelectArea" type="Area2D" parent="."]
+position = Vector2(32, -30)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("5_lwrmp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectArea"]
+position = Vector2(-32, -66)
+shape = SubResource("RectangleShape2D_mbd7m")
+
+[node name="BaseArea" type="StaticBody2D" parent="."]
+position = Vector2(32, -30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
+position = Vector2(-32, 30)
+shape = SubResource("RectangleShape2D_yy7dt")
+
+[node name="Front" type="Marker2D" parent="."]
+position = Vector2(0, 56)
+
+[node name="MenuAnchor" type="Marker2D" parent="."]
+position = Vector2(-32, -288)

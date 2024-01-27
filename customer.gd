@@ -135,6 +135,14 @@ func change_state(next_state: State) -> void:
 					product = "ICECREAM"
 				Building.Product.BREAD:
 					product = "BREAD"
+				Building.Product.TOMCIO:
+					product = "TOMCIO"
+				Building.Product.SODA:
+					product = "SOD"
+				Building.Product.CHIPS:
+					product = "CHIPS"
+				Building.Product.MALPKA:
+					product = "MALPKA"
 				_:
 					product = "NONE"
 

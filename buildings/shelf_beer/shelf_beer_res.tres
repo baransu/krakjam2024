@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Buildable" load_steps=5 format=3 uid="uid://br4togwko5rd3"]
+[gd_resource type="Resource" script_class="Buildable" load_steps=6 format=3 uid="uid://br4togwko5rd3"]
 
 [ext_resource type="Texture2D" uid="uid://b1cbch7lv6s74" path="res://art/Sprite-0001-5-lodowmfa.png" id="1_s4p2b"]
+[ext_resource type="Texture2D" uid="uid://qv2pnbli320s" path="res://art/icons/10.png" id="1_yvd6u"]
 [ext_resource type="PackedScene" uid="uid://b84dyd6d0hn1h" path="res://buildings/shelf_beer/shelf_beer.tscn" id="2_qhiig"]
 [ext_resource type="Script" path="res://buildable.gd" id="3_5m15j"]
 [ext_resource type="PackedScene" uid="uid://bgmr44kekvp40" path="res://buildings/shelf_beer/shelf_beer_template.tscn" id="4_dd221"]
@@ -12,3 +13,5 @@ template = ExtResource("4_dd221")
 product_cost = 1
 build_cost = 1
 product_texture = ExtResource("1_s4p2b")
+name = "Mocny ful"
+icon = ExtResource("1_yvd6u")

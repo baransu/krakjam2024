@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Buildable" load_steps=5 format=3 uid="uid://bbi8wtxunmusn"]
+[gd_resource type="Resource" script_class="Buildable" load_steps=6 format=3 uid="uid://bbi8wtxunmusn"]
 
+[ext_resource type="Texture2D" uid="uid://fxwv1gw7wg7s" path="res://art/icons/9.png" id="1_8g3ru"]
 [ext_resource type="Texture2D" uid="uid://dbe8qx54d7sfc" path="res://art/Sprite-000165.png" id="1_t782r"]
 [ext_resource type="PackedScene" uid="uid://jm67ewtjm6x5" path="res://buildings/shelf_bread/shelf_bread.tscn" id="2_47oi6"]
 [ext_resource type="Script" path="res://buildable.gd" id="3_rlthw"]
@@ -12,3 +13,5 @@ template = ExtResource("4_7pr8r")
 product_cost = 0
 build_cost = 0
 product_texture = ExtResource("1_t782r")
+name = "Kajzerki"
+icon = ExtResource("1_8g3ru")
