@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvio7aaw5oatx"]
+
+[ext_resource type="Texture2D" uid="uid://clwg1nifvuwf2" path="res://art/szyba1.png" id="1_o0n0n"]
+[ext_resource type="Texture2D" uid="uid://nwk4ak3s1psw" path="res://art/szyba2.png" id="2_m8rl4"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qd8co"]
+polygon = PackedVector2Array(64, 128, -64, 128, -64, -128, 64, -128)
+
+[node name="FrontWall" type="Node2D"]
+position = Vector2(-512, -128)
+
+[node name="Sprite-0005-2" type="Sprite2D" parent="."]
+texture = ExtResource("1_o0n0n")
+
+[node name="Sprite-0005-3" type="Sprite2D" parent="."]
+light_mask = 0
+position = Vector2(-2.50003, -4.5)
+scale = Vector2(1, 1)
+texture = ExtResource("2_m8rl4")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_qd8co")
