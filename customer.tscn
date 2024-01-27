@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://2r5d1n83oer5"]
 
 [ext_resource type="Script" path="res://customer.gd" id="1_28mxv"]
-[ext_resource type="Texture2D" uid="uid://divallwkj31nb" path="res://art/Warstwa 3.png" id="2_eihj4"]
+[ext_resource type="Texture2D" uid="uid://cwuqxnqnrt256" path="res://art/Sprite-0007.png" id="2_n21ku"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5l8y"]
 radius = 21.0
@@ -77,7 +77,7 @@ movement_speed = 300.0
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -98)
 scale = Vector2(0.95, 1)
-texture = ExtResource("2_eihj4")
+texture = ExtResource("2_n21ku")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)

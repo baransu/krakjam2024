@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c1vhiidpbpuyc"]
 
 [ext_resource type="Script" path="res://staff.gd" id="1_fgakm"]
-[ext_resource type="Texture2D" uid="uid://divallwkj31nb" path="res://art/Warstwa 3.png" id="2_s07e5"]
+[ext_resource type="Texture2D" uid="uid://cfbxp6iqj3qra" path="res://art/Sprite-0007-2.png" id="2_a0b02"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5l8y"]
 radius = 21.0
@@ -103,10 +103,9 @@ collision_mask = 3
 script = ExtResource("1_fgakm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.509804, 0.87451, 0.533333, 1)
 position = Vector2(0, -98)
 scale = Vector2(0.95, 1)
-texture = ExtResource("2_s07e5")
+texture = ExtResource("2_a0b02")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)

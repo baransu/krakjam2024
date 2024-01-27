@@ -1,6 +1,7 @@
 extends Node2D
 
 var template: Template = null
+@onready var dynamic: Node2D = $Dynamic
 
 var tile_size = 64
 var half_tile = 32
@@ -33,7 +34,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		GameState.Tool.PLACE:
 			template.global_position = pos
 
-			if event is InputEventMouseButton && !template.collision:
+			if event is InputEventMouseButton && template.can_build:
 				if event.is_pressed():
 					place_buildable(pos)
 
@@ -44,7 +45,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func place_buildable(pos: Vector2) -> void:
 	var item: Building = GameState.buildable.scene.instantiate()
 	item.global_position = pos
-	add_child(item)
+	dynamic.add_child(item)
 	GameState.buildings.append(item)
 
 

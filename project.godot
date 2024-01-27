@@ -43,6 +43,7 @@ tool_delete={
 2d_physics/layer_1="buildable"
 2d_physics/layer_2="actor"
 2d_physics/layer_3="selectable"
+2d_physics/layer_4="buildable_area"
 
 [rendering]
 
