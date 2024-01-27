@@ -17,7 +17,6 @@ size = Vector2(128, 64)
 [node name="Shelf" type="Node2D"]
 script = ExtResource("1_xkxnk")
 select_material = ExtResource("2_jfjot")
-type = null
 product = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

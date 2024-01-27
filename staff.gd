@@ -1,16 +1,20 @@
 class_name Staff
 extends CharacterBody2D
 
+signal state_changed
+
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var decision_timer: Timer = $DecisionTimer
 @export var movement_speed: float = 100.0
 @onready var state_label: Label = $StateLabel
 @export var smoke_time := 15.0
+@onready var sprite: Sprite2D = $Sprite2D
 
 enum State { IDLE, REFILL, CHECKOUT, HOTDOG, SMOKE }
 var state = State.CHECKOUT
 var target: Building
+var staff_res: StaffRes
 
 
 func _ready() -> void:
@@ -110,6 +114,7 @@ func change_state(next_state: State) -> void:
 		target.staff_left()
 
 	state = next_state
+	state_changed.emit()
 	match state:
 		State.IDLE:
 			state_label.text = "IDLE"
@@ -135,3 +140,8 @@ func something_hotdog() -> void:
 	anim_player.play("hotdog")
 	await get_tree().create_timer(anim_player.current_animation_length).timeout
 	change_state(Staff.State.CHECKOUT)
+
+
+func set_res(res: StaffRes) -> void:
+	staff_res = res
+	sprite.texture = res.texture

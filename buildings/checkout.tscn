@@ -13,10 +13,8 @@ size = Vector2(128, 64)
 
 [node name="Checkout" type="Node2D"]
 script = ExtResource("1_16yyo")
-max_wait_time = null
 select_material = ExtResource("2_pgep5")
 type = 1
-product = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(32, -61.5)

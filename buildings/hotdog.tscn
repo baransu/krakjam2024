@@ -13,7 +13,6 @@ size = Vector2(128, 70)
 
 [node name="Hotdog" type="Node2D"]
 script = ExtResource("1_w5bch")
-max_wait_time = null
 select_material = ExtResource("2_sq4ic")
 type = 1
 product = 2

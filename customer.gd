@@ -6,7 +6,7 @@ signal state_changed
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var state_label: Label = $StateLabel
 @onready var product_sprite: Sprite2D = $ProductSprite
-@export var movement_speed: float = 100.0
+@export var movement_speed: float = 200.0
 
 var target: Building
 var target_type: Building.Type = Building.Type.CHECKOUT

@@ -19,7 +19,13 @@ func on_customer_left() -> void:
 
 
 func spawn_customer() -> void:
-	if count > 0 && GameState.buildings.size() > 0:
+	var staff_count = get_tree().get_nodes_in_group("staff").size()
+	if (
+		count > 0
+		&& GameState.buildings.size() > 0
+		&& GameState.get_checkout_for_customer() != null
+		&& staff_count > 0
+	):
 		var customer: Customer = customer_scene.instantiate()
 		var pos = get_spawn_point()
 		customer.global_position = pos

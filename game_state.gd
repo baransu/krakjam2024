@@ -7,17 +7,18 @@ signal building_empty(Building)
 signal customer_left
 signal seconds_elapsed_changed
 signal money_changed(int)
+signal staff_changed
 
 var selected: Building
 var buildings: Array[Building] = []
 
 var buildable: Buildable
-var seconds_elapsed := 0
+var seconds_elapsed := 12 * 60  # noon
 
 enum Tool { PLACE, DELETE, SELECT }
 
 var tool: Tool = Tool.SELECT
-var money = 0
+var money = 1000
 
 
 func _ready() -> void:
@@ -43,9 +44,6 @@ func select(b: Building) -> void:
 func _unhandled_key_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		reset_tool()
-
-	if event.is_action_pressed("tool_delete"):
-		delete_tool()
 
 
 func reset_tool() -> void:

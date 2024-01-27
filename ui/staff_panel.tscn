@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cp8lvkxf3u6ng"]
+[gd_scene load_steps=7 format=3 uid="uid://cp8lvkxf3u6ng"]
 
 [ext_resource type="Texture2D" uid="uid://ch4x5rl6lj8t4" path="res://art/trash-can.png" id="1_jjvmt"]
+[ext_resource type="Script" path="res://ui/staff_panel.gd" id="1_l6yho"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h2asx"]
 size = Vector2(64, 64)
@@ -14,7 +15,56 @@ font_size = 32
 size = Vector2(64, 64)
 
 [node name="StaffPanel" type="Panel"]
-custom_minimum_size = Vector2(550, 100)
+custom_minimum_size = Vector2(450, 100)
+mouse_filter = 1
+script = ExtResource("1_l6yho")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = SubResource("PlaceholderTexture2D_h2asx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Halina z Żabki"
+label_settings = SubResource("LabelSettings_2e0bj")
+
+[node name="Wage" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "100 Ż/dzień"
+label_settings = SubResource("LabelSettings_gil2u")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource("PlaceholderTexture2D_fnp7i")
 
 [node name="FireButton" type="Button" parent="."]
 unique_name_in_owner = true
@@ -23,10 +73,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -22.0
-offset_top = -16.0
-offset_right = 10.0
-offset_bottom = 16.0
+offset_left = -38.0
+offset_top = 32.0
+offset_right = -6.0
+offset_bottom = 64.0
 grow_horizontal = 0
 size_flags_horizontal = 6
 size_flags_vertical = 4
@@ -41,45 +91,3 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_jjvmt")
 expand_mode = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
-texture = SubResource("PlaceholderTexture2D_h2asx")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="Name" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "Halina z Żabki"
-label_settings = SubResource("LabelSettings_2e0bj")
-
-[node name="Rate" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-text = "100 Ż/dzień"
-label_settings = SubResource("LabelSettings_gil2u")
-
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = SubResource("PlaceholderTexture2D_fnp7i")

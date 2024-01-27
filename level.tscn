@@ -2128,7 +2128,7 @@ position = Vector2(448, 0)
 [node name="Marker2D4" type="Marker2D" parent="Dynamic/CustomerSpawn/SpawnPoints"]
 position = Vector2(-448, 0)
 
-[node name="StaffSpawner" type="Marker2D" parent="Dynamic"]
+[node name="StaffSpawner" type="Marker2D" parent="Dynamic" groups=["staff_spawner"]]
 y_sort_enabled = true
 position = Vector2(0, 384)
 script = ExtResource("8_sipmc")
