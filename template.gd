@@ -3,11 +3,9 @@ extends Area2D
 
 @onready var sprite: Sprite2D = $Sprite2D
 var collision = false
-@onready var sizing: Sprite2D = $Sizing
 
 
 func _ready() -> void:
-	sizing.hide()
 	area_entered.connect(on_area_entered)
 	area_exited.connect(on_area_exited)
 

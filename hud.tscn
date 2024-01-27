@@ -1,0 +1,93 @@
+[gd_scene load_steps=8 format=3 uid="uid://cdgaksn1few4f"]
+
+[ext_resource type="Script" path="res://HUD.gd" id="1_dqttv"]
+[ext_resource type="Script" path="res://ui/buildings_container.gd" id="2_7q1ln"]
+[ext_resource type="Script" path="res://ui/building_button.gd" id="2_kir6n"]
+[ext_resource type="Texture2D" uid="uid://dli5mvbw25gux" path="res://art/Sprite-0001.png" id="2_mnqpg"]
+[ext_resource type="Resource" uid="uid://cx1bj3sfwh4y7" path="res://buildings/shelf_res.tres" id="4_70qfo"]
+[ext_resource type="Resource" uid="uid://cd5kajlna4w82" path="res://buildings/checkout_res.tres" id="6_iqtfk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5kdf5"]
+font_size = 32
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_dqttv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="ToolLabel" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Tool: Build"
+label_settings = SubResource("LabelSettings_5kdf5")
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+script = ExtResource("2_7q1ln")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BuildingButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("2_kir6n")
+buildable = ExtResource("4_70qfo")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer/BuildingButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mnqpg")
+expand_mode = 1
+
+[node name="BuildingButton2" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("2_kir6n")
+buildable = ExtResource("6_iqtfk")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer/BuildingButton2"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mnqpg")
+expand_mode = 1

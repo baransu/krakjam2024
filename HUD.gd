@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var tool_label: Label = $ToolLabel
+@onready var tool_label: Label = %ToolLabel
 
 
 func _ready():

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://2r5d1n83oer5"]
+
+[ext_resource type="Script" path="res://customer.gd" id="1_28mxv"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jfn6e"]
+size = Vector2(64, 64)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5l8y"]
+radius = 14.0
+height = 54.0
+
+[node name="Customer" type="CharacterBody2D"]
+script = ExtResource("1_28mxv")
+movement_speed = 300.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_jfn6e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.84217e-14, 18)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_p5l8y")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+radius = 32.0
+max_speed = 300.0

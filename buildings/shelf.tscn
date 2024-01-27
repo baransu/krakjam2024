@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://dq301i1qh5tko"]
+
+[ext_resource type="Script" path="res://building.gd" id="1_56lhf"]
+[ext_resource type="Material" uid="uid://li5m067f0ccm" path="res://select_material.tres" id="2_c2riq"]
+[ext_resource type="Texture2D" uid="uid://dli5mvbw25gux" path="res://art/Sprite-0001.png" id="3_a5sqs"]
+[ext_resource type="Script" path="res://selectable.gd" id="4_gacnw"]
+[ext_resource type="Texture2D" uid="uid://bkk6k65vowxcc" path="res://art/Sprite-0002 2.png" id="4_gl0pt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbd7m"]
+size = Vector2(128, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yy7dt"]
+size = Vector2(128, 128)
+
+[node name="Shelf" type="Node2D"]
+script = ExtResource("1_56lhf")
+select_material = ExtResource("2_c2riq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(32, -64)
+texture = ExtResource("3_a5sqs")
+
+[node name="Products" type="Node2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="Products"]
+position = Vector2(-8, -96)
+texture = ExtResource("4_gl0pt")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Products"]
+position = Vector2(32, -96)
+texture = ExtResource("4_gl0pt")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Products"]
+position = Vector2(72, -96)
+texture = ExtResource("4_gl0pt")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Products"]
+position = Vector2(-8, -16)
+texture = ExtResource("4_gl0pt")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Products"]
+position = Vector2(32, -16)
+texture = ExtResource("4_gl0pt")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Products"]
+position = Vector2(72, -16)
+texture = ExtResource("4_gl0pt")
+
+[node name="SelectArea" type="Area2D" parent="."]
+position = Vector2(32, -30)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("4_gacnw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectArea"]
+position = Vector2(0, -34)
+shape = SubResource("RectangleShape2D_mbd7m")
+
+[node name="BaseArea" type="Area2D" parent="."]
+position = Vector2(32, -30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_yy7dt")
+
+[node name="Front" type="Marker2D" parent="."]
+position = Vector2(32, 56)
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+position = Vector2(32, -32)
+radius = 72.0

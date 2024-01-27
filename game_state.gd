@@ -1,14 +1,19 @@
 extends Node
 
 signal tool_changed
+signal building_destroyed(Building)
+signal buildable_changed
+signal building_empty(Building)
 
 var selected: Building
-
 var buildings: Array[Building] = []
+
+var buildable: Buildable
 
 enum Tool { PLACE, DELETE, SELECT }
 
-var tool: Tool = Tool.PLACE
+var tool: Tool = Tool.SELECT
+var money = 0
 
 
 func select(b: Building) -> void:
@@ -46,3 +51,28 @@ func clear_selection() -> void:
 func delete(b: Building) -> void:
 	b.queue_free()
 	buildings.erase(b)
+	building_destroyed.emit(b)
+
+
+func get_building_by_type(type: Building.Type) -> Building:
+	buildings.shuffle()
+	for b in buildings:
+		if b.type == type && b.has_product():
+			return b
+
+	return null
+
+
+func set_buildable(b: Buildable) -> void:
+	print("switching buildable")
+	clear_selection()
+	tool = Tool.PLACE
+	tool_changed.emit()
+
+	buildable = b
+	buildable_changed.emit()
+
+
+func add_money() -> void:
+	money += 1
+	print("money: ", money)
