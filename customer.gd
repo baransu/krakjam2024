@@ -7,6 +7,9 @@ signal state_changed
 @onready var state_label: Label = $StateLabel
 @onready var product_sprite: Sprite2D = $ProductSprite
 @export var movement_speed: float = 200.0
+@onready var sprite: Sprite2D = $Sprite2D
+
+@export var textures: Array[Texture2D] = []
 
 var target: Building
 var target_type: Building.Type = Building.Type.CHECKOUT
@@ -25,6 +28,7 @@ func _ready() -> void:
 	random_product()
 	change_state(State.PRODUCT)
 	find_target(target_type, false)
+	sprite.texture = textures[randi() % textures.size()]
 
 
 func random_product() -> void:
@@ -33,12 +37,13 @@ func random_product() -> void:
 		if building.product != Building.Product.NONE:
 			products.append(building.product)
 
-	var idx = randi() % products.size()
-	target_product = products[idx]
-	if target_product == Building.Product.HOTDOG:
-		target_type = Building.Type.CHECKOUT
-	else:
-		target_type = Building.Type.PRODUCT
+	if products.size() > 0:
+		var idx = randi() % products.size()
+		target_product = products[idx]
+		if target_product == Building.Product.HOTDOG:
+			target_type = Building.Type.CHECKOUT
+		else:
+			target_type = Building.Type.PRODUCT
 
 
 func on_nav_finished() -> void:

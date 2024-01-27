@@ -3,6 +3,8 @@ extends CheckoutBuilding
 
 
 func interact_customer(customer: Customer) -> void:
+	customer.nav_agent.avoidance_priority = 1
+
 	for x in range(max_wait_time):
 		if is_working():
 			break

@@ -1,16 +1,23 @@
-[gd_scene load_steps=37 format=3 uid="uid://cdgaksn1few4f"]
+[gd_scene load_steps=47 format=3 uid="uid://cdgaksn1few4f"]
 
 [ext_resource type="Script" path="res://HUD.gd" id="1_dqttv"]
 [ext_resource type="Script" path="res://ui/buildings_container.gd" id="2_7q1ln"]
 [ext_resource type="Texture2D" uid="uid://dhaj4mw6ixrdu" path="res://art/heart-plus.png" id="2_851ro"]
 [ext_resource type="PackedScene" uid="uid://cp8lvkxf3u6ng" path="res://ui/staff_panel.tscn" id="2_j5xho"]
 [ext_resource type="Script" path="res://ui/building_button.gd" id="2_kir6n"]
+[ext_resource type="Texture2D" uid="uid://cja4t4qvt75yo" path="res://art/glowy/glowa4.png" id="3_jga2w"]
 [ext_resource type="Script" path="res://staff_res.gd" id="3_kckky"]
 [ext_resource type="Script" path="res://ui/delete_button.gd" id="3_q3tk0"]
 [ext_resource type="Texture2D" uid="uid://bsbnpal1phlu4" path="res://art/Sprite-0007-2.png" id="4_begqd"]
 [ext_resource type="Resource" uid="uid://cygl2nish317r" path="res://buildings/hotdog/hotdog_res.tres" id="4_jk0rg"]
+[ext_resource type="Texture2D" uid="uid://cmfmu3ydo8ubw" path="res://art/glowy/glowa3.png" id="6_4somm"]
 [ext_resource type="PackedScene" uid="uid://dbedkj40f785x" path="res://ui/building_panel.tscn" id="6_cybql"]
+[ext_resource type="Texture2D" uid="uid://qkd6y75bqw2t" path="res://art/Sprite-0007-3.png" id="7_e4f51"]
+[ext_resource type="Texture2D" uid="uid://icn2ycy81btw" path="res://art/glowy/glowa2.png" id="8_nifrp"]
+[ext_resource type="Texture2D" uid="uid://c43pyvvpb7dwu" path="res://art/Sprite-0007-4.png" id="9_cb4en"]
+[ext_resource type="Texture2D" uid="uid://da2j3lddtr5r7" path="res://art/glowy/glowa1.png" id="10_a5cht"]
 [ext_resource type="Texture2D" uid="uid://cos6j80okj1ig" path="res://art/icons/4.png" id="11_e0y0g"]
+[ext_resource type="Texture2D" uid="uid://llfsq1ba8cn2" path="res://art/Sprite-0007-5.png" id="11_l0s6m"]
 [ext_resource type="Resource" uid="uid://br4togwko5rd3" path="res://buildings/shelf_beer/shelf_beer_res.tres" id="11_yn7g0"]
 [ext_resource type="Resource" uid="uid://cx1bj3sfwh4y7" path="res://buildings/shelf_wine/shelf_wine_res.tres" id="13_cmllh"]
 [ext_resource type="Texture2D" uid="uid://c2phbkarwf0kp" path="res://art/icons/3.png" id="13_e2r5d"]
@@ -37,6 +44,28 @@ script = ExtResource("3_kckky")
 texture = ExtResource("4_begqd")
 name = "Robert"
 wage = 10
+avatar = ExtResource("3_jga2w")
+
+[sub_resource type="Resource" id="Resource_y4ak6"]
+script = ExtResource("3_kckky")
+texture = ExtResource("7_e4f51")
+name = "Marcin"
+wage = 10
+avatar = ExtResource("6_4somm")
+
+[sub_resource type="Resource" id="Resource_7sdde"]
+script = ExtResource("3_kckky")
+texture = ExtResource("9_cb4en")
+name = "Alicja"
+wage = 10
+avatar = ExtResource("8_nifrp")
+
+[sub_resource type="Resource" id="Resource_ruj08"]
+script = ExtResource("3_kckky")
+texture = ExtResource("11_l0s6m")
+name = "Żaneta"
+wage = 10
+avatar = ExtResource("10_a5cht")
 
 [sub_resource type="LabelSettings" id="LabelSettings_s7rcm"]
 font_size = 32
@@ -53,7 +82,7 @@ font_size = 32
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_dqttv")
 staff_panel_scene = ExtResource("2_j5xho")
-staff_list = Array[ExtResource("3_kckky")]([SubResource("Resource_4bkkg")])
+staff_list = Array[ExtResource("3_kckky")]([SubResource("Resource_4bkkg"), SubResource("Resource_y4ak6"), SubResource("Resource_7sdde"), SubResource("Resource_ruj08")])
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -131,7 +160,7 @@ mouse_filter = 2
 layout_mode = 2
 
 [node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
-custom_minimum_size = Vector2(380, 150)
+custom_minimum_size = Vector2(400, 150)
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Panel"]
@@ -718,9 +747,8 @@ mouse_filter = 1
 [node name="AlkoholAccessPanel" type="ColorRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/Control"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_left = -321.0
+offset_left = -320.0
 offset_top = -1.0
-offset_right = -1.0
 offset_bottom = 103.0
 mouse_filter = 1
 color = Color(0, 0, 0, 0.764706)

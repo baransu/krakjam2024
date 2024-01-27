@@ -2112,6 +2112,7 @@ y_sort_enabled = true
 y_sort_enabled = true
 position = Vector2(0, 416)
 script = ExtResource("6_xh5gs")
+count = 10
 customer_scene = ExtResource("7_ukjo2")
 
 [node name="Timer" type="Timer" parent="Dynamic/CustomerSpawn"]

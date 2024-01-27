@@ -10,6 +10,7 @@ signal state_changed
 @onready var state_label: Label = $StateLabel
 @export var smoke_time := 15.0
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var szlug: Node2D = %Szlug
 
 enum State { IDLE, REFILL, CHECKOUT, HOTDOG, SMOKE }
 var state = State.CHECKOUT
@@ -18,6 +19,7 @@ var staff_res: StaffRes
 
 
 func _ready() -> void:
+	szlug.hide()
 	nav_agent.velocity_computed.connect(on_velocity_computed)
 	nav_agent.navigation_finished.connect(on_nav_finished)
 	GameState.building_destroyed.connect(on_building_destroyed)
@@ -65,7 +67,9 @@ func on_nav_finished() -> void:
 				target.staff_arrived(self)
 
 		State.SMOKE:
+			szlug.show()
 			await get_tree().create_timer(smoke_time).timeout
+			szlug.hide()
 			change_state(State.CHECKOUT)
 			find_target(Building.Type.CHECKOUT)
 
