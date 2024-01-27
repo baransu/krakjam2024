@@ -17,8 +17,7 @@ func on_customer_left() -> void:
 
 
 func spawn_customer() -> void:
-	print(count)
-	if count > 0:
+	if count > 0 && GameState.buildings.size() > 0:
 		var customer: Customer = customer_scene.instantiate()
 		add_child(customer)
 		customer.global_position = global_position

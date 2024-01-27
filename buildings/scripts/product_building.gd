@@ -35,16 +35,7 @@ func deselect() -> void:
 	menu.hide()
 
 
-func interact(actor: Node) -> void:
-	if actor is Customer:
-		print("interact with customer")
-		await interact_customer()
-	elif actor is Staff:
-		print("interact with staff")
-		await interact_staff()
-
-
-func interact_staff() -> void:
+func interact_staff(_staff: Staff) -> void:
 	await get_tree().create_timer(1).timeout
 
 	products = max_products
@@ -55,7 +46,7 @@ func interact_staff() -> void:
 	update_refill_button()
 
 
-func interact_customer() -> void:
+func interact_customer(_customer: Customer) -> void:
 	await get_tree().create_timer(1).timeout
 
 	if products <= 0:

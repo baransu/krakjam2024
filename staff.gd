@@ -1,13 +1,14 @@
 class_name Staff
 extends CharacterBody2D
 
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var decision_timer: Timer = $DecisionTimer
 @export var movement_speed: float = 100.0
 @onready var state_label: Label = $StateLabel
 @export var smoke_time := 15.0
 
-enum State { IDLE, REFILL, CHECKOUT, SMOKE }
+enum State { IDLE, REFILL, CHECKOUT, HOTDOG, SMOKE }
 var state = State.CHECKOUT
 var target: Building
 
@@ -49,7 +50,7 @@ func on_nav_finished() -> void:
 	match state:
 		State.REFILL:
 			if target is ProductBuilding:
-				await target.interact(self)
+				await target.interact_staff(self)
 
 			change_state(State.CHECKOUT)
 			find_target(Building.Type.CHECKOUT)
@@ -57,16 +58,19 @@ func on_nav_finished() -> void:
 		State.CHECKOUT:
 			change_state(State.CHECKOUT)
 			if target is CheckoutBuilding:
-				target.staff_arrived()
+				target.staff_arrived(self)
 
 		State.SMOKE:
 			await get_tree().create_timer(smoke_time).timeout
 			change_state(State.CHECKOUT)
 			find_target(Building.Type.CHECKOUT)
 
+		_:
+			pass
+
 
 func find_target(type: Building.Type) -> void:
-	target = GameState.get_building_by_type(type, false)
+	target = GameState.get_building_for_staff(type)
 	if is_instance_valid(target):
 		var pos = Vector2.ZERO
 		if type == Building.Type.CHECKOUT:
@@ -97,7 +101,12 @@ func on_velocity_computed(safe_velocity: Vector2) -> void:
 
 
 func change_state(next_state: State) -> void:
-	if state == State.CHECKOUT && next_state != state && target is CheckoutBuilding:
+	if (
+		state == State.CHECKOUT
+		&& next_state != State.HOTDOG
+		&& next_state != state
+		&& target is CheckoutBuilding
+	):
 		target.staff_left()
 
 	state = next_state
@@ -114,5 +123,15 @@ func change_state(next_state: State) -> void:
 		State.SMOKE:
 			state_label.text = "SMOKE"
 
+		State.HOTDOG:
+			state_label.text = "HOTDOG"
+
 		_:
 			pass
+
+
+func something_hotdog() -> void:
+	change_state(Staff.State.HOTDOG)
+	anim_player.play("hotdog")
+	await get_tree().create_timer(anim_player.current_animation_length).timeout
+	change_state(Staff.State.CHECKOUT)

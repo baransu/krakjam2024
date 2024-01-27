@@ -9,10 +9,12 @@ signal on_selected(bool)
 
 @export var select_material: Material
 @export var type: Type = Type.PRODUCT
+@export var product: Product = Product.NONE
 
 var selected = false
 
 enum Type { PRODUCT, CHECKOUT }
+enum Product { NONE, BEER, HOTDOG }
 
 
 func _ready() -> void:

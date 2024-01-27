@@ -55,14 +55,44 @@ func delete(b: Building) -> void:
 	building_destroyed.emit(b)
 
 
-func get_building_by_type(type: Building.Type, working: bool = true) -> Building:
+func get_building_for_product(product: Building.Product) -> Building:
+	buildings.shuffle()
+	for b in buildings:
+		if b.product == product:
+			match b.type:
+				# always find checkout
+				Building.Type.CHECKOUT:
+					return b
+
+				# other must be working and product should match
+				_:
+					if b.is_working():
+						return b
+
+	return null
+
+
+func get_checkout_for_customer() -> Building:
+	buildings.shuffle()
+	for b in buildings:
+		if b.type == Building.Type.CHECKOUT:
+			return b
+
+	return null
+
+
+func get_building_for_staff(type: Building.Type) -> Building:
 	buildings.shuffle()
 	for b in buildings:
 		if b.type == type:
-			if working && b.is_working():
-				return b
-			elif !working:
-				return b
+			match type:
+				# find checkout without staff
+				Building.Type.CHECKOUT:
+					if !b.is_working():
+						return b
+
+				_:
+					return b
 
 	return null
 

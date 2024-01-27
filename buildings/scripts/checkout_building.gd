@@ -3,34 +3,37 @@ extends Building
 
 signal start_working
 
-var working = false
+var staff: Staff
+
+@export var max_wait_time := 15
 
 
-func interact(_actor: Node) -> void:
-	for x in range(15):
-		if working:
+func interact_customer(_customer: Customer) -> void:
+	for x in range(max_wait_time):
+		if is_working():
 			break
 		else:
 			await get_tree().create_timer(1).timeout
 
-	if working:
+	if is_working():
 		await get_tree().create_timer(1).timeout
 		GameState.add_money()
+	else:
+		# todo: return product or not?
+		pass
 
 
 func is_working() -> bool:
-	return working
+	return staff != null && is_instance_valid(staff)
 
 
-func staff_arrived() -> void:
+func staff_arrived(s: Staff) -> void:
 	start_working.emit()
-	print("staff arrived")
-	working = true
+	staff = s
 
 
 func staff_left() -> void:
-	print("staff left")
-	working = false
+	staff = null
 
 
 func get_back() -> Vector2:

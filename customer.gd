@@ -8,7 +8,8 @@ signal state_changed
 @export var movement_speed: float = 100.0
 
 var target: Building
-var target_type: Building.Type = Building.Type.PRODUCT
+var target_type: Building.Type = Building.Type.CHECKOUT
+var target_product: Building.Product = Building.Product.HOTDOG
 
 enum State { PRODUCT, CHECKOUT, EXIT }
 var state = State.PRODUCT
@@ -19,24 +20,39 @@ func _ready() -> void:
 	nav_agent.navigation_finished.connect(on_nav_finished)
 	GameState.building_destroyed.connect(on_building_destroyed_or_empty)
 	GameState.building_empty.connect(on_building_destroyed_or_empty)
+	random_product()
 	change_state(State.PRODUCT)
 	find_target(target_type, false)
+
+
+func random_product() -> void:
+	var products = [Building.Product.BEER, Building.Product.HOTDOG]
+	var idx = randi() % products.size()
+	target_product = products[idx]
+	if target_product == Building.Product.HOTDOG:
+		target_type = Building.Type.CHECKOUT
+	else:
+		target_type = Building.Type.PRODUCT
 
 
 func on_nav_finished() -> void:
 	match state:
 		State.PRODUCT:
 			if is_instance_valid(target):
-				await target.interact(self)
+				await target.interact_customer(self)
 
-				change_state(State.CHECKOUT)
-				find_target(Building.Type.CHECKOUT, false)
+				if target_product == Building.Product.HOTDOG:
+					change_state(State.EXIT)
+					find_exit()
+				else:
+					change_state(State.CHECKOUT)
+					find_target(Building.Type.CHECKOUT, false)
 			else:
 				find_target(target_type, false)
 
 		State.CHECKOUT:
 			if is_instance_valid(target):
-				await target.interact(self)
+				await target.interact_customer(self)
 
 			change_state(State.EXIT)
 			find_exit()
@@ -47,11 +63,11 @@ func on_nav_finished() -> void:
 
 
 func find_target(type: Building.Type, exit: bool) -> void:
-	var should_be_working = true
-	if type == Building.Type.CHECKOUT:
-		should_be_working = false
+	if type == Building.Type.PRODUCT:
+		target = GameState.get_building_for_product(target_product)
+	else:
+		target = GameState.get_checkout_for_customer()
 
-	target = GameState.get_building_by_type(type, should_be_working)
 	if is_instance_valid(target):
 		nav_agent.set_target_position(target.get_front())
 	else:
@@ -59,7 +75,7 @@ func find_target(type: Building.Type, exit: bool) -> void:
 			find_exit()
 		else:
 			print("waiting for building to be created")
-			await get_tree().create_timer(10).timeout
+			await get_tree().create_timer(1).timeout
 			find_target(type, true)
 
 
@@ -98,7 +114,16 @@ func change_state(next_state: State) -> void:
 	state = next_state
 	match state:
 		State.PRODUCT:
-			state_label.text = "PRODUCT"
+			var product
+			match target_product:
+				Building.Product.BEER:
+					product = "BEER"
+				Building.Product.HOTDOG:
+					product = "HOTDOG"
+				_:
+					product = "TODO"
+
+			state_label.text = "PRODUCT: " + product
 
 		State.CHECKOUT:
 			state_label.text = "CHECKOUT"

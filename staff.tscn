@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1vhiidpbpuyc"]
+[gd_scene load_steps=8 format=3 uid="uid://c1vhiidpbpuyc"]
 
 [ext_resource type="Script" path="res://staff.gd" id="1_fgakm"]
 [ext_resource type="Texture2D" uid="uid://divallwkj31nb" path="res://art/Warstwa 3.png" id="2_s07e5"]
@@ -33,6 +33,34 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(0.95, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_27ta8"]
+resource_name = "hotdog"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
 
 [sub_resource type="Animation" id="Animation_l0fc1"]
 resource_name = "idle"
@@ -65,6 +93,7 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q2a2j"]
 _data = {
 "RESET": SubResource("Animation_ngac3"),
+"hotdog": SubResource("Animation_27ta8"),
 "idle": SubResource("Animation_l0fc1")
 }
 
