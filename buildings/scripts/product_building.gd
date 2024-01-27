@@ -87,7 +87,7 @@ func is_working() -> bool:
 	return products > 0
 
 
-func update_refill_button() -> void:
+func update_refill_button(_delta: int = 0) -> void:
 	if products < max_products:
 		refill_button.show()
 		if GameState.money < get_refill_cost():
