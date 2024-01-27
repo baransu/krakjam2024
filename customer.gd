@@ -1,11 +1,14 @@
 class_name Customer
 extends CharacterBody2D
 
+signal state_changed
+
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
+@onready var state_label: Label = $StateLabel
 @export var movement_speed: float = 100.0
 
 var target: Building
-var target_type: Building.Type = Building.Type.BEER
+var target_type: Building.Type = Building.Type.PRODUCT
 
 enum State { PRODUCT, CHECKOUT, EXIT }
 var state = State.PRODUCT
@@ -16,6 +19,7 @@ func _ready() -> void:
 	nav_agent.navigation_finished.connect(on_nav_finished)
 	GameState.building_destroyed.connect(on_building_destroyed_or_empty)
 	GameState.building_empty.connect(on_building_destroyed_or_empty)
+	change_state(State.PRODUCT)
 	find_target(target_type, false)
 
 
@@ -23,32 +27,38 @@ func on_nav_finished() -> void:
 	match state:
 		State.PRODUCT:
 			if is_instance_valid(target):
-				await target.interact()
+				await target.interact(self)
 
-				state = State.CHECKOUT
+				change_state(State.CHECKOUT)
 				find_target(Building.Type.CHECKOUT, false)
 			else:
 				find_target(target_type, false)
 
 		State.CHECKOUT:
 			if is_instance_valid(target):
-				await target.interact()
+				await target.interact(self)
 
-			state = State.EXIT
+			change_state(State.EXIT)
 			find_exit()
 
 		State.EXIT:
+			GameState.customer_left.emit()
 			queue_free()
 
 
 func find_target(type: Building.Type, exit: bool) -> void:
-	target = GameState.get_building_by_type(type)
+	var should_be_working = true
+	if type == Building.Type.CHECKOUT:
+		should_be_working = false
+
+	target = GameState.get_building_by_type(type, should_be_working)
 	if is_instance_valid(target):
 		nav_agent.set_target_position(target.get_front())
 	else:
 		if exit:
 			find_exit()
 		else:
+			print("waiting for building to be created")
 			await get_tree().create_timer(10).timeout
 			find_target(type, true)
 
@@ -82,3 +92,19 @@ func _physics_process(_delta: float):
 func on_velocity_computed(safe_velocity: Vector2) -> void:
 	velocity = safe_velocity
 	move_and_slide()
+
+
+func change_state(next_state: State) -> void:
+	state = next_state
+	match state:
+		State.PRODUCT:
+			state_label.text = "PRODUCT"
+
+		State.CHECKOUT:
+			state_label.text = "CHECKOUT"
+
+		State.EXIT:
+			state_label.text = "EXIT"
+
+		_:
+			pass

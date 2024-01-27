@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://2r5d1n83oer5"]
+[gd_scene load_steps=7 format=3 uid="uid://c1vhiidpbpuyc"]
 
-[ext_resource type="Script" path="res://customer.gd" id="1_28mxv"]
-[ext_resource type="Texture2D" uid="uid://divallwkj31nb" path="res://art/Warstwa 3.png" id="2_eihj4"]
+[ext_resource type="Script" path="res://staff.gd" id="1_fgakm"]
+[ext_resource type="Texture2D" uid="uid://divallwkj31nb" path="res://art/Warstwa 3.png" id="2_s07e5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5l8y"]
 radius = 21.0
@@ -68,16 +68,16 @@ _data = {
 "idle": SubResource("Animation_l0fc1")
 }
 
-[node name="Customer" type="CharacterBody2D"]
+[node name="Staff" type="CharacterBody2D" groups=["staff"]]
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("1_28mxv")
-movement_speed = 300.0
+script = ExtResource("1_fgakm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.509804, 0.87451, 0.533333, 1)
 position = Vector2(0, -98)
 scale = Vector2(0.95, 1)
-texture = ExtResource("2_eihj4")
+texture = ExtResource("2_s07e5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -5)
@@ -85,9 +85,10 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_p5l8y")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+target_desired_distance = 32.0
 path_postprocessing = 1
 avoidance_enabled = true
-radius = 32.0
+radius = 24.0
 max_speed = 300.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -95,6 +96,9 @@ libraries = {
 "": SubResource("AnimationLibrary_q2a2j")
 }
 autoplay = "idle"
+
+[node name="DecisionTimer" type="Timer" parent="."]
+autostart = true
 
 [node name="StateLabel" type="Label" parent="."]
 offset_left = -37.0

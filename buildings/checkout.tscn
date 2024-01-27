@@ -1,24 +1,24 @@
 [gd_scene load_steps=7 format=3 uid="uid://c468m31ankxao"]
 
-[ext_resource type="Script" path="res://building.gd" id="1_m5hba"]
+[ext_resource type="Script" path="res://checkout_building.gd" id="1_taovi"]
 [ext_resource type="Material" uid="uid://li5m067f0ccm" path="res://select_material.tres" id="2_pgep5"]
-[ext_resource type="Texture2D" uid="uid://6wobndqppnd7" path="res://art/Grupa 4.png" id="3_g0wkr"]
+[ext_resource type="Texture2D" uid="uid://b0y6nesk2srv4" path="res://art/Sprite-0006.png" id="3_h3fq8"]
 [ext_resource type="Script" path="res://selectable.gd" id="4_b0ur2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbd7m"]
 size = Vector2(128, 192)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yy7dt"]
-size = Vector2(128, 128)
+size = Vector2(128, 70)
 
 [node name="Checkout" type="Node2D"]
-script = ExtResource("1_m5hba")
+script = ExtResource("1_taovi")
 select_material = ExtResource("2_pgep5")
 type = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(32, -64)
-texture = ExtResource("3_g0wkr")
+texture = ExtResource("3_h3fq8")
 
 [node name="SelectArea" type="Area2D" parent="."]
 position = Vector2(32, -30)
@@ -34,12 +34,15 @@ shape = SubResource("RectangleShape2D_mbd7m")
 position = Vector2(32, -30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
-position = Vector2(0, -2)
+position = Vector2(0, 27)
 shape = SubResource("RectangleShape2D_yy7dt")
 
 [node name="Front" type="Marker2D" parent="."]
 position = Vector2(32, 56)
 
+[node name="Back" type="Marker2D" parent="."]
+position = Vector2(32, -91)
+
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
-position = Vector2(32, -32)
-radius = 72.0
+position = Vector2(32, -16)
+radius = 48.0

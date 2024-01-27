@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ce6b7u0jhjp55"]
+[gd_scene load_steps=9 format=3 uid="uid://ce6b7u0jhjp55"]
 
 [ext_resource type="Script" path="res://builder.gd" id="1_hf5fo"]
 [ext_resource type="Script" path="res://grid.gd" id="2_hipk1"]
 [ext_resource type="Script" path="res://camera.gd" id="4_4aa6m"]
 [ext_resource type="PackedScene" uid="uid://cdgaksn1few4f" path="res://hud.tscn" id="5_48ess"]
+[ext_resource type="PackedScene" uid="uid://c1vhiidpbpuyc" path="res://staff.tscn" id="5_mo255"]
 [ext_resource type="Script" path="res://customer_spawn.gd" id="6_pyy4g"]
 [ext_resource type="PackedScene" uid="uid://2r5d1n83oer5" path="res://customer.tscn" id="7_s87fi"]
 
@@ -29,11 +30,17 @@ script = ExtResource("4_4aa6m")
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_h631n")
 
+[node name="Staff" parent="." instance=ExtResource("5_mo255")]
+position = Vector2(548, 0)
+
 [node name="CustomerSpawn" type="Marker2D" parent="." groups=["exit"]]
 y_sort_enabled = true
-position = Vector2(853, -435)
+position = Vector2(779, 4)
 script = ExtResource("6_pyy4g")
 customer_scene = ExtResource("7_s87fi")
 
 [node name="Timer" type="Timer" parent="CustomerSpawn"]
 autostart = true
+
+[node name="Smoke" type="Marker2D" parent="." groups=["smoke"]]
+position = Vector2(905, 431)

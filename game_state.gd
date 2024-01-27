@@ -4,6 +4,7 @@ signal tool_changed
 signal building_destroyed(Building)
 signal buildable_changed
 signal building_empty(Building)
+signal customer_left
 
 var selected: Building
 var buildings: Array[Building] = []
@@ -54,11 +55,14 @@ func delete(b: Building) -> void:
 	building_destroyed.emit(b)
 
 
-func get_building_by_type(type: Building.Type) -> Building:
+func get_building_by_type(type: Building.Type, working: bool = true) -> Building:
 	buildings.shuffle()
 	for b in buildings:
-		if b.type == type && b.has_product():
-			return b
+		if b.type == type:
+			if working && b.is_working():
+				return b
+			elif !working:
+				return b
 
 	return null
 
