@@ -8,12 +8,15 @@ signal customer_left
 signal seconds_elapsed_changed
 signal money_changed(int)
 signal staff_changed
+signal alkohol_access_changed
 
 var selected: Building
 var buildings: Array[Building] = []
 
 var buildable: Buildable
 var seconds_elapsed := 12 * 60  # noon
+var alkohol_access := false
+var alkohol_access_price := 1000
 
 enum Tool { PLACE, DELETE, SELECT }
 
@@ -131,3 +134,9 @@ func add_money(delta: int = 1) -> void:
 func remove_money(delta: int = 1) -> void:
 	money -= delta
 	money_changed.emit(-delta)
+
+
+func buy_alkohol_access() -> void:
+	alkohol_access = true
+	alkohol_access_changed.emit()
+	remove_money(alkohol_access_price)

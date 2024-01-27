@@ -7,6 +7,8 @@ extends CanvasLayer
 @onready var hire_button: Button = %HireButton
 @onready var staff_container: Container = %StaffContainer
 @onready var hire_panel: Panel = %HirePanel
+@onready var alkohol_access_panel: Control = %AlkoholAccessPanel
+@onready var alkohol_access_button: Button = %AlkoholAccessButton
 
 @export var staff_panel_scene: PackedScene
 
@@ -17,14 +19,17 @@ var hire_cost = 100
 
 func _ready():
 	hire_button.pressed.connect(on_hire)
+	alkohol_access_button.pressed.connect(on_buy_alkohol_access)
 	GameState.tool_changed.connect(update_tool_ui)
 	GameState.money_changed.connect(update_money_ui)
 	GameState.seconds_elapsed_changed.connect(update_time_ui)
 	GameState.staff_changed.connect(update_staff_ui)
+	GameState.alkohol_access_changed.connect(update_alkohol_access_ui)
 	update_tool_ui()
 	update_money_ui(0)
 	update_time_ui()
 	update_staff_ui()
+	update_alkohol_access_ui()
 
 
 func on_hire() -> void:
@@ -52,6 +57,11 @@ func update_tool_ui() -> void:
 
 func update_money_ui(_delta: int) -> void:
 	money_label.text = "Żabsy: $" + str(GameState.money)
+	if !GameState.alkohol_access:
+		if GameState.money < GameState.alkohol_access_price:
+			alkohol_access_button.disabled = true
+		else:
+			alkohol_access_button.disabled = false
 
 
 func update_time_ui() -> void:
@@ -93,3 +103,16 @@ func format_seconds_elapsed(seconds_elapsed: int) -> String:
 		m = m.pad_zeros(2)
 
 	return m + ":" + s
+
+
+func update_alkohol_access_ui() -> void:
+	if GameState.alkohol_access:
+		alkohol_access_panel.hide()
+		alkohol_access_button.hide()
+	else:
+		alkohol_access_panel.show()
+		alkohol_access_panel.show()
+
+
+func on_buy_alkohol_access() -> void:
+	GameState.buy_alkohol_access()
