@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cfbxp6iqj3qra" path="res://art/Sprite-0007-2.png" id="2_a0b02"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5l8y"]
-radius = 21.0
-height = 54.0
+radius = 17.0
+height = 62.0
 
 [sub_resource type="Animation" id="Animation_ngac3"]
 length = 0.001
@@ -96,7 +96,7 @@ scale = Vector2(0.95, 1)
 texture = ExtResource("2_a0b02")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -5)
+position = Vector2(-1.81899e-12, -17)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_p5l8y")
 
@@ -106,6 +106,7 @@ path_postprocessing = 1
 avoidance_enabled = true
 radius = 24.0
 max_speed = 300.0
+avoidance_priority = 0.75
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

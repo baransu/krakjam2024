@@ -15,7 +15,7 @@ var buildings: Array[Building] = []
 
 var buildable: Buildable
 var seconds_elapsed := 12 * 60  # noon
-var alkohol_access := false
+var alkohol_access := true
 var alkohol_access_price := 1000
 
 enum Tool { PLACE, DELETE, SELECT }

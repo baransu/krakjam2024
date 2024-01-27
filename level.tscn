@@ -18,6 +18,7 @@
 vertices = PackedVector2Array(-138, -118, 246, -118, 246, 310, -263, 310, -196, 394, 246, 425, 246, 502, -886, 502, -886, 425, -444, 394, -268, 322, -372, 322, -377, 310, -886, 310, -886, -438, -138, -438)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8, 9), PackedInt32Array(10, 4, 9, 11), PackedInt32Array(12, 13, 14, 15, 0), PackedInt32Array(12, 0, 3, 10, 11)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(256, 320, 256, -128, -128, -128, -128, -448, -896, -448, -896, 320, -384, 320, -448, 384, -896, 416, -896, 512, 256, 512, 256, 416, -192, 384, -256, 320)])
+parsed_geometry_type = 1
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="Level" type="Node2D"]
@@ -2104,10 +2105,6 @@ collision_mask = 0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BuildableArea"]
 polygon = PackedVector2Array(224, -160, 224, -480, -608, -480, -608, 352, 608, 352, 608, -160)
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-position = Vector2(320, 0)
-navigation_polygon = SubResource("NavigationPolygon_rtm1c")
-
 [node name="Dynamic" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -2133,6 +2130,11 @@ y_sort_enabled = true
 position = Vector2(0, 384)
 script = ExtResource("8_sipmc")
 staff_scene = ExtResource("9_r2drp")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+y_sort_enabled = true
+position = Vector2(320, 0)
+navigation_polygon = SubResource("NavigationPolygon_rtm1c")
 
 [node name="Smoke" type="Marker2D" parent="." groups=["smoke"]]
 position = Vector2(128, 416)

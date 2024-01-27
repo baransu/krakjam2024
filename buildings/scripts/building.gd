@@ -69,3 +69,7 @@ func select() -> void:
 func deselect() -> void:
 	selected = false
 	sprite.material = null
+
+
+func get_obstacle() -> PackedVector2Array:
+	return get_node("NavigationObstacle2D").vertices

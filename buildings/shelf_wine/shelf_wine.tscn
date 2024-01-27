@@ -77,7 +77,7 @@ script = ExtResource("5_p441m")
 position = Vector2(0, -34)
 shape = SubResource("RectangleShape2D_mbd7m")
 
-[node name="BaseArea" type="Area2D" parent="."]
+[node name="BaseArea" type="StaticBody2D" parent="."]
 position = Vector2(32, -30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
@@ -86,13 +86,6 @@ shape = SubResource("RectangleShape2D_yy7dt")
 
 [node name="Front" type="Marker2D" parent="."]
 position = Vector2(32, 56)
-
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
-radius = 32.0
-
-[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="."]
-position = Vector2(64, 0)
-radius = 32.0
 
 [node name="MenuAnchor" type="Marker2D" parent="."]
 position = Vector2(-24, -224)
