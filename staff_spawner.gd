@@ -6,5 +6,5 @@ extends Marker2D
 
 func _ready():
 	var staff = staff_scene.instantiate()
-	staff.global_position = global_position
 	add_child(staff)
+	staff.global_position = global_position

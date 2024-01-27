@@ -23,7 +23,7 @@ func update_buildable() -> void:
 	if template != null:
 		positon = template.global_position
 		template.queue_free()
-		remove_child(template)
+		dynamic.remove_child(template)
 
 	template = GameState.buildable.template.instantiate()
 	template.global_position = positon

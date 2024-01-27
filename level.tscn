@@ -15,9 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://37xetqlbyp0u" path="res://art/grid.png" id="13_dyp46"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_rtm1c"]
-vertices = PackedVector2Array(-138, -118, 246, -118, 246, 310, -264, 310, -268, 325, -138, 390, -138, 502, -502, 502, -502, 390, -372, 325, -376, 310, -886, 310, -886, -438, -138, -438)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8, 9), PackedInt32Array(10, 11, 12, 13, 0), PackedInt32Array(10, 0, 3), PackedInt32Array(10, 3, 4, 9)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(256, 320, 256, -128, -128, -128, -128, -448, -896, -448, -896, 320, -384, 320, -384, 416, -512, 512, -128, 512, -256, 416, -256, 320)])
+vertices = PackedVector2Array(-138, -118, 246, -118, 246, 310, -263, 310, -196, 394, 246, 425, 246, 502, -886, 502, -886, 425, -444, 394, -268, 322, -372, 322, -377, 310, -886, 310, -886, -438, -138, -438)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8, 9), PackedInt32Array(10, 4, 9, 11), PackedInt32Array(12, 13, 14, 15, 0), PackedInt32Array(12, 0, 3, 10, 11)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(256, 320, 256, -128, -128, -128, -128, -448, -896, -448, -896, 320, -384, 320, -448, 384, -896, 416, -896, 512, 256, 512, 256, 416, -192, 384, -256, 320)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="Level" type="Node2D"]
@@ -26,10 +26,10 @@ script = ExtResource("1_hqa1e")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -20
-offset_left = -1824.0
-offset_top = -1408.0
-offset_right = 1568.0
-offset_bottom = 928.0
+offset_left = -3744.0
+offset_top = -2656.0
+offset_right = 6256.0
+offset_bottom = 7344.0
 color = Color(0.545098, 0.439216, 0.419608, 1)
 
 [node name="Back" type="Node2D" parent="."]
@@ -1232,7 +1232,80 @@ texture = ExtResource("12_a3gdg")
 position = Vector2(352, -32)
 texture = ExtResource("12_a3gdg")
 
+[node name="Sprite-0004-40" type="Sprite2D" parent="SideWalk"]
+position = Vector2(544, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-41" type="Sprite2D" parent="SideWalk"]
+position = Vector2(480, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-42" type="Sprite2D" parent="SideWalk"]
+position = Vector2(416, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-43" type="Sprite2D" parent="SideWalk"]
+position = Vector2(352, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-44" type="Sprite2D" parent="SideWalk"]
+position = Vector2(288, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-45" type="Sprite2D" parent="SideWalk"]
+position = Vector2(224, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-46" type="Sprite2D" parent="SideWalk"]
+position = Vector2(160, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-47" type="Sprite2D" parent="SideWalk"]
+position = Vector2(96, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-48" type="Sprite2D" parent="SideWalk"]
+position = Vector2(32, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-49" type="Sprite2D" parent="SideWalk"]
+position = Vector2(-32, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-50" type="Sprite2D" parent="SideWalk"]
+position = Vector2(-96, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-51" type="Sprite2D" parent="SideWalk"]
+position = Vector2(-160, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-52" type="Sprite2D" parent="SideWalk"]
+position = Vector2(-224, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-53" type="Sprite2D" parent="SideWalk"]
+position = Vector2(-288, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-54" type="Sprite2D" parent="SideWalk"]
+position = Vector2(-352, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-55" type="Sprite2D" parent="SideWalk"]
+position = Vector2(-416, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-56" type="Sprite2D" parent="SideWalk"]
+position = Vector2(-480, 32)
+texture = ExtResource("12_a3gdg")
+
+[node name="Sprite-0004-57" type="Sprite2D" parent="SideWalk"]
+position = Vector2(-544, 32)
+texture = ExtResource("12_a3gdg")
+
 [node name="Grid" type="Node2D" parent="."]
+modulate = Color(0.360784, 0.360784, 0.360784, 1)
 z_index = -4
 position = Vector2(320, 0)
 
@@ -2038,14 +2111,22 @@ navigation_polygon = SubResource("NavigationPolygon_rtm1c")
 [node name="Dynamic" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="CustomerSpawn" type="Marker2D" parent="Dynamic" groups=["exit"]]
+[node name="CustomerSpawn" type="Node2D" parent="Dynamic" groups=["exit"]]
 y_sort_enabled = true
-position = Vector2(0, 384)
+position = Vector2(0, 416)
 script = ExtResource("6_xh5gs")
 customer_scene = ExtResource("7_ukjo2")
 
 [node name="Timer" type="Timer" parent="Dynamic/CustomerSpawn"]
 autostart = true
+
+[node name="SpawnPoints" type="Node2D" parent="Dynamic/CustomerSpawn"]
+
+[node name="Marker2D" type="Marker2D" parent="Dynamic/CustomerSpawn/SpawnPoints"]
+position = Vector2(448, 0)
+
+[node name="Marker2D4" type="Marker2D" parent="Dynamic/CustomerSpawn/SpawnPoints"]
+position = Vector2(-448, 0)
 
 [node name="StaffSpawner" type="Marker2D" parent="Dynamic"]
 y_sort_enabled = true
@@ -2054,7 +2135,7 @@ script = ExtResource("8_sipmc")
 staff_scene = ExtResource("9_r2drp")
 
 [node name="Smoke" type="Marker2D" parent="." groups=["smoke"]]
-position = Vector2(128, 384)
+position = Vector2(128, 416)
 
 [node name="Front" type="Node2D" parent="."]
 position = Vector2(0, 320)

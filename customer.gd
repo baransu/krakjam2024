@@ -26,7 +26,11 @@ func _ready() -> void:
 
 
 func random_product() -> void:
-	var products = [Building.Product.BEER, Building.Product.HOTDOG]
+	var products = []
+	for building in GameState.buildings:
+		if building.product != Building.Product.NONE:
+			products.append(building.product)
+
 	var idx = randi() % products.size()
 	target_product = products[idx]
 	if target_product == Building.Product.HOTDOG:

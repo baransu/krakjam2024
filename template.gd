@@ -11,7 +11,7 @@ func _ready() -> void:
 	area_exited.connect(on_area_exited)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if in_buildable() && !other_shape_overlap:
 		sprite.modulate = Color(1, 1, 1, 0.4)
 		can_build = true
@@ -20,11 +20,11 @@ func _process(delta: float) -> void:
 		can_build = false
 
 
-func on_area_entered(area: Area2D) -> void:
+func on_area_entered(_area: Area2D) -> void:
 	other_shape_overlap = true
 
 
-func on_area_exited(area: Area2D) -> void:
+func on_area_exited(_area: Area2D) -> void:
 	other_shape_overlap = false
 
 

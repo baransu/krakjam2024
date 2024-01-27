@@ -32,11 +32,6 @@ func _unhandled_key_input(event):
 			tool = Tool.SELECT
 			tool_changed.emit()
 
-	if event.is_action_pressed("tool_place"):
-		clear_selection()
-		tool = Tool.PLACE
-		tool_changed.emit()
-
 	if event.is_action_pressed("tool_delete"):
 		clear_selection()
 		tool = Tool.DELETE
