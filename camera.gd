@@ -27,3 +27,6 @@ func _unhandled_input(event):
 		zoom += Vector2(zoom_factor, zoom_factor)
 
 	zoom = clamp(zoom, Vector2(min_zoom, min_zoom), Vector2(max_zoom, max_zoom))
+
+	if event is InputEventMouseMotion && Input.is_action_pressed("right_click"):
+		global_position -= event.relative
