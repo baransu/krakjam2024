@@ -3,4 +3,5 @@ extends Resource
 
 @export var scene: PackedScene
 @export var template: PackedScene
-# todo: add icon texture?
+@export var cost := 1
+@export var product_texture: Texture2D

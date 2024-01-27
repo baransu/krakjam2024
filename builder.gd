@@ -52,6 +52,8 @@ func place_buildable(pos: Vector2) -> void:
 	var item: Building = GameState.buildable.scene.instantiate()
 	dynamic.add_child(item)
 	item.global_position = pos
+	item.cost = GameState.buildable.cost
+	item.product_texture = GameState.buildable.product_texture
 	GameState.buildings.append(item)
 
 

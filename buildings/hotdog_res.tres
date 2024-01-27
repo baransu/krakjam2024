@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Buildable" load_steps=4 format=3 uid="uid://cygl2nish317r"]
+[gd_resource type="Resource" script_class="Buildable" load_steps=5 format=3 uid="uid://cygl2nish317r"]
 
+[ext_resource type="Texture2D" uid="uid://bkk6k65vowxcc" path="res://art/Sprite-0002 2.png" id="1_d4j0x"]
 [ext_resource type="PackedScene" uid="uid://doeubp62x8dt4" path="res://buildings/hotdog.tscn" id="1_ot8tp"]
 [ext_resource type="Script" path="res://buildable.gd" id="2_77hfk"]
 [ext_resource type="PackedScene" uid="uid://dhfjdct7ywher" path="res://buildings/hotdog_template.tscn" id="3_p0bns"]
@@ -8,3 +9,5 @@
 script = ExtResource("2_77hfk")
 scene = ExtResource("1_ot8tp")
 template = ExtResource("3_p0bns")
+cost = 1
+product_texture = ExtResource("1_d4j0x")

@@ -8,7 +8,7 @@ var staff: Staff
 @export var max_wait_time := 15
 
 
-func interact_customer(_customer: Customer) -> void:
+func interact_customer(customer: Customer) -> void:
 	for x in range(max_wait_time):
 		if is_working():
 			break
@@ -17,7 +17,7 @@ func interact_customer(_customer: Customer) -> void:
 
 	if is_working():
 		await get_tree().create_timer(1).timeout
-		GameState.add_money()
+		GameState.add_money(customer.product_cost)
 	else:
 		# todo: return product or not?
 		pass

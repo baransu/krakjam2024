@@ -12,11 +12,12 @@ func interact_customer(customer: Customer) -> void:
 	if is_working():
 		if customer.target_product == Building.Product.HOTDOG:
 			await staff.something_hotdog()
-			# todo: play animation on customer
+			customer.give_product(product_texture, cost)
+			GameState.add_money(cost)
 		else:
+			GameState.add_money(customer.product_cost)
 			await get_tree().create_timer(1).timeout
 
-		GameState.add_money()
 	else:
 		# todo: return product or not?
 		pass

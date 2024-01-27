@@ -46,12 +46,14 @@ func interact_staff(_staff: Staff) -> void:
 	update_refill_button()
 
 
-func interact_customer(_customer: Customer) -> void:
+func interact_customer(customer: Customer) -> void:
 	await get_tree().create_timer(1).timeout
 
 	if products <= 0:
 		GameState.building_empty.emit(self)
 		return
+
+	customer.give_product(product_texture, cost)
 
 	var children = products_container.get_children()
 	children.shuffle()

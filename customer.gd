@@ -5,11 +5,13 @@ signal state_changed
 
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var state_label: Label = $StateLabel
+@onready var product_sprite: Sprite2D = $ProductSprite
 @export var movement_speed: float = 100.0
 
 var target: Building
 var target_type: Building.Type = Building.Type.CHECKOUT
 var target_product: Building.Product = Building.Product.HOTDOG
+var product_cost: int
 
 enum State { PRODUCT, CHECKOUT, EXIT }
 var state = State.PRODUCT
@@ -137,3 +139,9 @@ func change_state(next_state: State) -> void:
 
 		_:
 			pass
+
+
+func give_product(tex: Texture2D, cost: int) -> void:
+	product_cost = cost
+	product_sprite.show()
+	product_sprite.texture = tex

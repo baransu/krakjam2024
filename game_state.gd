@@ -5,16 +5,32 @@ signal building_destroyed(Building)
 signal buildable_changed
 signal building_empty(Building)
 signal customer_left
+signal seconds_elapsed_changed
+signal money_changed(int)
 
 var selected: Building
 var buildings: Array[Building] = []
 
 var buildable: Buildable
+var seconds_elapsed := 0
 
 enum Tool { PLACE, DELETE, SELECT }
 
 var tool: Tool = Tool.SELECT
 var money = 0
+
+
+func _ready() -> void:
+	var timer = Timer.new()
+	timer.wait_time = 1
+	timer.timeout.connect(add_time)
+	add_child(timer)
+	timer.start()
+
+
+func add_time() -> void:
+	seconds_elapsed += 1
+	seconds_elapsed_changed.emit()
 
 
 func select(b: Building) -> void:
@@ -26,16 +42,24 @@ func select(b: Building) -> void:
 
 func _unhandled_key_input(event):
 	if event.is_action_pressed("ui_cancel"):
-		clear_selection()
-
-		if tool != Tool.SELECT:
-			tool = Tool.SELECT
-			tool_changed.emit()
+		reset_tool()
 
 	if event.is_action_pressed("tool_delete"):
-		clear_selection()
-		tool = Tool.DELETE
+		delete_tool()
+
+
+func reset_tool() -> void:
+	clear_selection()
+
+	if tool != Tool.SELECT:
+		tool = Tool.SELECT
 		tool_changed.emit()
+
+
+func delete_tool() -> void:
+	clear_selection()
+	tool = Tool.DELETE
+	tool_changed.emit()
 
 
 func clear_selection() -> void:
@@ -93,7 +117,6 @@ func get_building_for_staff(type: Building.Type) -> Building:
 
 
 func set_buildable(b: Buildable) -> void:
-	print("switching buildable")
 	clear_selection()
 	tool = Tool.PLACE
 	tool_changed.emit()
@@ -102,6 +125,11 @@ func set_buildable(b: Buildable) -> void:
 	buildable_changed.emit()
 
 
-func add_money() -> void:
-	money += 1
-	print("money: ", money)
+func add_money(delta: int = 1) -> void:
+	money += delta
+	money_changed.emit(money)
+
+
+func remove_money(delta: int = 1) -> void:
+	money -= delta
+	money_changed.emit(-delta)

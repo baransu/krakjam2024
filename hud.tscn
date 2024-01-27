@@ -1,12 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdgaksn1few4f"]
+[gd_scene load_steps=15 format=3 uid="uid://cdgaksn1few4f"]
 
 [ext_resource type="Script" path="res://HUD.gd" id="1_dqttv"]
 [ext_resource type="Script" path="res://ui/buildings_container.gd" id="2_7q1ln"]
+[ext_resource type="Texture2D" uid="uid://dhaj4mw6ixrdu" path="res://art/heart-plus.png" id="2_851ro"]
+[ext_resource type="PackedScene" uid="uid://cp8lvkxf3u6ng" path="res://ui/staff_panel.tscn" id="2_j5xho"]
 [ext_resource type="Script" path="res://ui/building_button.gd" id="2_kir6n"]
 [ext_resource type="Texture2D" uid="uid://dli5mvbw25gux" path="res://art/Sprite-0001.png" id="2_mnqpg"]
+[ext_resource type="Script" path="res://ui/delete_button.gd" id="3_q3tk0"]
 [ext_resource type="Resource" uid="uid://cx1bj3sfwh4y7" path="res://buildings/shelf_res.tres" id="4_70qfo"]
 [ext_resource type="Resource" uid="uid://cygl2nish317r" path="res://buildings/hotdog_res.tres" id="4_jk0rg"]
 [ext_resource type="Resource" uid="uid://cd5kajlna4w82" path="res://buildings/checkout_res.tres" id="6_iqtfk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s7rcm"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_8mugf"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_qug1b"]
+font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_5kdf5"]
 font_size = 32
@@ -25,36 +37,148 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="ToolLabel" type="Label" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="StaffPanel" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" instance=ExtResource("2_j5xho")]
+layout_mode = 2
+
+[node name="HirePanel" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/HirePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="HideButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/HirePanel/MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/HirePanel/MarginContainer/HideButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_851ro")
+expand_mode = 3
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TimeLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "21:37"
+label_settings = SubResource("LabelSettings_s7rcm")
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DayLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Dzień 1"
+label_settings = SubResource("LabelSettings_8mugf")
+
+[node name="MoneyLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Żabsy: 10
+"
+label_settings = SubResource("LabelSettings_qug1b")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ToolLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Tool: Build"
 label_settings = SubResource("LabelSettings_5kdf5")
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 script = ExtResource("2_7q1ln")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Hotdog" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="DeleteButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+text = "DELETE
+"
+script = ExtResource("3_q3tk0")
+
+[node name="Hotdog" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+focus_mode = 0
 script = ExtResource("2_kir6n")
 buildable = ExtResource("4_jk0rg")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Hotdog"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Hotdog"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
@@ -71,13 +195,14 @@ grow_vertical = 2
 texture = ExtResource("2_mnqpg")
 expand_mode = 1
 
-[node name="Shelf" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="Shelf" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+focus_mode = 0
 script = ExtResource("2_kir6n")
 buildable = ExtResource("4_70qfo")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Shelf"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Shelf"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -93,13 +218,14 @@ grow_vertical = 2
 texture = ExtResource("2_mnqpg")
 expand_mode = 1
 
-[node name="Checkout" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="Checkout" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+focus_mode = 0
 script = ExtResource("2_kir6n")
 buildable = ExtResource("6_iqtfk")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Checkout"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer/Checkout"]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
