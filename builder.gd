@@ -45,9 +45,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		GameState.Tool.PLACE:
 			template.global_position = pos
 
-			if event is InputEventMouseButton && template.can_build:
-				if event.is_pressed():
-					place_buildable(pos)
+			if event.is_action_pressed("place") && template.can_build:
+				place_buildable(pos)
 
 		_:
 			pass
