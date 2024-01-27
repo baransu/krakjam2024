@@ -5,12 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://cdgaksn1few4f" path="res://hud.tscn" id="5_48ess"]
 
 [node name="Game" type="Node2D"]
-position = Vector2(0, 64)
 
 [node name="Level" parent="." instance=ExtResource("2_oy64i")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-256, -192)
+position = Vector2(0, -64)
 script = ExtResource("4_4aa6m")
 
 [node name="HUD" parent="." instance=ExtResource("5_48ess")]

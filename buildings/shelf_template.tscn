@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://dli5mvbw25gux" path="res://art/Sprite-0001.png" id="2_6bduh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5t5a4"]
-size = Vector2(126, 126)
+size = Vector2(126, 62)
 
 [node name="ShelfTemplate" type="Area2D"]
 collision_mask = 9
 script = ExtResource("1_vy24b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(32, -32)
+position = Vector2(32, 0)
 shape = SubResource("RectangleShape2D_5t5a4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

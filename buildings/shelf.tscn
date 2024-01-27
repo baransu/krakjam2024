@@ -10,7 +10,7 @@
 size = Vector2(128, 192)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yy7dt"]
-size = Vector2(128, 128)
+size = Vector2(128, 64)
 
 [sub_resource type="LabelSettings" id="LabelSettings_obkn6"]
 
@@ -64,7 +64,7 @@ shape = SubResource("RectangleShape2D_mbd7m")
 position = Vector2(32, -30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
-position = Vector2(0, -2)
+position = Vector2(0, 30)
 shape = SubResource("RectangleShape2D_yy7dt")
 
 [node name="Front" type="Marker2D" parent="."]

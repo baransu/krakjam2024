@@ -6,10 +6,10 @@
 [ext_resource type="Script" path="res://selectable.gd" id="4_b0ur2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbd7m"]
-size = Vector2(128, 192)
+size = Vector2(128, 186)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yy7dt"]
-size = Vector2(128, 70)
+size = Vector2(128, 67)
 
 [node name="Checkout" type="Node2D"]
 script = ExtResource("1_16yyo")
@@ -17,32 +17,32 @@ select_material = ExtResource("2_pgep5")
 type = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(32, -64)
+position = Vector2(32, -61.5)
 texture = ExtResource("3_h3fq8")
 
 [node name="SelectArea" type="Area2D" parent="."]
-position = Vector2(32, -30)
+position = Vector2(32, -29.5)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("4_b0ur2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SelectArea"]
-position = Vector2(0, -34)
+position = Vector2(0, -37)
 shape = SubResource("RectangleShape2D_mbd7m")
 
 [node name="BaseArea" type="Area2D" parent="."]
-position = Vector2(32, -30)
+position = Vector2(32, -27.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
-position = Vector2(0, 27)
+position = Vector2(0, 22)
 shape = SubResource("RectangleShape2D_yy7dt")
 
 [node name="Front" type="Marker2D" parent="."]
-position = Vector2(32, 56)
+position = Vector2(32, 58.5)
 
 [node name="Back" type="Marker2D" parent="."]
-position = Vector2(32, -91)
+position = Vector2(32, -88.5)
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
-position = Vector2(32, -16)
+position = Vector2(32, -13.5)
 radius = 48.0
