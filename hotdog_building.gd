@@ -20,6 +20,8 @@ func interact_customer(customer: Customer) -> void:
 			GameState.add_money(customer.product_cost)
 			await get_tree().create_timer(1).timeout
 
+		$AudioStreamPlayer2D.play()
+
 	else:
 		customer.drop_product()
 		pass

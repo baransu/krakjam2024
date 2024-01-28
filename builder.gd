@@ -61,6 +61,7 @@ func place_buildable(pos: Vector2) -> void:
 	GameState.remove_money(GameState.buildable.build_cost)
 	update_nav_mesh()
 	GameState.reset_tool()
+	$PlopSound.play()
 
 
 func on_tool_changed() -> void:
@@ -80,6 +81,7 @@ func on_tool_changed() -> void:
 func on_building_destroyed(_b: Building) -> void:
 	await get_tree().create_timer(0.1).timeout
 	update_nav_mesh()
+	$DestroySound.play()
 
 
 func update_nav_mesh() -> void:
