@@ -105,8 +105,39 @@ position = Vector2(0, -98)
 scale = Vector2(0.95, 1)
 texture = ExtResource("2_n21ku")
 
+[node name="StateLabel" type="Label" parent="Sprite2D"]
+unique_name_in_owner = true
+visible = false
+offset_left = -38.9474
+offset_top = -138.0
+offset_right = 34.0526
+offset_bottom = -115.0
+text = "Checkout"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Sprite2D"]
+offset_left = -46.3158
+offset_top = -146.0
+offset_right = 1.68421
+offset_bottom = -98.0
+texture = ExtResource("20_aif2y")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="StatusIcon" type="TextureRect" parent="Sprite2D"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(28, 28)
+offset_left = -35.7895
+offset_top = -142.0
+offset_right = -7.78947
+offset_bottom = -114.0
+texture = ExtResource("15_1dasv")
+expand_mode = 3
+stretch_mode = 5
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.27374e-12, -17)
+position = Vector2(0, -8)
 rotation = 1.5708
 shape = SubResource("CircleShape2D_le2hu")
 
@@ -121,35 +152,6 @@ libraries = {
 "": SubResource("AnimationLibrary_q2a2j")
 }
 autoplay = "idle"
-
-[node name="StateLabel" type="Label" parent="."]
-visible = false
-offset_left = -37.0
-offset_top = -236.0
-offset_right = 36.0
-offset_bottom = -213.0
-text = "Checkout"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -44.0
-offset_top = -244.0
-offset_right = 4.0
-offset_bottom = -196.0
-texture = ExtResource("20_aif2y")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="StatusIcon" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(28, 28)
-offset_left = -34.0
-offset_top = -240.0
-offset_right = -6.0
-offset_bottom = -212.0
-texture = ExtResource("15_1dasv")
-expand_mode = 3
-stretch_mode = 5
 
 [node name="ProductSprite" type="Sprite2D" parent="."]
 visible = false

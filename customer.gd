@@ -4,11 +4,11 @@ extends CharacterBody2D
 signal state_changed
 
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
-@onready var state_label: Label = $StateLabel
+@onready var state_label: Label = %StateLabel
 @onready var product_sprite: Sprite2D = $ProductSprite
 @export var movement_speed: float = 200.0
 @onready var sprite: Sprite2D = $Sprite2D
-@onready var status_icon: TextureRect = $StatusIcon
+@onready var status_icon: TextureRect = %StatusIcon
 
 @export var textures: Array[Texture2D] = []
 @export var worker_tex: Texture2D

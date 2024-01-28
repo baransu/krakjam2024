@@ -188,9 +188,9 @@ polygon = PackedVector2Array(32, 32, 16, 32, 16, -32, 32, -32)
 polygon = PackedVector2Array(32, 32, 16, 32, 16, -32, 32, -32)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_rtm1c"]
-vertices = PackedVector2Array(-138, -118, 246, -118, 246, 310, -295, 310, -195, 394, 246, 425, 246, 502, -886, 502, -886, 438, -445, 394, -1270, 438, -1270, 330, -1026, 330, -963, 361, -897, 378, -300, 324, -340, 324, -345, 310, -886, 310, -886, 246, -1270, 246, -1270, -310, -886, -310, -886, -438, -138, -438)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8, 9), PackedInt32Array(8, 10, 11, 12, 13), PackedInt32Array(8, 13, 14), PackedInt32Array(8, 14, 9), PackedInt32Array(15, 4, 9, 16), PackedInt32Array(17, 18, 19, 0), PackedInt32Array(19, 20, 21, 22, 0), PackedInt32Array(22, 23, 24, 0), PackedInt32Array(17, 0, 3), PackedInt32Array(17, 3, 15, 16)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(256, 320, 256, -128, -128, -128, -128, -448, -896, -448, -896, -320, -1280, -320, -1280, 256, -896, 256, -896, 320, -352, 320, -448, 384, -896, 368, -960, 352, -1024, 320, -1280, 320, -1280, 448, -896, 448, -896, 512, 256, 512, 256, 416, -192, 384, -288, 320)])
+vertices = PackedVector2Array(-194, 364, 246, 362, 246, 502, -886, 502, -299, 327, -446, 362, -138, -118, 246, -118, 246, 310, -296, 310, -886, 438, -1270, 438, -1270, 330, -964, 330, -932, 362, -343, 310, -886, 310, -886, 246, -1270, 246, -1270, -310, -886, -310, -886, -438, -138, -438, -341, 327)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(10, 11, 12, 13, 14), PackedInt32Array(10, 14, 5), PackedInt32Array(15, 16, 17, 6), PackedInt32Array(17, 18, 19, 20, 6), PackedInt32Array(20, 21, 22, 6), PackedInt32Array(15, 6, 9), PackedInt32Array(15, 9, 4, 23), PackedInt32Array(3, 10, 5), PackedInt32Array(23, 4, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(256, 320, 256, -128, -128, -128, -128, -448, -896, -448, -896, -320, -1280, -320, -1280, 256, -896, 256, -896, 320, -352, 320, -448, 352, -928, 352, -960, 320, -1024, 320, -1280, 320, -1280, 448, -896, 448, -896, 512, 256, 512, 256, 352, -192, 354, -288, 320)])
 parsed_geometry_type = 1
 source_geometry_group_name = &"navigation_polygon_source_group"
 
@@ -3338,7 +3338,7 @@ position = Vector2(320, 0)
 navigation_polygon = SubResource("NavigationPolygon_rtm1c")
 
 [node name="Smoke" type="Marker2D" parent="." groups=["smoke"]]
-position = Vector2(128, 416)
+position = Vector2(80, 464)
 
 [node name="Front" type="Node2D" parent="."]
 position = Vector2(0, 320)

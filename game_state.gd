@@ -30,7 +30,7 @@ var money = 1000
 
 func _ready() -> void:
 	var timer = Timer.new()
-	timer.wait_time = 0.005
+	timer.wait_time = 0.1
 	timer.timeout.connect(add_time)
 	add_child(timer)
 	timer.start()
