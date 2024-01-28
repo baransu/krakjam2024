@@ -588,9 +588,9 @@ mouse_filter = 1
 [node name="AlkoholAccessPanel" type="ColorRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/Control"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_left = -334.0
+offset_left = -340.0
 offset_top = -1.0
-offset_right = -5.0
+offset_right = -2.0
 offset_bottom = 103.0
 mouse_filter = 1
 color = Color(0, 0, 0, 0.764706)
@@ -609,7 +609,7 @@ offset_right = 128.5
 offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Koncesja na alkohol (1000 Żapsów)"
+text = "Koncesja na alkohol (600 Żapsów)"
 
 [node name="GameOver" type="Control" parent="."]
 unique_name_in_owner = true

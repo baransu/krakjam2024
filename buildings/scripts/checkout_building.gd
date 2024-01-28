@@ -17,6 +17,7 @@ func interact_customer(customer: Customer) -> void:
 			await get_tree().create_timer(1).timeout
 
 	if is_working():
+		$AudioStreamPlayer2D.play()
 		await get_tree().create_timer(1).timeout
 		GameState.add_money(customer.product_cost)
 	else:

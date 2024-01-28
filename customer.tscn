@@ -22,9 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://rvko8xbw6ta8" path="res://art/final/exit.png" id="15_1dasv"]
 [ext_resource type="Texture2D" uid="uid://bjj0ucq64g7st" path="res://art/final/chmura.png" id="20_aif2y"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5l8y"]
-radius = 16.0
-height = 60.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_le2hu"]
+radius = 18.1108
 
 [sub_resource type="Animation" id="Animation_ngac3"]
 length = 0.001
@@ -109,12 +108,11 @@ texture = ExtResource("2_n21ku")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.27374e-12, -17)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_p5l8y")
+shape = SubResource("CircleShape2D_le2hu")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-path_postprocessing = 1
 avoidance_enabled = true
-radius = 32.0
+radius = 64.0
 max_speed = 300.0
 avoidance_priority = 0.5
 

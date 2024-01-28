@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://doeubp62x8dt4"]
+[gd_scene load_steps=8 format=3 uid="uid://doeubp62x8dt4"]
 
 [ext_resource type="Script" path="res://hotdog_building.gd" id="1_w5bch"]
 [ext_resource type="Material" uid="uid://li5m067f0ccm" path="res://select_material.tres" id="2_sq4ic"]
 [ext_resource type="Texture2D" uid="uid://dekpteffdi3yy" path="res://art/final/hotdog-sosy.png" id="3_vmqbo"]
 [ext_resource type="Script" path="res://selectable.gd" id="4_e2tdo"]
+[ext_resource type="AudioStream" uid="uid://d2mblswt2mrsl" path="res://art/final/cashier-quotka-chingquot-sound-effect-129698.mp3" id="5_46enc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbd7m"]
 size = Vector2(256, 192)
@@ -43,3 +44,6 @@ position = Vector2(32, 56)
 
 [node name="Back" type="Marker2D" parent="."]
 position = Vector2(32, -64)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_46enc")

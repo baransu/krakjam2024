@@ -20,4 +20,4 @@ func on_money_changed(_delta: int) -> void:
 		tooltip_text = "Nie wystarczająco Żappsów"
 	else:
 		disabled = false
-		tooltip_text = "Koszt: " + str(buildable.build_cost) + "Żappsów"
+		tooltip_text = "Koszt: " + str(buildable.build_cost) + " Żappsów"

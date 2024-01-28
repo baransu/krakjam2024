@@ -1,17 +1,18 @@
-[gd_scene load_steps=14 format=3 uid="uid://c1vhiidpbpuyc"]
+[gd_scene load_steps=16 format=3 uid="uid://c1vhiidpbpuyc"]
 
 [ext_resource type="Script" path="res://staff.gd" id="1_fgakm"]
 [ext_resource type="Texture2D" uid="uid://c2phbkarwf0kp" path="res://art/icons/3.png" id="2_41a35"]
 [ext_resource type="Texture2D" uid="uid://bsbnpal1phlu4" path="res://art/Sprite-0007-2.png" id="2_a0b02"]
+[ext_resource type="Texture2D" uid="uid://c51ca3dmrmbgb" path="res://art/final/dotdotdot 2.png" id="2_pec71"]
 [ext_resource type="Texture2D" uid="uid://btk7en0xdypx5" path="res://art/dym.png" id="3_5pvn1"]
 [ext_resource type="Texture2D" uid="uid://dg7yoia30qwqj" path="res://art/hotdog.png" id="4_3ssft"]
 [ext_resource type="Texture2D" uid="uid://cyahkr7ejt4uy" path="res://art/szlug.png" id="4_cu3pp"]
+[ext_resource type="Texture2D" uid="uid://bcq7l5da1fmex" path="res://art/final/szlug2.png" id="4_msb8y"]
 [ext_resource type="Texture2D" uid="uid://bjj0ucq64g7st" path="res://art/final/chmura.png" id="6_p0a0o"]
 [ext_resource type="Texture2D" uid="uid://rvko8xbw6ta8" path="res://art/final/exit.png" id="7_2rjo6"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5l8y"]
-radius = 17.0
-height = 62.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_tsh58"]
+radius = 28.0179
 
 [sub_resource type="Animation" id="Animation_ngac3"]
 length = 0.001
@@ -95,8 +96,9 @@ _data = {
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_fgakm")
+idle_icon = ExtResource("2_pec71")
 checkout_icon = ExtResource("2_41a35")
-smoke_icon = ExtResource("4_cu3pp")
+smoke_icon = ExtResource("4_msb8y")
 hotdog_icon = ExtResource("4_3ssft")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -152,13 +154,12 @@ texture = ExtResource("4_cu3pp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.81899e-12, -17)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_p5l8y")
+shape = SubResource("CircleShape2D_tsh58")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 target_desired_distance = 32.0
-path_postprocessing = 1
 avoidance_enabled = true
-radius = 24.0
+radius = 64.0
 max_speed = 300.0
 avoidance_priority = 0.75
 

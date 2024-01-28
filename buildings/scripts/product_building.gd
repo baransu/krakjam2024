@@ -23,6 +23,7 @@ func start_refill() -> void:
 	for staff in get_tree().get_nodes_in_group("staff"):
 		if staff.state == Staff.State.IDLE || staff.state == Staff.State.CHECKOUT:
 			staff.start_refill(self)
+			return
 
 
 func get_refill_cost() -> int:

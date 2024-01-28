@@ -38,7 +38,7 @@ func on_decision_timer_timeout() -> void:
 		change_state(State.CHECKOUT)
 		find_target(Building.Type.CHECKOUT)
 
-	if state == State.CHECKOUT && randf() < 0.01:
+	if state == State.CHECKOUT && randf() < 0.02:
 		change_state(State.SMOKE)
 		var smoke = get_tree().get_first_node_in_group("smoke")
 		nav_agent.set_target_position(smoke.global_position)

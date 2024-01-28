@@ -60,6 +60,7 @@ func place_buildable(pos: Vector2) -> void:
 	GameState.buildings.append(item)
 	GameState.remove_money(GameState.buildable.build_cost)
 	update_nav_mesh()
+	GameState.reset_tool()
 
 
 func on_tool_changed() -> void:

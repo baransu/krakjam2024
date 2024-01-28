@@ -19,13 +19,13 @@ var buildings: Array[Building] = []
 
 var buildable: Buildable
 var seconds_elapsed := 6 * 60
-var alkohol_access := true
-var alkohol_access_price := 1000
+var alkohol_access := false
+var alkohol_access_price := 600
 
 enum Tool { PLACE, DELETE, SELECT }
 
 var tool: Tool = Tool.SELECT
-var money = 1000
+var money = 1
 
 
 func _ready() -> void:
@@ -154,6 +154,9 @@ func remove_money(delta: int = 1) -> void:
 
 
 func buy_alkohol_access() -> void:
+	if money < alkohol_access_price:
+		return
+
 	alkohol_access = true
 	alkohol_access_changed.emit()
 	remove_money(alkohol_access_price)

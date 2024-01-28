@@ -25,7 +25,7 @@ func set_staff_member(s: Staff):
 	staff = s
 	avatar.texture = staff.staff_res.avatar
 	name_label.text = staff.staff_res.name
-	wage_label.text = str(staff.staff_res.wage) + " Żappsów/h"
+	wage_label.text = str(staff.staff_res.wage) + " Żappsów dziennie"
 	staff.state_changed.connect(update_status_info)
 
 
