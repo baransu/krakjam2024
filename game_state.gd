@@ -18,7 +18,7 @@ var selected: Building
 var buildings: Array[Building] = []
 
 var buildable: Buildable
-var seconds_elapsed := 6 * 60
+var seconds_elapsed := 18 * 60
 var alkohol_access := false
 var alkohol_access_price := 600
 
@@ -173,6 +173,7 @@ func trigger_game_over() -> void:
 
 
 func restart_game() -> void:
+	get_tree().paused = false
 	get_tree().reload_current_scene()
 	GameState.set_script(null)
 	GameState.set_script(preload("res://game_state.gd"))
