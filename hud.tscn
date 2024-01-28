@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://cdgaksn1few4f"]
+[gd_scene load_steps=52 format=3 uid="uid://cdgaksn1few4f"]
 
 [ext_resource type="Script" path="res://HUD.gd" id="1_dqttv"]
 [ext_resource type="Script" path="res://ui/buildings_container.gd" id="2_7q1ln"]
@@ -79,6 +79,9 @@ font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_qug1b"]
 font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_lhfmr"]
+font_size = 24
 
 [sub_resource type="LabelSettings" id="LabelSettings_5kdf5"]
 font_size = 32
@@ -218,6 +221,7 @@ theme_override_constants/margin_bottom = 16
 custom_minimum_size = Vector2(300, 2.08165e-12)
 layout_mode = 2
 text = "Postaw kasę i zatrudnij pierwszego pracownika aby zachęcić klientów. Zarabiaj pieniądze, wykup koncesje na alkohol aby zwiększyć ruch w sklepie. Uzupełniaj produkty kiedy zabraknie ich na pułkach."
+label_settings = SubResource("LabelSettings_lhfmr")
 autowrap_mode = 2
 
 [node name="BuildingPanel" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2" instance=ExtResource("6_cybql")]
@@ -277,25 +281,10 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
+icon = ExtResource("11_e0y0g")
+icon_alignment = 1
 script = ExtResource("2_kir6n")
 buildable = ExtResource("4_jk0rg")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer/Hotdog"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("11_e0y0g")
-expand_mode = 3
-stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -321,25 +310,10 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
+icon = ExtResource("13_e2r5d")
+icon_alignment = 1
 script = ExtResource("2_kir6n")
 buildable = ExtResource("15_q5gos")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer4/Checkout"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -34.5
-offset_top = -34.0
-offset_right = 29.5
-offset_bottom = 30.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("13_e2r5d")
-expand_mode = 3
-stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer4"]
 layout_mode = 2
@@ -364,25 +338,10 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
+icon = ExtResource("15_h0i1l")
+icon_alignment = 1
 script = ExtResource("2_kir6n")
 buildable = ExtResource("17_eegkq")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer5/Coffee"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("15_h0i1l")
-expand_mode = 3
-stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer5"]
 layout_mode = 2
@@ -407,25 +366,10 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
+icon = ExtResource("17_hncxn")
+icon_alignment = 1
 script = ExtResource("2_kir6n")
 buildable = ExtResource("19_lfqtp")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer6/Icecream"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("17_hncxn")
-expand_mode = 3
-stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer6"]
 layout_mode = 2
@@ -450,25 +394,10 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
+icon = ExtResource("19_2ltjj")
+icon_alignment = 1
 script = ExtResource("2_kir6n")
 buildable = ExtResource("21_eyjh0")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer7/Bread"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("19_2ltjj")
-expand_mode = 3
-stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer7"]
 layout_mode = 2
@@ -489,29 +418,14 @@ size_flags_horizontal = 3
 text = "Zielona cebulka"
 horizontal_alignment = 1
 
-[node name="Bread" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer8"]
+[node name="Chips" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer8"]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
+icon = ExtResource("20_n7npy")
+icon_alignment = 1
 script = ExtResource("2_kir6n")
 buildable = ExtResource("20_7jirg")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer8/Bread"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("20_n7npy")
-expand_mode = 3
-stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer8"]
 layout_mode = 2
@@ -532,29 +446,14 @@ size_flags_horizontal = 3
 text = "Colka"
 horizontal_alignment = 1
 
-[node name="Bread" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer9"]
+[node name="Cola" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer9"]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
+icon = ExtResource("23_3fp5j")
+icon_alignment = 1
 script = ExtResource("2_kir6n")
 buildable = ExtResource("22_omlem")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer9/Bread"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("23_3fp5j")
-expand_mode = 3
-stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer9"]
 layout_mode = 2
@@ -579,25 +478,10 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
+icon = ExtResource("25_xo1xw")
+icon_alignment = 1
 script = ExtResource("2_kir6n")
 buildable = ExtResource("24_guudq")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer10/Bread"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("25_xo1xw")
-expand_mode = 3
-stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/VBoxContainer10"]
 layout_mode = 2
@@ -626,25 +510,10 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
+icon = ExtResource("21_uy6mm")
+icon_alignment = 1
 script = ExtResource("2_kir6n")
 buildable = ExtResource("11_yn7g0")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer2/Beer"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("21_uy6mm")
-expand_mode = 3
-stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
@@ -669,25 +538,10 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
+icon = ExtResource("23_4abvg")
+icon_alignment = 1
 script = ExtResource("2_kir6n")
 buildable = ExtResource("13_cmllh")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer3/Wine"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("23_4abvg")
-expand_mode = 3
-stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
@@ -712,25 +566,10 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
+icon = ExtResource("25_n5fd6")
+icon_alignment = 1
 script = ExtResource("2_kir6n")
 buildable = ExtResource("24_mnjdu")
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer4/Wine"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -32.0
-offset_right = 32.0
-offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("25_n5fd6")
-expand_mode = 3
-stretch_mode = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/HBoxContainer/VBoxContainer4"]
 layout_mode = 2

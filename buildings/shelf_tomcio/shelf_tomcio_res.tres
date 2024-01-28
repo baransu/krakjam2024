@@ -10,8 +10,8 @@
 script = ExtResource("3_tka1n")
 scene = ExtResource("2_sabmt")
 template = ExtResource("4_vn127")
-product_cost = 200
-build_cost = 8
+product_cost = 8
+build_cost = 200
 product_texture = ExtResource("1_oajqf")
 name = "Tomcio Paluch"
 descriptions = Array[String](["Tomcio Paluch, znany również jako \"Wielki Poszukiwacz Bagietek\" - bo kto inny może rozwikłać tajemnice najsmaczniejszych bagietek na świecie?", "To jak próba zrozumienia mowy chleba, który mówi: \"Zjedz mnie, zjedz mnie!", "To jak komedia chlebowa, gdzie każda scena jest pełna chrupania i żartów!", "To historia nieudanej próby dialogu między człowiekiem a chlebem, gdzie każda kęska jest dowodem na to, że bagietka ma ostatnie słowo!"])
