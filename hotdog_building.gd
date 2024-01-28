@@ -13,6 +13,11 @@ func interact_customer(customer: Customer) -> void:
 
 	if is_working():
 		if customer.target_product == Building.Product.HOTDOG:
+			if staff.staff_res.male:
+				$Sosiwo2.play()
+			else:
+				$Sosiwo1.play()
+
 			await staff.something_hotdog()
 			customer.give_product(res.product_texture, res.product_cost)
 			GameState.add_money(res.product_cost)

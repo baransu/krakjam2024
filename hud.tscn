@@ -46,6 +46,7 @@ texture = ExtResource("4_begqd")
 name = "Robert"
 wage = 10
 avatar = ExtResource("3_jga2w")
+male = true
 
 [sub_resource type="Resource" id="Resource_y4ak6"]
 script = ExtResource("3_kckky")
@@ -53,6 +54,7 @@ texture = ExtResource("7_e4f51")
 name = "Marcin"
 wage = 10
 avatar = ExtResource("6_4somm")
+male = true
 
 [sub_resource type="Resource" id="Resource_7sdde"]
 script = ExtResource("3_kckky")
@@ -60,6 +62,7 @@ texture = ExtResource("9_cb4en")
 name = "Alicja"
 wage = 10
 avatar = ExtResource("8_nifrp")
+male = false
 
 [sub_resource type="Resource" id="Resource_ruj08"]
 script = ExtResource("3_kckky")
@@ -67,6 +70,7 @@ texture = ExtResource("11_l0s6m")
 name = "Żaneta"
 wage = 10
 avatar = ExtResource("10_a5cht")
+male = false
 
 [sub_resource type="LabelSettings" id="LabelSettings_btwk3"]
 font_size = 24
@@ -220,7 +224,9 @@ theme_override_constants/margin_bottom = 16
 [node name="Tutorial" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer2/MarginContainer"]
 custom_minimum_size = Vector2(300, 2.08165e-12)
 layout_mode = 2
-text = "Postaw kasę i zatrudnij pierwszego pracownika aby zachęcić klientów. Zarabiaj pieniądze, wykup koncesje na alkohol aby zwiększyć ruch w sklepie. Uzupełniaj produkty kiedy zabraknie ich na pułkach."
+text = "1. Postaw kasę i zatrudnij pierwszego pracownika.
+2. Zarabiaj pieniądze oraz wykup koncesje na alkohol aby zwiększyć ruch w sklepie.
+3. Uzupełniaj produkty kiedy zabraknie ich na pułkach."
 label_settings = SubResource("LabelSettings_lhfmr")
 autowrap_mode = 2
 

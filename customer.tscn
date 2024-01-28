@@ -23,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://bjj0ucq64g7st" path="res://art/final/chmura.png" id="20_aif2y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_le2hu"]
-radius = 18.0
 
 [sub_resource type="Animation" id="Animation_ngac3"]
 length = 0.001
@@ -137,11 +136,12 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(0, -10)
 rotation = 1.5708
 shape = SubResource("CircleShape2D_le2hu")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
 avoidance_enabled = true
 radius = 64.0
 max_speed = 300.0

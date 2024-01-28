@@ -19,7 +19,8 @@ func on_customer_left() -> void:
 
 
 func next_customer_count() -> void:
-	var r = range(1, 4)
+	var m = clamp(GameState.buildings.size() * 2, 3, 7)
+	var r = range(1, m)
 	count = r[randi() % r.size()]
 	spawn_timer.wait_time = (randi() % 5) + 1
 

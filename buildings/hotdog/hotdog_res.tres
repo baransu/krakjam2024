@@ -10,7 +10,7 @@
 script = ExtResource("2_77hfk")
 scene = ExtResource("1_ot8tp")
 template = ExtResource("3_p0bns")
-product_cost = 6
+product_cost = 12
 build_cost = 400
 product_texture = ExtResource("1_0vl00")
 name = "Kasa z hotdogami"

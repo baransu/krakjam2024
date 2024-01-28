@@ -10,7 +10,7 @@
 script = ExtResource("1_7ifw5")
 scene = ExtResource("1_xx68t")
 template = ExtResource("3_gbcrw")
-product_cost = 10
+product_cost = 20
 build_cost = 200
 product_texture = ExtResource("1_m2lj2")
 name = "Wino Mamrot"

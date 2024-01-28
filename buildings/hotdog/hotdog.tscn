@@ -1,16 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://doeubp62x8dt4"]
+[gd_scene load_steps=10 format=3 uid="uid://doeubp62x8dt4"]
 
 [ext_resource type="Script" path="res://hotdog_building.gd" id="1_w5bch"]
 [ext_resource type="Material" uid="uid://li5m067f0ccm" path="res://select_material.tres" id="2_sq4ic"]
 [ext_resource type="Texture2D" uid="uid://dekpteffdi3yy" path="res://art/final/hotdog-sosy.png" id="3_vmqbo"]
 [ext_resource type="Script" path="res://selectable.gd" id="4_e2tdo"]
 [ext_resource type="AudioStream" uid="uid://fjn8napcyn7h" path="res://cash_cut.wav" id="5_et1th"]
+[ext_resource type="AudioStream" uid="uid://dpospubf3d8lh" path="res://sosiwo1.mp3" id="6_i2m5j"]
+[ext_resource type="AudioStream" uid="uid://cewd7vr7jwx80" path="res://sosiwo2.mp3" id="7_kstgu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbd7m"]
 size = Vector2(256, 192)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yy7dt"]
-size = Vector2(256, 64)
+size = Vector2(256, 32)
 
 [node name="Hotdog" type="Node2D"]
 script = ExtResource("1_w5bch")
@@ -36,7 +38,7 @@ shape = SubResource("RectangleShape2D_mbd7m")
 position = Vector2(32, -30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
-position = Vector2(64, 30)
+position = Vector2(64, 46)
 shape = SubResource("RectangleShape2D_yy7dt")
 
 [node name="Front" type="Marker2D" parent="."]
@@ -47,3 +49,11 @@ position = Vector2(32, -64)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_et1th")
+
+[node name="Sosiwo1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_i2m5j")
+volume_db = -5.0
+
+[node name="Sosiwo2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_kstgu")
+volume_db = -5.0

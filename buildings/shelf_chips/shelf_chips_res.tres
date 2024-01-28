@@ -10,7 +10,7 @@
 script = ExtResource("3_eq5jk")
 scene = ExtResource("2_bhmt0")
 template = ExtResource("4_n0hbh")
-product_cost = 4
+product_cost = 8
 build_cost = 100
 product_texture = ExtResource("1_j3gvt")
 name = "Zielona cebulka"

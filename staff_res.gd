@@ -5,3 +5,4 @@ extends Resource
 @export var name: String = "Robert"
 @export var wage := 10
 @export var avatar: Texture2D
+@export var male = false

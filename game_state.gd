@@ -62,6 +62,9 @@ func _unhandled_key_input(event):
 	if event.is_action_pressed("ui_cancel"):
 		reset_tool()
 
+	if event.is_action_pressed("hack_money"):
+		add_money(1000)
+
 
 func reset_tool() -> void:
 	clear_selection()

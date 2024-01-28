@@ -10,7 +10,7 @@
 script = ExtResource("3_0hssa")
 scene = ExtResource("2_mvv1i")
 template = ExtResource("4_f4war")
-product_cost = 4
+product_cost = 8
 build_cost = 200
 product_texture = ExtResource("1_my2ey")
 name = "Cola"

@@ -10,7 +10,7 @@
 script = ExtResource("3_tka1n")
 scene = ExtResource("2_sabmt")
 template = ExtResource("4_vn127")
-product_cost = 8
+product_cost = 16
 build_cost = 200
 product_texture = ExtResource("1_oajqf")
 name = "Tomcio Paluch"

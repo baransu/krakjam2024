@@ -10,7 +10,7 @@
 script = ExtResource("3_xbewx")
 scene = ExtResource("2_20nlj")
 template = ExtResource("4_6ie5m")
-product_cost = 6
+product_cost = 12
 build_cost = 300
 product_texture = ExtResource("1_ow1nx")
 name = "Kawunia"

@@ -10,7 +10,7 @@
 size = Vector2(128, 186)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yy7dt"]
-size = Vector2(128, 64)
+size = Vector2(128, 34.5)
 
 [node name="Checkout" type="Node2D"]
 script = ExtResource("1_16yyo")
@@ -35,7 +35,7 @@ shape = SubResource("RectangleShape2D_mbd7m")
 position = Vector2(32, -27.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BaseArea"]
-position = Vector2(0, 22)
+position = Vector2(0, 36.75)
 shape = SubResource("RectangleShape2D_yy7dt")
 
 [node name="Front" type="Marker2D" parent="."]
