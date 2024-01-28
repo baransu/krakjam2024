@@ -17,7 +17,7 @@ var selected: Building
 var buildings: Array[Building] = []
 
 var buildable: Buildable
-var seconds_elapsed := 12 * 60  # noon
+var seconds_elapsed := 6 * 60
 var alkohol_access := true
 var alkohol_access_price := 1000
 
@@ -29,7 +29,7 @@ var money = 1000
 
 func _ready() -> void:
 	var timer = Timer.new()
-	timer.wait_time = 1
+	timer.wait_time = 0.2
 	timer.timeout.connect(add_time)
 	add_child(timer)
 	timer.start()
@@ -144,3 +144,9 @@ func buy_alkohol_access() -> void:
 	alkohol_access = true
 	alkohol_access_changed.emit()
 	remove_money(alkohol_access_price)
+
+
+func get_hour() -> int:
+	var h = roundi(seconds_elapsed / 60.0)
+	print(h)
+	return h

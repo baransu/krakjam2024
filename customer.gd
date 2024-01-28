@@ -8,13 +8,24 @@ signal state_changed
 @onready var product_sprite: Sprite2D = $ProductSprite
 @export var movement_speed: float = 200.0
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var status_icon: TextureRect = $StatusIcon
 
 @export var textures: Array[Texture2D] = []
+@export var worker_tex: Texture2D
+@export var pregnant_tex: Array[Texture2D] = []
+@export var children_tex: Array[Texture2D] = []
+
+@export var exit_status_icon: Texture2D
+@export var checkout_icon: Texture2D
+@export var malpka_res: Buildable
+@export var hotdog_res: Buildable
+@export var beer_res: Buildable
 
 var target: Building
 var target_type: Building.Type = Building.Type.CHECKOUT
 var target_product: Building.Product = Building.Product.HOTDOG
 var product_cost: int
+var target_product_texture: Texture2D
 
 enum State { PRODUCT, CHECKOUT, EXIT }
 var state = State.PRODUCT
@@ -25,23 +36,66 @@ func _ready() -> void:
 	nav_agent.navigation_finished.connect(on_nav_finished)
 	GameState.building_destroyed.connect(on_building_destroyed_or_empty)
 	GameState.building_empty.connect(on_building_destroyed_or_empty)
+	random_texture()
 	random_product()
 	change_state(State.PRODUCT)
 	find_target(target_type, false)
-	sprite.texture = textures[randi() % textures.size()]
-	var night = "#3c5f47"
-	var day = "#89d092"
+
+
+func random_texture() -> void:
+	var tex = textures
+	var h = GameState.get_hour()
+
+	# more workers in the morning
+	if h >= 6 and h < 10:
+		tex.append(worker_tex)
+		tex.append(worker_tex)
+		tex.append(worker_tex)
+		tex.append(worker_tex)
+		tex.append(worker_tex)
+		tex.append(worker_tex)
+
+	if h >= 0 and h < 6:
+		tex.append(pregnant_tex[randi() % pregnant_tex.size()])
+		tex.append(pregnant_tex[randi() % pregnant_tex.size()])
+		tex.append(pregnant_tex[randi() % pregnant_tex.size()])
+		tex.append(pregnant_tex[randi() % pregnant_tex.size()])
+
+	if h >= 10 and h < 14:
+		tex.append(children_tex[randi() % children_tex.size()])
+		tex.append(children_tex[randi() % children_tex.size()])
+		tex.append(children_tex[randi() % children_tex.size()])
+		tex.append(children_tex[randi() % children_tex.size()])
+		tex.append(children_tex[randi() % children_tex.size()])
+
+	sprite.texture = tex[randi() % tex.size()]
 
 
 func random_product() -> void:
+	var h = GameState.get_hour()
 	var products = []
+	var texs = []
 	for building in GameState.buildings:
 		if building.product != Building.Product.NONE:
 			products.append(building.product)
+			texs.append(building.res.icon)
+
+	if h >= 6 and h < 10 and products.any(func(x): return x == Building.Product.MALPKA):
+		products.append(Building.Product.MALPKA)
+		texs.append(malpka_res.icon)
+
+	if h >= 10 and h < 14 and products.any(func(x): return x == Building.Product.HOTDOG):
+		products.append(Building.Product.HOTDOG)
+		texs.append(hotdog_res.icon)
+
+	if h >= 0 and h < 6 and products.any(func(x): return x == Building.Product.BEER):
+		products.append(Building.Product.BEER)
+		texs.append(beer_res.icon)
 
 	if products.size() > 0:
 		var idx = randi() % products.size()
 		target_product = products[idx]
+		target_product_texture = texs[idx]
 		if target_product == Building.Product.HOTDOG:
 			target_type = Building.Type.CHECKOUT
 		else:
@@ -128,6 +182,7 @@ func change_state(next_state: State) -> void:
 	state = next_state
 	match state:
 		State.PRODUCT:
+			status_icon.texture = target_product_texture
 			var product
 			match target_product:
 				Building.Product.BEER:
@@ -157,9 +212,11 @@ func change_state(next_state: State) -> void:
 
 		State.CHECKOUT:
 			state_label.text = "CHECKOUT"
+			status_icon.texture = checkout_icon
 
 		State.EXIT:
 			state_label.text = "EXIT"
+			status_icon.texture = exit_status_icon
 
 		_:
 			pass

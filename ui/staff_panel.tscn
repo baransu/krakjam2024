@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cp8lvkxf3u6ng"]
 
-[ext_resource type="Texture2D" uid="uid://ch4x5rl6lj8t4" path="res://art/trash-can.png" id="1_jjvmt"]
 [ext_resource type="Script" path="res://ui/staff_panel.gd" id="1_l6yho"]
+[ext_resource type="Texture2D" uid="uid://vpi4ex2gn0qc" path="res://art/final/x.png" id="2_kdo2n"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_h2asx"]
 size = Vector2(64, 64)
@@ -46,6 +46,7 @@ texture = SubResource("PlaceholderTexture2D_h2asx")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="Name" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -59,12 +60,15 @@ layout_mode = 2
 text = "100 Ż/dzień"
 label_settings = SubResource("LabelSettings_gil2u")
 
-[node name="TextureRect2" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+[node name="StatusIcon" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = SubResource("PlaceholderTexture2D_fnp7i")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="FireButton" type="Button" parent="."]
 unique_name_in_owner = true
@@ -73,21 +77,20 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -38.0
-offset_top = 32.0
-offset_right = -6.0
-offset_bottom = 64.0
+offset_left = -34.0
+offset_right = -2.0
+offset_bottom = 32.0
 grow_horizontal = 0
 size_flags_horizontal = 6
 size_flags_vertical = 4
 
 [node name="TextureRect" type="TextureRect" parent="FireButton"]
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_jjvmt")
+texture = ExtResource("2_kdo2n")
 expand_mode = 3

@@ -56,7 +56,7 @@ func update_tool_ui() -> void:
 
 
 func update_money_ui(_delta: int) -> void:
-	money_label.text = "Żabsy: $" + str(GameState.money)
+	money_label.text = "Żappsy: $" + str(GameState.money)
 	if !GameState.alkohol_access:
 		if GameState.money < GameState.alkohol_access_price:
 			alkohol_access_button.disabled = true
@@ -92,17 +92,17 @@ func update_staff_ui() -> void:
 
 
 func format_seconds_elapsed(seconds_elapsed: int) -> String:
-	var seconds = seconds_elapsed % 60
-	var s = str(seconds)
-	if s.length() == 1:
-		s = s.pad_zeros(2)
+	# var seconds = seconds_elapsed % 60
+	# var s = str(seconds)
+	# if s.length() == 1:
+	# 	s = s.pad_zeros(2)
 
 	var minutes = floori(seconds_elapsed / 60.0)
 	var m = str(minutes)
 	if m.length() == 1:
 		m = m.pad_zeros(2)
 
-	return m + ":" + s
+	return m + ":00"
 
 
 func update_alkohol_access_ui() -> void:

@@ -7,10 +7,16 @@ signal state_changed
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var decision_timer: Timer = $DecisionTimer
 @export var movement_speed: float = 100.0
-@onready var state_label: Label = $StateLabel
+@onready var state_label: Label = %StateLabel
 @export var smoke_time := 15.0
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var szlug: Node2D = %Szlug
+@onready var status_icon: TextureRect = %StatusIcon
+
+@export var idle_icon: Texture2D
+@export var checkout_icon: Texture2D
+@export var smoke_icon: Texture2D
+@export var hotdog_icon: Texture2D
 
 enum State { IDLE, REFILL, CHECKOUT, HOTDOG, SMOKE }
 var state = State.CHECKOUT
@@ -137,6 +143,23 @@ func change_state(next_state: State) -> void:
 
 		_:
 			pass
+
+	match state:
+		State.IDLE:
+			status_icon.texture = idle_icon
+
+		State.REFILL:
+			if target is ProductBuilding:
+				status_icon.texture = target.res.icon
+
+		State.CHECKOUT:
+			status_icon.texture = checkout_icon
+
+		State.SMOKE:
+			status_icon.texture = smoke_icon
+
+		State.HOTDOG:
+			status_icon.texture = hotdog_icon
 
 
 func something_hotdog() -> void:

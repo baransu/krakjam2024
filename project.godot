@@ -27,6 +27,7 @@ window/stretch/mode="canvas_items"
 
 [gui]
 
+theme/custom="res://art/default.tres"
 theme/custom_font="res://art/DigitalDisco.ttf"
 
 [input]

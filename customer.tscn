@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://2r5d1n83oer5"]
+[gd_scene load_steps=26 format=3 uid="uid://2r5d1n83oer5"]
 
 [ext_resource type="Script" path="res://customer.gd" id="1_28mxv"]
 [ext_resource type="Texture2D" uid="uid://bims07las46xb" path="res://art/Sprite-0007-10.png" id="2_5s535"]
@@ -8,6 +8,19 @@
 [ext_resource type="Texture2D" uid="uid://3iw541q1uop6" path="res://art/Sprite-0007-12.png" id="4_8igma"]
 [ext_resource type="Texture2D" uid="uid://bmw4ewlxa0kc" path="res://art/Sprite-0007-13.png" id="5_wxuy6"]
 [ext_resource type="Texture2D" uid="uid://ob2td3r0pqgu" path="res://art/Sprite-0007-14.png" id="6_gg6bw"]
+[ext_resource type="Texture2D" uid="uid://blc41u1qunoua" path="res://art/ludzie/osoba1.png" id="8_ud073"]
+[ext_resource type="Texture2D" uid="uid://dfvsf1i4ti5kw" path="res://art/rachunek.png" id="9_2ad47"]
+[ext_resource type="Texture2D" uid="uid://c85piui0lfr8l" path="res://art/ludzie/osoba2.png" id="9_yc22c"]
+[ext_resource type="Texture2D" uid="uid://d2mt2coa5dc34" path="res://art/ludzie/osoba3.png" id="10_62syi"]
+[ext_resource type="Resource" uid="uid://dtygck8qfbldp" path="res://buildings/shelf_malpka/shelf_malpka_res.tres" id="10_lw3hh"]
+[ext_resource type="Texture2D" uid="uid://crm7qvmqh8ydc" path="res://art/ludzie/osoba4.png" id="11_a0emf"]
+[ext_resource type="Resource" uid="uid://cygl2nish317r" path="res://buildings/hotdog/hotdog_res.tres" id="11_vrbic"]
+[ext_resource type="Texture2D" uid="uid://chqrrfbujnth6" path="res://art/ludzie/osoba5.png" id="12_8glur"]
+[ext_resource type="Resource" uid="uid://br4togwko5rd3" path="res://buildings/shelf_beer/shelf_beer_res.tres" id="12_f8u5y"]
+[ext_resource type="Texture2D" uid="uid://cj2xvgybtrklk" path="res://art/ludzie/osoba6.png" id="13_m18c0"]
+[ext_resource type="Texture2D" uid="uid://bkxqb8a6tu0m0" path="res://art/ludzie/osoba7.png" id="14_talrp"]
+[ext_resource type="Texture2D" uid="uid://rvko8xbw6ta8" path="res://art/final/exit.png" id="15_1dasv"]
+[ext_resource type="Texture2D" uid="uid://bjj0ucq64g7st" path="res://art/final/chmura.png" id="20_aif2y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p5l8y"]
 radius = 16.0
@@ -78,7 +91,15 @@ _data = {
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_28mxv")
-textures = Array[Texture2D]([ExtResource("2_5s535"), ExtResource("3_fovn1"), ExtResource("4_8igma"), ExtResource("5_wxuy6"), ExtResource("6_gg6bw"), ExtResource("2_n21ku")])
+textures = Array[Texture2D]([ExtResource("2_5s535"), ExtResource("3_fovn1"), ExtResource("4_8igma"), ExtResource("5_wxuy6"), ExtResource("6_gg6bw"), ExtResource("2_n21ku"), ExtResource("8_ud073"), ExtResource("9_yc22c"), ExtResource("10_62syi"), ExtResource("11_a0emf"), ExtResource("12_8glur"), ExtResource("13_m18c0"), ExtResource("14_talrp")])
+worker_tex = ExtResource("3_fovn1")
+pregnant_tex = Array[Texture2D]([ExtResource("2_5s535"), ExtResource("9_yc22c"), ExtResource("10_62syi"), ExtResource("11_a0emf")])
+children_tex = Array[Texture2D]([ExtResource("5_wxuy6"), ExtResource("6_gg6bw"), ExtResource("12_8glur")])
+exit_status_icon = ExtResource("15_1dasv")
+checkout_icon = ExtResource("9_2ad47")
+malpka_res = ExtResource("10_lw3hh")
+hotdog_res = ExtResource("11_vrbic")
+beer_res = ExtResource("12_f8u5y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -98)
@@ -104,6 +125,7 @@ libraries = {
 autoplay = "idle"
 
 [node name="StateLabel" type="Label" parent="."]
+visible = false
 offset_left = -37.0
 offset_top = -236.0
 offset_right = 36.0
@@ -111,6 +133,25 @@ offset_bottom = -213.0
 text = "Checkout"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -44.0
+offset_top = -244.0
+offset_right = 4.0
+offset_bottom = -196.0
+texture = ExtResource("20_aif2y")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="StatusIcon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(28, 28)
+offset_left = -34.0
+offset_top = -240.0
+offset_right = -6.0
+offset_bottom = -212.0
+texture = ExtResource("15_1dasv")
+expand_mode = 3
+stretch_mode = 5
 
 [node name="ProductSprite" type="Sprite2D" parent="."]
 visible = false

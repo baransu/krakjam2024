@@ -1,11 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbedkj40f785x"]
+[gd_scene load_steps=6 format=3 uid="uid://dbedkj40f785x"]
 
 [ext_resource type="Script" path="res://ui/building_panel.gd" id="1_von7c"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_p6j6j"]
 size = Vector2(32, 32)
 
+[sub_resource type="LabelSettings" id="LabelSettings_s2r8w"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_4vp38"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_d75vb"]
+font_size = 18
+
 [node name="BuildingPanel" type="PanelContainer"]
+offset_right = 400.0
+offset_bottom = 200.0
 script = ExtResource("1_von7c")
 
 [node name="MarginContainer2" type="MarginContainer" parent="."]
@@ -21,35 +32,59 @@ theme_override_constants/separation = 16
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer2/VBoxContainer"]
 layout_mode = 2
-
-[node name="Name" type="Label" parent="MarginContainer2/VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 2.08165e-12)
-layout_mode = 2
-text = "Wino Mamrot"
-autowrap_mode = 2
+theme_override_constants/separation = 8
 
 [node name="BuildingIcon" type="TextureRect" parent="MarginContainer2/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 texture = SubResource("PlaceholderTexture2D_p6j6j")
+expand_mode = 3
 
-[node name="InventoryText" type="Label" parent="MarginContainer2/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Name" type="Label" parent="MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 2.08165e-12)
+layout_mode = 2
+text = "Wino Mamrot"
+label_settings = SubResource("LabelSettings_s2r8w")
+autowrap_mode = 2
+
+[node name="PriceText" type="Label" parent="MarginContainer2/VBoxContainer/HBoxContainer2/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Stan: 5/10 sztuk"
+text = "10 Żappsów za sztukę"
 
-[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer2/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 8
-
-[node name="RefillBuildingButton" type="Button" parent="MarginContainer2/VBoxContainer/HBoxContainer"]
+[node name="InventoryText" type="Label" parent="MarginContainer2/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Uzupełnij (-100 Żabsów)"
+text = "5/10 sztuk"
+label_settings = SubResource("LabelSettings_4vp38")
 
-[node name="DeleteBuildingButton" type="Button" parent="MarginContainer2/VBoxContainer/HBoxContainer"]
+[node name="DescriptionText" type="Label" parent="MarginContainer2/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 2.08165e-12)
 layout_mode = 2
-text = "Sprzedaj (+100 Żabsów)"
+text = "Mamrot Podlaski Wino Ekologiczne z Polskich Owoców"
+label_settings = SubResource("LabelSettings_d75vb")
+autowrap_mode = 2
+
+[node name="RefillBuildingButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(2.08165e-12, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 0
+text = "Uzupełnij (-100 Żappsów)"
+
+[node name="DeleteBuildingButton" type="Button" parent="MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(2.08165e-12, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Sprzedaj (+100 Żappsów)"
