@@ -25,7 +25,7 @@ var alkohol_access_price := 1000
 enum Tool { PLACE, DELETE, SELECT }
 
 var tool: Tool = Tool.SELECT
-var money = 1
+var money = 1000
 
 
 func _ready() -> void:

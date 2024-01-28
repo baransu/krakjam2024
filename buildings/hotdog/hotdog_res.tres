@@ -10,8 +10,9 @@
 script = ExtResource("2_77hfk")
 scene = ExtResource("1_ot8tp")
 template = ExtResource("3_p0bns")
-product_cost = 0
-build_cost = 0
+product_cost = 6
+build_cost = 400
 product_texture = ExtResource("1_0vl00")
 name = "Kasa z hotdogami"
+descriptions = Array[String](["Bo to jedyna żaba, która pozwala, aby skakać z radości przy każdym kęsie!", "Jedzenie, które jest na tyle skoczne, że zawsze jest w ruchu, zanim trafi do Twojego brzucha!", "Bo czasem wiesz, że twoje życie jest na fajrerze, kiedy jedzenie jest gotowe w 3... 2... 1... i już zniknęło!", "To jak skok na marsa z jedzeniem! Bo tylko żabki mogą wziąć kiełbasę na skok i zjeść ją z powrotem na ziemi!", "To jak małe UFO, które ląduje na talerzu i zabiera twoje kubki smakowe w kosmiczną podróż pełną przyjemności!", "To taki duet, gdzie jeden mówi \"zjedz mnie\", a drugi odpowiada \"z przyjemnością!”"])
 icon = ExtResource("1_8lalb")

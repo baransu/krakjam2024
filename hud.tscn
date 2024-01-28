@@ -749,8 +749,9 @@ mouse_filter = 1
 [node name="AlkoholAccessPanel" type="ColorRect" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2/HBoxContainer/Control"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_left = -320.0
+offset_left = -334.0
 offset_top = -1.0
+offset_right = -5.0
 offset_bottom = 103.0
 mouse_filter = 1
 color = Color(0, 0, 0, 0.764706)

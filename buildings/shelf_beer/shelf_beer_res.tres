@@ -10,8 +10,9 @@
 script = ExtResource("3_5m15j")
 scene = ExtResource("2_qhiig")
 template = ExtResource("4_dd221")
-product_cost = 1
-build_cost = 1
+product_cost = 4
+build_cost = 200
 product_texture = ExtResource("1_s4p2b")
 name = "Mocny ful"
+descriptions = Array[String](["Mocny full – bulgotający chaos, który rozśmiesza do łez!", "Tak potężne, że po jednym łyku czujesz się gotowy na wszystko, nawet na rozprawienie się z opakowaniem chipsów jednym palcem!", "Jak skok na bungee dla Twojego języka, a Twoja kura już szykuje się na pierwszy lot!", "Napój, który sprawia, że twoje życie staje się pełniejsze... chociaż twoje kubki smakowe mogą potrzebować GPS-u!", "Jak turboładowanie dla Twojego poczucia humoru, ale ostrzegamy, nadmiar może prowadzić do taniec na stole!"])
 icon = ExtResource("1_yvd6u")

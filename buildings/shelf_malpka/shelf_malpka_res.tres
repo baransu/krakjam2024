@@ -10,8 +10,9 @@
 script = ExtResource("3_rhnvb")
 scene = ExtResource("1_yp4a7")
 template = ExtResource("3_a5h3i")
-product_cost = 1
-build_cost = 1
+product_cost = 12
+build_cost = 200
 product_texture = ExtResource("1_fdoat")
 name = "Małpka"
+descriptions = Array[String](["Napój, który sprawia, że każdy staje się mistrzem w wspinaczce po drzewach... lub przynajmniej tak mu się wydaje!", "Bo przy każdym łyku czujesz, że twoja dusza zaczyna skakać po gałęziach!", "Napój, który sprawia, że twoje tańczące nogi wydają się być zwinne jak małpi ogon!", "Bo potrafi rozpocząć \"małpią rewolucję\" na parkiecie!", "Napój, który jest jak dziki safari w butelce, z każdym łykiem jesteś bliżej przygody!"])
 icon = ExtResource("1_drh1n")

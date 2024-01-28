@@ -10,8 +10,9 @@
 script = ExtResource("3_0hssa")
 scene = ExtResource("2_mvv1i")
 template = ExtResource("4_f4war")
-product_cost = 1
-build_cost = 1
+product_cost = 4
+build_cost = 200
 product_texture = ExtResource("1_my2ey")
-name = "Colka"
+name = "Cola"
+descriptions = Array[String](["Napój, który sprawia, że bąbelki w brzuchu to nie tylko bańki mydlane!", "Napój, który potrafi zamienić zwykły dzień w \"cola-szalony\" dzień!", "Bo zawsze jest gotowa do \"kolawitacji\" w twoim kubku!", "Napój, który potrafi zamienić zwykły moment w \"cola-chwilę\"!", "Napój, który jest gotowy do \"cola-eksplozji\" smaku!"])
 icon = ExtResource("1_7iqui")

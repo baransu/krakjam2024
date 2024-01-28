@@ -10,8 +10,9 @@
 script = ExtResource("3_xbewx")
 scene = ExtResource("2_20nlj")
 template = ExtResource("4_6ie5m")
-product_cost = 1
-build_cost = 1
+product_cost = 6
+build_cost = 300
 product_texture = ExtResource("1_ow1nx")
 name = "Kawunia"
+descriptions = Array[String](["To jak pocałunek budzenia od najlepszego przyjaciela, który mówi: \"Hej, jestem tutaj, żebyś mógł przetrwać ten dzień!", "To nasza prywatna supermoc w kubku, która sprawia, że nawet nasza rozmowa z papugą staje się bardziej sensowna!", "To jak superbohater w filiżance, który ratuje nas przed zasypianiem na każdym zebraniu!", "To taki magiczny płyn, który daje nam nadzieję, że wszelkie życiowe problemy da się rozwiązać... przynajmniej do końca filiżanki!", "Nasza codzienna dawka supermocy w kubku, która pozwala nam myśleć, że jesteśmy niepokonani... przynajmniej do kolejnej przerwy na kawę!"])
 icon = ExtResource("1_j6ktx")

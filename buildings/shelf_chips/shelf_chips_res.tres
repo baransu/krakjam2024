@@ -10,9 +10,9 @@
 script = ExtResource("3_eq5jk")
 scene = ExtResource("2_bhmt0")
 template = ExtResource("4_n0hbh")
-product_cost = 1
-build_cost = 1
+product_cost = 4
+build_cost = 100
 product_texture = ExtResource("1_j3gvt")
 name = "Zielona cebulka"
-description = ""
+descriptions = Array[String](["Chipsy, które krzyczą \"Zjedz mnie!\" tak głośno, że próbują wyprzedzić nawet Twoje własne myśli!", "Te chipsy to tajny agent, który rozpoczął misję podbicia Twojego podniebienia!", "Kto potrzebuje zielonej trawy, skoro można mieć zieloną cebulkę na chipsach?", "Chipsy, które robią taką fajerwerkową eksplozję smaku, że nawet petardy mogą zazdrościć!", "To jak maskotka na imprezie, która przykuwa uwagę wszystkich swoim kuszącym zapachem!"])
 icon = ExtResource("1_hg2u3")

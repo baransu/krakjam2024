@@ -10,8 +10,9 @@
 script = ExtResource("3_m0or0")
 scene = ExtResource("2_dkjan")
 template = ExtResource("4_eayss")
-product_cost = 1
-build_cost = 1
+product_cost = 2
+build_cost = 300
 product_texture = ExtResource("1_ow24x")
 name = "Lody Ekipy"
+descriptions = Array[String](["Przygotuj się na mroźny rejs po najśmieszniejszych smakach internetu!", "Dla tych, którzy wiedzą, że żaden dzień nie jest zbyt zimny na lody i śmiech!", "Gdzie lody stają się gwiazdami i głównymi bohaterami każdej historii!", "Przygotuj się na mroźny rejs po najśmieszniejszych smakach internetu", "Bo razem smakują jeszcze lepiej, tak jak żarty w dobrym towarzystwie!"])
 icon = ExtResource("1_kliws")
