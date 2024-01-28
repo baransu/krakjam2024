@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dhfjdct7ywher"]
 
 [ext_resource type="Script" path="res://template.gd" id="1_52q6e"]
-[ext_resource type="Texture2D" uid="uid://bftbtvqmorrov" path="res://art/Sprite-0006-3.png" id="2_dnpeo"]
+[ext_resource type="Texture2D" uid="uid://dekpteffdi3yy" path="res://art/final/hotdog-sosy.png" id="2_bckoc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5t5a4"]
 size = Vector2(254, 126)
@@ -16,5 +16,5 @@ shape = SubResource("RectangleShape2D_5t5a4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.462745, 1, 1, 0.223529)
-position = Vector2(96, -56)
-texture = ExtResource("2_dnpeo")
+position = Vector2(96, -60)
+texture = ExtResource("2_bckoc")

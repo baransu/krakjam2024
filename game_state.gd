@@ -12,6 +12,7 @@ signal alkohol_access_changed
 signal building_selected(Building)
 signal building_deselected(Building)
 signal building_changed(Building)
+signal game_over
 
 var selected: Building
 var buildings: Array[Building] = []
@@ -24,20 +25,30 @@ var alkohol_access_price := 1000
 enum Tool { PLACE, DELETE, SELECT }
 
 var tool: Tool = Tool.SELECT
-var money = 1000
+var money = 1
 
 
 func _ready() -> void:
 	var timer = Timer.new()
-	timer.wait_time = 0.2
+	timer.wait_time = 0.005
 	timer.timeout.connect(add_time)
 	add_child(timer)
 	timer.start()
 
 
 func add_time() -> void:
+	var d_before = floori(seconds_elapsed / (60.0 * 24))
+	var d_after = floori((seconds_elapsed + 1) / (60.0 * 24))
+
 	seconds_elapsed += 1
 	seconds_elapsed_changed.emit()
+
+	if d_before != d_after:
+		var staff_cost = 0
+		for staff in get_tree().get_nodes_in_group("staff"):
+			staff_cost += staff.staff_res.wage
+
+		remove_money(staff_cost)
 
 
 func select(b: Building) -> void:
@@ -138,6 +149,8 @@ func add_money(delta: int = 1) -> void:
 func remove_money(delta: int = 1) -> void:
 	money -= delta
 	money_changed.emit(-delta)
+	if money < 0:
+		trigger_game_over()
 
 
 func buy_alkohol_access() -> void:
@@ -148,5 +161,15 @@ func buy_alkohol_access() -> void:
 
 func get_hour() -> int:
 	var h = roundi(seconds_elapsed / 60.0)
-	print(h)
 	return h
+
+
+func trigger_game_over() -> void:
+	get_tree().paused = true
+	game_over.emit()
+
+
+func restart_game() -> void:
+	get_tree().reload_current_scene()
+	GameState.set_script(null)
+	GameState.set_script(preload("res://game_state.gd"))

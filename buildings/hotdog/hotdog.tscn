@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://hotdog_building.gd" id="1_w5bch"]
 [ext_resource type="Material" uid="uid://li5m067f0ccm" path="res://select_material.tres" id="2_sq4ic"]
-[ext_resource type="Texture2D" uid="uid://bftbtvqmorrov" path="res://art/Sprite-0006-3.png" id="3_2pg5p"]
+[ext_resource type="Texture2D" uid="uid://dekpteffdi3yy" path="res://art/final/hotdog-sosy.png" id="3_vmqbo"]
 [ext_resource type="Script" path="res://selectable.gd" id="4_e2tdo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbd7m"]
@@ -18,8 +18,8 @@ type = 1
 product = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(96, -56)
-texture = ExtResource("3_2pg5p")
+position = Vector2(96, -64)
+texture = ExtResource("3_vmqbo")
 
 [node name="SelectArea" type="Area2D" parent="."]
 position = Vector2(32, -30)

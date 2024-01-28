@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cdgaksn1few4f"]
+[gd_scene load_steps=51 format=3 uid="uid://cdgaksn1few4f"]
 
 [ext_resource type="Script" path="res://HUD.gd" id="1_dqttv"]
 [ext_resource type="Script" path="res://ui/buildings_container.gd" id="2_7q1ln"]
@@ -22,6 +22,7 @@
 [ext_resource type="Resource" uid="uid://cx1bj3sfwh4y7" path="res://buildings/shelf_wine/shelf_wine_res.tres" id="13_cmllh"]
 [ext_resource type="Texture2D" uid="uid://c2phbkarwf0kp" path="res://art/icons/3.png" id="13_e2r5d"]
 [ext_resource type="Texture2D" uid="uid://c3ws0pwcp2xa8" path="res://art/icons/7.png" id="15_h0i1l"]
+[ext_resource type="Texture2D" uid="uid://cb4fh8f7lytkx" path="res://art/final/kosz.png" id="15_jqhbc"]
 [ext_resource type="Resource" uid="uid://cd5kajlna4w82" path="res://buildings/checkout/checkout_res.tres" id="15_q5gos"]
 [ext_resource type="Resource" uid="uid://bx3khnmti1p5t" path="res://buildings/coffee/coffee_res.tres" id="17_eegkq"]
 [ext_resource type="Texture2D" uid="uid://dtr7thfglinuu" path="res://art/icons/8.png" id="17_hncxn"]
@@ -82,7 +83,14 @@ font_size = 32
 [sub_resource type="LabelSettings" id="LabelSettings_5kdf5"]
 font_size = 32
 
+[sub_resource type="LabelSettings" id="LabelSettings_eqhyy"]
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_oexi3"]
+font_size = 32
+
 [node name="HUD" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_dqttv")
 staff_panel_scene = ExtResource("2_j5xho")
 staff_list = Array[ExtResource("3_kckky")]([SubResource("Resource_4bkkg"), SubResource("Resource_y4ak6"), SubResource("Resource_7sdde"), SubResource("Resource_ruj08")])
@@ -119,12 +127,6 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="StaffPanel" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/StaffContainer" instance=ExtResource("2_j5xho")]
-layout_mode = 2
-
-[node name="StaffPanel2" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/StaffContainer" instance=ExtResource("2_j5xho")]
-layout_mode = 2
-
 [node name="HirePanel" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(450, 100)
@@ -148,16 +150,8 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer/HirePanel/MarginContainer/HireButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("12_r61ut")
-expand_mode = 3
+tooltip_text = "Zatrudnij pracownika (100 Żabsów)"
+icon = ExtResource("12_r61ut")
 
 [node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
@@ -257,10 +251,10 @@ layout_mode = 2
 
 [node name="DeleteButton" type="Button" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2"]
 layout_mode = 2
+tooltip_text = "Usuwanie"
 focus_mode = 0
 toggle_mode = true
-text = "DELETE
-"
+icon = ExtResource("15_jqhbc")
 script = ExtResource("3_q3tk0")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer2"]
@@ -776,3 +770,66 @@ offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Koncesja na alkohol (1000 Żapsów)"
+
+[node name="GameOver" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.603922)
+
+[node name="PanelContainer" type="PanelContainer" parent="GameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.5
+offset_top = -80.0
+offset_right = 156.5
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="GameOver/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOver/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label2" type="Label" parent="GameOver/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Game Over!"
+label_settings = SubResource("LabelSettings_eqhyy")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="GameOver/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Twoja Żabka splajtowała. "
+label_settings = SubResource("LabelSettings_oexi3")
+
+[node name="PlayAgain" type="Button" parent="GameOver/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Zagraj jeszcze raz!"

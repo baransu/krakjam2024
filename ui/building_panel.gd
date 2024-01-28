@@ -9,6 +9,7 @@ extends PanelContainer
 @onready var delete_building_button: Button = %DeleteBuildingButton
 
 var building: Building
+var description: String
 
 
 func _ready():
@@ -39,6 +40,7 @@ func on_money_changed(_delta: int):
 
 func on_building_selected(b: Building):
 	building = b
+	description = building.res.descriptions[randi() % building.res.descriptions.size()]
 	update_building_info(building)
 	show()
 
@@ -55,7 +57,7 @@ func update_building_info(_b: Building = null):
 	name_label.text = building.res.name
 	building_icon.texture = building.res.icon
 	price_label.text = str(building.res.product_cost) + " Żappsów"
-	description_label.text = building.res.description
+	description_label.text = description
 
 	if building is CheckoutBuilding && !building is HotDogBuilding:
 		price_label.hide()

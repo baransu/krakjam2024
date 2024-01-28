@@ -87,7 +87,7 @@ _data = {
 "idle": SubResource("Animation_l0fc1")
 }
 
-[node name="Customer" type="CharacterBody2D"]
+[node name="Customer" type="CharacterBody2D" groups=["customer"]]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_28mxv")

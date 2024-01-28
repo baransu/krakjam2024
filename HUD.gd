@@ -9,22 +9,30 @@ extends CanvasLayer
 @onready var hire_panel: Panel = %HirePanel
 @onready var alkohol_access_panel: Control = %AlkoholAccessPanel
 @onready var alkohol_access_button: Button = %AlkoholAccessButton
+@onready var game_over: Control = %GameOver
+
+@onready var play_again: Button = %PlayAgain
 
 @export var staff_panel_scene: PackedScene
 
 var max_staff = 3
-var hire_cost = 100
+var hire_cost = 1
 @export var staff_list: Array[StaffRes] = []
 
 
 func _ready():
+	game_over.hide()
+
 	hire_button.pressed.connect(on_hire)
 	alkohol_access_button.pressed.connect(on_buy_alkohol_access)
+	play_again.pressed.connect(GameState.restart_game)
+
 	GameState.tool_changed.connect(update_tool_ui)
 	GameState.money_changed.connect(update_money_ui)
 	GameState.seconds_elapsed_changed.connect(update_time_ui)
 	GameState.staff_changed.connect(update_staff_ui)
 	GameState.alkohol_access_changed.connect(update_alkohol_access_ui)
+	GameState.game_over.connect(game_over.show)
 	update_tool_ui()
 	update_money_ui(0)
 	update_time_ui()
@@ -41,6 +49,7 @@ func on_hire() -> void:
 	staff_list.shuffle()
 	var res = staff_list[0]
 	spawner.spawn_staff(res)
+	GameState.remove_money(hire_cost)
 
 
 func update_tool_ui() -> void:
@@ -56,7 +65,7 @@ func update_tool_ui() -> void:
 
 
 func update_money_ui(_delta: int) -> void:
-	money_label.text = "Żappsy: $" + str(GameState.money)
+	money_label.text = "Żappsy: " + str(GameState.money)
 	if !GameState.alkohol_access:
 		if GameState.money < GameState.alkohol_access_price:
 			alkohol_access_button.disabled = true
@@ -97,7 +106,7 @@ func format_seconds_elapsed(seconds_elapsed: int) -> String:
 	# if s.length() == 1:
 	# 	s = s.pad_zeros(2)
 
-	var minutes = floori(seconds_elapsed / 60.0)
+	var minutes = floori(seconds_elapsed / 60.0) % 24
 	var m = str(minutes)
 	if m.length() == 1:
 		m = m.pad_zeros(2)
