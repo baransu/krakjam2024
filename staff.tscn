@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c1vhiidpbpuyc"]
+[gd_scene load_steps=17 format=3 uid="uid://c1vhiidpbpuyc"]
 
 [ext_resource type="Script" path="res://staff.gd" id="1_fgakm"]
 [ext_resource type="Texture2D" uid="uid://c2phbkarwf0kp" path="res://art/icons/3.png" id="2_41a35"]
@@ -9,10 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://cyahkr7ejt4uy" path="res://art/szlug.png" id="4_cu3pp"]
 [ext_resource type="Texture2D" uid="uid://bcq7l5da1fmex" path="res://art/final/szlug2.png" id="4_msb8y"]
 [ext_resource type="Texture2D" uid="uid://bjj0ucq64g7st" path="res://art/final/chmura.png" id="6_p0a0o"]
+[ext_resource type="Texture2D" uid="uid://ddb3uesmdbppq" path="res://art/icons/13.png" id="6_r1hfw"]
 [ext_resource type="Texture2D" uid="uid://rvko8xbw6ta8" path="res://art/final/exit.png" id="7_2rjo6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tsh58"]
-radius = 28.0179
+radius = 18.0
 
 [sub_resource type="Animation" id="Animation_ngac3"]
 length = 0.001
@@ -100,6 +101,7 @@ idle_icon = ExtResource("2_pec71")
 checkout_icon = ExtResource("2_41a35")
 smoke_icon = ExtResource("4_msb8y")
 hotdog_icon = ExtResource("4_3ssft")
+refill_icon = ExtResource("6_r1hfw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -98)

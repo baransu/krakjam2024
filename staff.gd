@@ -17,6 +17,7 @@ signal state_changed
 @export var checkout_icon: Texture2D
 @export var smoke_icon: Texture2D
 @export var hotdog_icon: Texture2D
+@export var refill_icon: Texture2D
 
 enum State { IDLE, REFILL, CHECKOUT, HOTDOG, SMOKE }
 var state = State.CHECKOUT
@@ -149,8 +150,7 @@ func change_state(next_state: State) -> void:
 			status_icon.texture = idle_icon
 
 		State.REFILL:
-			if target is ProductBuilding:
-				status_icon.texture = target.res.icon
+			status_icon.texture = refill_icon
 
 		State.CHECKOUT:
 			status_icon.texture = checkout_icon

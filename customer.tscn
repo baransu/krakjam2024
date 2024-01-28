@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bmw4ewlxa0kc" path="res://art/Sprite-0007-13.png" id="5_wxuy6"]
 [ext_resource type="Texture2D" uid="uid://ob2td3r0pqgu" path="res://art/Sprite-0007-14.png" id="6_gg6bw"]
 [ext_resource type="Texture2D" uid="uid://blc41u1qunoua" path="res://art/ludzie/osoba1.png" id="8_ud073"]
-[ext_resource type="Texture2D" uid="uid://dfvsf1i4ti5kw" path="res://art/rachunek.png" id="9_2ad47"]
 [ext_resource type="Texture2D" uid="uid://c85piui0lfr8l" path="res://art/ludzie/osoba2.png" id="9_yc22c"]
 [ext_resource type="Texture2D" uid="uid://d2mt2coa5dc34" path="res://art/ludzie/osoba3.png" id="10_62syi"]
 [ext_resource type="Resource" uid="uid://dtygck8qfbldp" path="res://buildings/shelf_malpka/shelf_malpka_res.tres" id="10_lw3hh"]
@@ -20,10 +19,11 @@
 [ext_resource type="Texture2D" uid="uid://cj2xvgybtrklk" path="res://art/ludzie/osoba6.png" id="13_m18c0"]
 [ext_resource type="Texture2D" uid="uid://bkxqb8a6tu0m0" path="res://art/ludzie/osoba7.png" id="14_talrp"]
 [ext_resource type="Texture2D" uid="uid://rvko8xbw6ta8" path="res://art/final/exit.png" id="15_1dasv"]
+[ext_resource type="Texture2D" uid="uid://c2phbkarwf0kp" path="res://art/icons/3.png" id="16_enbmg"]
 [ext_resource type="Texture2D" uid="uid://bjj0ucq64g7st" path="res://art/final/chmura.png" id="20_aif2y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_le2hu"]
-radius = 18.1108
+radius = 18.0
 
 [sub_resource type="Animation" id="Animation_ngac3"]
 length = 0.001
@@ -95,7 +95,7 @@ worker_tex = ExtResource("3_fovn1")
 pregnant_tex = Array[Texture2D]([ExtResource("2_5s535"), ExtResource("9_yc22c"), ExtResource("10_62syi"), ExtResource("11_a0emf")])
 children_tex = Array[Texture2D]([ExtResource("5_wxuy6"), ExtResource("6_gg6bw"), ExtResource("12_8glur")])
 exit_status_icon = ExtResource("15_1dasv")
-checkout_icon = ExtResource("9_2ad47")
+checkout_icon = ExtResource("16_enbmg")
 malpka_res = ExtResource("10_lw3hh")
 hotdog_res = ExtResource("11_vrbic")
 beer_res = ExtResource("12_f8u5y")

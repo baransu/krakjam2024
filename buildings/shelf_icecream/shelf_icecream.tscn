@@ -79,7 +79,7 @@ position = Vector2(32, 30)
 shape = SubResource("RectangleShape2D_yy7dt")
 
 [node name="Front" type="Marker2D" parent="."]
-position = Vector2(32, 56)
+position = Vector2(64, 64)
 
 [node name="MenuAnchor" type="Marker2D" parent="."]
 position = Vector2(-24, -224)

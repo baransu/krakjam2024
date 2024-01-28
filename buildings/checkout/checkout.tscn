@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://buildings/scripts/checkout_building.gd" id="1_16yyo"]
 [ext_resource type="Material" uid="uid://li5m067f0ccm" path="res://select_material.tres" id="2_pgep5"]
-[ext_resource type="Texture2D" uid="uid://dp6gnakolhff2" path="res://art/Sprite-0006.png" id="3_h3fq8"]
+[ext_resource type="Texture2D" uid="uid://dlcicq4rrctsu" path="res://art/final/kasa.png" id="3_1fbbo"]
 [ext_resource type="Script" path="res://selectable.gd" id="4_b0ur2"]
 [ext_resource type="AudioStream" uid="uid://d2mblswt2mrsl" path="res://art/final/cashier-quotka-chingquot-sound-effect-129698.mp3" id="5_1noei"]
 
@@ -18,8 +18,8 @@ select_material = ExtResource("2_pgep5")
 type = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(32, -61.5)
-texture = ExtResource("3_h3fq8")
+position = Vector2(32, -64)
+texture = ExtResource("3_1fbbo")
 
 [node name="SelectArea" type="Area2D" parent="."]
 position = Vector2(32, -29.5)
